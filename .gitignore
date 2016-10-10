@@ -1,0 +1,6 @@
+# mac system files
+.DS_Store
+
+# out intellij binary folder
+/out
+
