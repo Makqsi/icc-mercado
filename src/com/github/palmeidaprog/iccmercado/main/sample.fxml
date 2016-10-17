@@ -16,9 +16,9 @@
    <left>
       <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
+            <VBox fx:id="homeVB" alignment="CENTER" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../home.png" />
                      </image>
@@ -27,10 +27,13 @@
                      </cursor>
                   </ImageView>
                </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #e7655a;">
+            <VBox fx:id="testVB" alignment="CENTER" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #e7655a;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../network.png" />
                      </image>
@@ -39,10 +42,13 @@
                      </cursor>
                   </ImageView>
                </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #fcc666;">
+            <VBox fx:id="educacaoVB" alignment="CENTER" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #fcc666;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../school.png" />
                      </image>
@@ -51,10 +57,13 @@
                      </cursor>
                   </ImageView>
                </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #06e3bd;">
+            <VBox fx:id="leiVB" alignment="CENTER" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #06e3bd;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../text.png" />
                      </image>
@@ -63,6 +72,9 @@
                      </cursor>
                   </ImageView>
                </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </VBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="102.0" VBox.vgrow="ALWAYS">
                <VBox.margin>
@@ -71,7 +83,7 @@
                <children>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="34.0" spacing="10.0">
                      <children>
-                        <ImageView fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="26.0" fitWidth="22.0" onMouseClicked="#closeAction" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../exit2.png" />
                            </image>
@@ -82,7 +94,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Label text="Sair" textFill="#575a60">
+                        <Label onMouseClicked="#closeAction" text="Sair" textFill="#575a60">
                            <font>
                               <Font name="Ubuntu" size="13.0" />
                            </font>
@@ -111,7 +123,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label contentDisplay="CENTER" prefHeight="65.0" prefWidth="573.0" text="Buy a new better" textFill="WHITE">
+                  <Label fx:id="tituloLbl" contentDisplay="CENTER" prefHeight="65.0" prefWidth="573.0" text="Mercado de Trabalho de TI" textFill="WHITE">
                      <font>
                         <Font name="Ubuntu" size="36.0" />
                      </font>
@@ -124,7 +136,7 @@
                      <effect>
                         <Reflection>
                            <input>
-                              <Glow level="0.28" />
+                              <Glow level="0.27" />
                            </input>
                         </Reflection>
                      </effect>
