@@ -1,19 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="com.github.palmeidaprog.iccmercado.main.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
-   <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" />
-   </children>
-</GridPane>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.Controller">
+   <left>
+      <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="homeVB" alignment="CENTER" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../home.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="testVB" alignment="CENTER" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #e7655a;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../network.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="educacaoVB" alignment="CENTER" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #fcc666;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../school.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="leiVB" alignment="CENTER" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #06e3bd;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../text.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="102.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="34.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="22.0" onMouseClicked="#closeAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../exit2.png" />
+                           </image>
+                           <effect>
+                              <Glow level="0.47" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#closeAction" text="Sair" textFill="#575a60">
+                           <font>
+                              <Font name="Ubuntu" size="13.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.47" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="432.0" prefWidth="667.0" style="-fx-background-color: #52596b;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="tituloLbl" contentDisplay="CENTER" prefHeight="65.0" prefWidth="573.0" text="Mercado de Trabalho de TI" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Glow level="0.27" />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox fx:id="mainPanel" alignment="TOP_CENTER" prefHeight="453.0" prefWidth="699.0" spacing="10.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Programa suporte de trabalho de Introdução à Ciência da Computação" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="39.0" prefWidth="659.0" />
+                  <HBox>
+                     <children>
+                        <Label text="UNICAP - Universidade Católica de Pernambuco" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Professor: " textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="M.e Fernando César Brito Santos" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Introdução à Ciência da Computação" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="20.0" prefWidth="659.0" />
+                  <HBox>
+                     <children>
+                        <Label text="Alunos: " textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="153.0" prefWidth="463.0" spacing="5.0">
+                           <children>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Kelvin Lima" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Mawel Roberto" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;maxwel.silva10@hotmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Paulo R. Almeida Filho" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;pauloalmeidaf@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Rafael" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Tulio" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
