@@ -3,19 +3,21 @@ package com.github.palmeidaprog.iccmercado.main;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.layout.VBox;
 
 public class Controller {
     @FXML private Label tituloLbl;
-    @FXML private VBox testVB, homeVB, educacaoVB, leiVB;
+    @FXML private VBox testVB, homeVB, educacaoVB, leiVB, mainPanel;
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
-    private Glow glow = new Glow(0.20);
+    private boolean disableEffect = false;
+
     private AnimationTimer anim = new AnimationTimer() {
         @Override
         public void handle(long now) {
-            tituloLbl.setEffect(glow);
+            /*tituloLbl.setEffect(glow);
             for(int i = 1; i <= 7; ++i) {
                 glow.setLevel(glow.getLevel() + (double) i / 10);
                 try {
@@ -23,9 +25,27 @@ public class Controller {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
         }
     };
+
+    // adiciona e remove efeito "blur" e "glow" ao painel de navegação
+    private void addBlur(boolean b) {
+        Glow glow = new Glow(0.20);
+        BoxBlur blur = new BoxBlur(1.0, 1.0, 1);
+
+        if(b) {
+            mainPanel.setEffect(blur);
+            mainPanel.setEffect(glow);
+        }
+        else {
+            mainPanel.setEffect(null);
+        }
+        blur.setHeight(10.0);
+        blur.setWidth(10.0);
+        glow.setLevel(1.0);
+        mainPanel.setDisable(b);
+    }
 
     private String tituloAntigo = "Mercado de Trabalho de TI";
 
@@ -38,6 +58,7 @@ public class Controller {
             tituloLbl.setText("Teste de Aptidão");
             //anim.start();
             testVB.setOpacity(0.8);
+            addBlur(true);
             /*tituloLbl.setEffect(glow);
             for(int i = 1; i <= 7; ++i) {
                 glow.setLevel(glow.getLevel() + (double) i / 10);
@@ -79,13 +100,15 @@ public class Controller {
         if(currentMenu != 1) {
             tituloLbl.setText("Mercado de Trabalho de TI");
             homeVB.setOpacity(0.8);
+            addBlur(true);
         }
     }
 
-    public void educacaoMouseEnterAction() {
+    public void educacaoMouseEnterAction() { //todo: Adicionar disableEffect false em todos ENTERACTIONS
         if(currentMenu != 3) {
             tituloLbl.setText("Educação para TI");
             educacaoVB.setOpacity(0.8);
+            addBlur(true);
         }
     }
 
@@ -134,15 +157,28 @@ public class Controller {
         if(currentMenu != 4) {
             tituloLbl.setText("Leis sobre Mercado de TI");
             leiVB.setOpacity(0.8);
+            addBlur(true);
         }
     }
 
     public void mouseExitAction() {
+        disableEffect = true;
         tituloLbl.setText(tituloAntigo);
         testVB.setOpacity(1.0);
         homeVB.setOpacity(1.0);
         educacaoVB.setOpacity(1.0);
         leiVB.setOpacity(1.0);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // remove os efeitos do painel principal caso nao passe o mouse
+        // sobre outro icone nos proximos 250ms.
+        if(disableEffect) {
+            addBlur(false);
+        }
         //blinkFlag = false;
     }
 

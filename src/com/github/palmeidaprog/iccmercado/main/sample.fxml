@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -143,6 +144,172 @@
                   </Label>
                </children>
             </HBox>
+            <VBox fx:id="mainPanel" alignment="TOP_CENTER" prefHeight="453.0" prefWidth="699.0" spacing="10.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Programa suporte de trabalho de Introdução à Ciência da Computação" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="39.0" prefWidth="659.0" />
+                  <HBox>
+                     <children>
+                        <Label text="UNICAP - Universidade Católica de Pernambuco" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Professor: " textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="M.e Fernando César Brito Santos" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Introdução à Ciência da Computação" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="20.0" prefWidth="659.0" />
+                  <HBox>
+                     <children>
+                        <Label text="Alunos: " textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="153.0" prefWidth="463.0" spacing="5.0">
+                           <children>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Kelvin Lima" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Maax Well" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Paulo R. Almeida Filho" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;pauloalmeidaf@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Rafael" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <Label text="Tulio" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
          </children>
       </VBox>
    </center>
