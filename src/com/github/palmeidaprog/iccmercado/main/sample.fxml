@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="530.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.Controller">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.Controller">
    <left>
       <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
          <children>
@@ -23,7 +23,7 @@
                         <Image url="@../home.png" />
                      </image>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
                </children>
@@ -35,7 +35,7 @@
                         <Image url="@../network.png" />
                      </image>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
                </children>
@@ -47,7 +47,7 @@
                         <Image url="@../school.png" />
                      </image>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
                </children>
@@ -59,7 +59,7 @@
                         <Image url="@../text.png" />
                      </image>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
                </children>
@@ -79,7 +79,7 @@
                               <Glow level="0.47" />
                            </effect>
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
                         <Label text="Sair" textFill="#575a60">
@@ -90,7 +90,7 @@
                               <Glow level="0.47" />
                            </effect>
                            <cursor>
-                              <Cursor fx:constant="OPEN_HAND" />
+                              <Cursor fx:constant="HAND" />
                            </cursor>
                         </Label>
                      </children>
