@@ -229,12 +229,12 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <Label text="Maax Well" textFill="WHITE">
+                                    <Label text="Mawel Roberto" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                    <Label text="&lt;maxwel.silva10@hotmail.com&gt;" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>

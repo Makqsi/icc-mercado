@@ -32,7 +32,7 @@ public class Controller {
     // adiciona e remove efeito "blur" e "glow" ao painel de navegação
     private void addBlur(boolean b) {
         Glow glow = new Glow(0.20);
-        BoxBlur blur = new BoxBlur(1.0, 1.0, 1);
+        BoxBlur blur = new BoxBlur(1.0, 1.0, 3);
 
         if(b) {
             mainPanel.setEffect(blur);
@@ -55,6 +55,7 @@ public class Controller {
 
     public void testeMouseEnterAction() {
         if(currentMenu != 2) {
+            disableEffect = false;
             tituloLbl.setText("Teste de Aptidão");
             //anim.start();
             testVB.setOpacity(0.8);
@@ -98,14 +99,16 @@ public class Controller {
 
     public void homeMouseEnterAction() {
         if(currentMenu != 1) {
+            disableEffect = false;
             tituloLbl.setText("Mercado de Trabalho de TI");
             homeVB.setOpacity(0.8);
             addBlur(true);
         }
     }
 
-    public void educacaoMouseEnterAction() { //todo: Adicionar disableEffect false em todos ENTERACTIONS
+    public void educacaoMouseEnterAction() { 
         if(currentMenu != 3) {
+            disableEffect = false;
             tituloLbl.setText("Educação para TI");
             educacaoVB.setOpacity(0.8);
             addBlur(true);
@@ -155,6 +158,7 @@ public class Controller {
 
     public void leiMouseEnterAction() {
         if(currentMenu != 4) {
+            disableEffect = false;
             tituloLbl.setText("Leis sobre Mercado de TI");
             leiVB.setOpacity(0.8);
             addBlur(true);
@@ -168,11 +172,11 @@ public class Controller {
         homeVB.setOpacity(1.0);
         educacaoVB.setOpacity(1.0);
         leiVB.setOpacity(1.0);
-        try {
-            Thread.sleep(1000);
+        /*try {
+            Thread.sleep(250);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // remove os efeitos do painel principal caso nao passe o mouse
         // sobre outro icone nos proximos 250ms.
