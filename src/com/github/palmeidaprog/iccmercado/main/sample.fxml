@@ -263,12 +263,12 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <Label text="Rafael" textFill="WHITE">
+                                    <Label text="Rafael Palmeira" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                    <Label text="&lt;rafaelsilvapalmeira@hotmail.com&gt;" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>
@@ -280,12 +280,12 @@
                               </HBox>
                               <HBox spacing="15.0">
                                  <children>
-                                    <Label text="Tulio" textFill="WHITE">
+                                    <Label text="Tulio Henrique" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="&lt;mail@gmail.com&gt;" textFill="WHITE">
+                                    <Label text="&lt;tulio_hos@hotmail.com&gt;" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="14.0" />
                                        </font>
