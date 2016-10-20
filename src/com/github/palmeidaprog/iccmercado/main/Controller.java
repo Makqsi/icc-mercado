@@ -13,6 +13,7 @@ public class Controller {
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
     private boolean disableEffect = false;
+    private String tituloAntigo = "Mercado de Trabalho de TI";
 
     private AnimationTimer anim = new AnimationTimer() {
         @Override
@@ -29,6 +30,7 @@ public class Controller {
         }
     };
 
+    // adds and remove blur and glow effect to the main panel
     // adiciona e remove efeito "blur" e "glow" ao painel de navegação
     private void addBlur(boolean b) {
         Glow glow = new Glow(0.20);
@@ -47,11 +49,12 @@ public class Controller {
         mainPanel.setDisable(b);
     }
 
-    private String tituloAntigo = "Mercado de Trabalho de TI";
 
     public void closeAction() {
         Main.primaryStage.close();
     }
+
+
 
     public void testeMouseEnterAction() {
         if(currentMenu != 2) {
@@ -115,6 +118,7 @@ public class Controller {
         }
     }
 
+    // return all "buttons/VBox" to their default colors (not selected)
     // volta todos os botoes para a cor padrao (não selecionado)
     private void normalColors() {
         homeVB.setStyle("-fx-background-color: #d086f5");
@@ -178,6 +182,9 @@ public class Controller {
             e.printStackTrace();
         }*/
 
+
+        // remove the effects from the main panel if the mouse doesn't enter
+        // a new button within the next 250ms.
         // remove os efeitos do painel principal caso nao passe o mouse
         // sobre outro icone nos proximos 250ms.
         if(disableEffect) {
