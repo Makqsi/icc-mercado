@@ -8,18 +8,30 @@ package com.github.palmeidaprog.iccmercado.main;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.layout.VBox;
+import javafx.util.Duration;
+import javafx.animation.FadeTransition;
+import java.net.URL;
+import javafx.animation.Timeline;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML private Label tituloLbl;
     @FXML private VBox testVB, homeVB, educacaoVB, leiVB, mainPanel;
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
     private boolean disableEffect = false;
     private String tituloAntigo = "Mercado de Trabalho de TI";
+
+    //--Initialization----------------------------------------------------------------
+
+    public void initialize(URL u, ResourceBundle rb) {
+
+    }
 
 
     public void closeAction() {
@@ -128,6 +140,14 @@ public class Controller {
             }
 
         }*/
+            // remove the effects from the main panel if the mouse doesn't enter
+            // a new button within the next 250ms.
+            // remove os efeitos do painel principal caso nao passe o mouse
+            // sobre outro icone nos proximos 250ms.
+            /*if(disableEffect) {
+                addBlur(false);
+                //blinkFlag = false;
+            }*/
         }
     }
 
@@ -146,11 +166,28 @@ public class Controller {
             tituloLbl.setText("Educação para TI");
             educacaoVB.setOpacity(0.8);
             addBlur(true);
-            anim.start();
+            fadeAnim(educacaoVB, tituloLbl);
+            //anim.start();
         }
     }
 
     //--Effects------------------------------------------------------------
+
+    private void fadeAnim(VBox v, Label l) {
+        FadeTransition ft = new FadeTransition(Duration.millis(1000), v);
+        ft.setFromValue(1.0);
+        ft.setToValue(0.3);
+        ft.setCycleCount(Timeline.INDEFINITE);
+        ft.setAutoReverse(true);
+        ft.play();
+
+        FadeTransition ftl = new FadeTransition(Duration.millis(1000), l);
+        ftl.setFromValue(1.0);
+        ftl.setToValue(0.1);
+        ftl.setCycleCount(Timeline.INDEFINITE);
+        ftl.setAutoReverse(true);
+        ftl.play();
+    }
 
     // return all "buttons/VBox" to their default colors (not selected)
     // volta todos os botoes para a cor padrao (não selecionado)
@@ -178,16 +215,6 @@ public class Controller {
         blur.setWidth(10.0);
         glow.setLevel(1.0);
         mainPanel.setDisable(b);
-
-
-        // remove the effects from the main panel if the mouse doesn't enter
-        // a new button within the next 250ms.
-        // remove os efeitos do painel principal caso nao passe o mouse
-        // sobre outro icone nos proximos 250ms.
-        if(disableEffect) {
-            addBlur(false);
-            //blinkFlag = false;
-        }
     }
 
     // anonymous class
