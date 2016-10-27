@@ -323,9 +323,9 @@
       </VBox>
    </center>
    <top>
-      <MenuBar style="-fx-background-color: #52596b;" BorderPane.alignment="CENTER">
+      <MenuBar style="-fx-background-color: #52596b; -fx-text-fill: white;" stylesheets="@css_ui/menubar.css" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Navegação">
+          <Menu mnemonicParsing="false" text="_Navegação">
             <items>
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
