@@ -55,6 +55,7 @@ public class Controller implements Initializable {
         tituloAntigo = "Mercado de Trabalho de TI";
         tituloLbl.setText(tituloAntigo);
         navigationBox.getChildren().set(1, mainPanel);
+        mouseExitAction();
         currentMenu = 1;
     }
 
@@ -64,6 +65,7 @@ public class Controller implements Initializable {
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
         navigationBox.getChildren().set(1, mainTesteVB);
+        mouseExitAction();
         currentMenu = 2;
     }
 
@@ -73,6 +75,7 @@ public class Controller implements Initializable {
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
         navigationBox.getChildren().set(1, mainEducVB);
+        mouseExitAction();
         currentMenu = 3;
     }
 
@@ -82,6 +85,7 @@ public class Controller implements Initializable {
         tituloAntigo = "Leis sobre Mercado de TI";
         tituloLbl.setText(tituloAntigo);
         navigationBox.getChildren().set(1, mainLeiVB);
+        mouseExitAction();
         currentMenu = 4;
     }
 
