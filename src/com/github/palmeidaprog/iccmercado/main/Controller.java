@@ -27,6 +27,14 @@ public class Controller implements Initializable {
     private boolean disableEffect = false;
     private String tituloAntigo = "Mercado de Trabalho de TI";
 
+    // navigation panels / painéis de navegação
+    @FXML private VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
+
+
+    //effects
+    private FadeTransition ft, ftl;
+    private boolean effectStatus = false;
+
     //--Initialization----------------------------------------------------------------
 
     public void initialize(URL u, ResourceBundle rb) {
@@ -46,6 +54,7 @@ public class Controller implements Initializable {
         homeVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Mercado de Trabalho de TI";
         tituloLbl.setText(tituloAntigo);
+        navigationBox.getChildren().set(1, mainPanel);
         currentMenu = 1;
     }
 
@@ -54,6 +63,7 @@ public class Controller implements Initializable {
         testVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
+        navigationBox.getChildren().set(1, mainTesteVB);
         currentMenu = 2;
     }
 
@@ -62,6 +72,7 @@ public class Controller implements Initializable {
         educacaoVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
+        navigationBox.getChildren().set(1, mainEducVB);
         currentMenu = 3;
     }
 
@@ -70,10 +81,20 @@ public class Controller implements Initializable {
         leiVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Leis sobre Mercado de TI";
         tituloLbl.setText(tituloAntigo);
+        navigationBox.getChildren().set(1, mainLeiVB);
         currentMenu = 4;
     }
 
     //--Mouse Enter and Exit Events--------------------------------------------------------
+
+    // mouse exit menu at the left event
+    // evento de saida de mouse do eventos da esquerda
+    public void mouseExitAction() {
+        disableEffect = true;
+        tituloLbl.setText(tituloAntigo);
+        fadeAnim();
+        opacityFull();
+    }
 
     public void leiMouseEnterAction() {
         if(currentMenu != 4) {
@@ -81,22 +102,9 @@ public class Controller implements Initializable {
             tituloLbl.setText("Leis sobre Mercado de TI");
             leiVB.setOpacity(0.8);
             addBlur(true);
-            anim.stop();
+            //anim.stop();
+            fadeAnim(leiVB, tituloLbl);
         }
-    }
-
-    public void mouseExitAction() {
-        disableEffect = true;
-        tituloLbl.setText(tituloAntigo);
-        testVB.setOpacity(1.0);
-        homeVB.setOpacity(1.0);
-        educacaoVB.setOpacity(1.0);
-        leiVB.setOpacity(1.0);
-        /*try {
-            Thread.sleep(250);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
     }
 
     public void testeMouseEnterAction() {
@@ -106,48 +114,7 @@ public class Controller implements Initializable {
             //anim.start();
             testVB.setOpacity(0.8);
             addBlur(true);
-        /*tituloLbl.setEffect(glow);
-        for(int i = 1; i <= 7; i++) {
-            glow.setLevel(glow.getLevel() + (double) i / 10);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }*/
-        /*blinkFlag = true;
-        boolean plus = true;
-        while(blinkFlag) {
-            if(plus) {
-                plus = false;
-            }
-            else {
-                plus = true;
-            }
-            for(int i = 1; i <= 5; i++) {
-                if(!plus) {
-                    testVB.setOpacity(testVB.getOpacity() - (double) i / 10);
-                }
-                else {
-                    testVB.setOpacity(testVB.getOpacity() + (double) i / 10);
-                }
-
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }*/
-            // remove the effects from the main panel if the mouse doesn't enter
-            // a new button within the next 250ms.
-            // remove os efeitos do painel principal caso nao passe o mouse
-            // sobre outro icone nos proximos 250ms.
-            /*if(disableEffect) {
-                addBlur(false);
-                //blinkFlag = false;
-            }*/
+            fadeAnim(testVB, tituloLbl);
         }
     }
 
@@ -157,6 +124,7 @@ public class Controller implements Initializable {
             tituloLbl.setText("Mercado de Trabalho de TI");
             homeVB.setOpacity(0.8);
             addBlur(true);
+            fadeAnim(homeVB, tituloLbl);
         }
     }
 
@@ -164,29 +132,56 @@ public class Controller implements Initializable {
         if(currentMenu != 3) {
             disableEffect = false;
             tituloLbl.setText("Educação para TI");
-            educacaoVB.setOpacity(0.8);
+            //educacaoVB.setOpacity(0.8);
             addBlur(true);
-            fadeAnim(educacaoVB, tituloLbl);
             //anim.start();
+            fadeAnim(educacaoVB, tituloLbl);
+
         }
     }
 
     //--Effects------------------------------------------------------------
 
-    private void fadeAnim(VBox v, Label l) {
-        FadeTransition ft = new FadeTransition(Duration.millis(1000), v);
+    // resets all menus opacity
+    // reinicia a opacidade de todos menus
+    private void opacityFull() {
+        testVB.setOpacity(1.0);
+        homeVB.setOpacity(1.0);
+        educacaoVB.setOpacity(1.0);
+        leiVB.setOpacity(1.0);
+        tituloLbl.setOpacity(1.0);
+    }
+
+    private void fadeAnim(VBox v, Label l) { //todo: implement rest
+
+        opacityFull(); // resets menu's opacity / reinicia opacidade dos menus
+        if(ft != null) {
+            ft.stop();
+        }
+        if(ftl != null) {
+            ftl.stop();
+        }
+
+        effectStatus = true;
+        ft = new FadeTransition(Duration.millis(1000), v);
         ft.setFromValue(1.0);
         ft.setToValue(0.3);
         ft.setCycleCount(Timeline.INDEFINITE);
         ft.setAutoReverse(true);
         ft.play();
 
-        FadeTransition ftl = new FadeTransition(Duration.millis(1000), l);
+        ftl = new FadeTransition(Duration.millis(750), l);
         ftl.setFromValue(1.0);
         ftl.setToValue(0.1);
         ftl.setCycleCount(Timeline.INDEFINITE);
         ftl.setAutoReverse(true);
         ftl.play();
+    }
+
+    private void fadeAnim() {
+        effectStatus = false;
+        ft.stop();
+        ftl.stop();
     }
 
     // return all "buttons/VBox" to their default colors (not selected)
@@ -237,11 +232,6 @@ public class Controller implements Initializable {
                     glow.setLevel(0.3);
                     tituloLbl.setText(tituloLbl.getText() + "a");
                 }
-                /*try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
             }
         }
     };

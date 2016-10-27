@@ -15,6 +15,11 @@
 
 <BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.Controller">
    <left>
+      <fx:define>
+         <fx:include fx:id="mainEducVB" source="vbox_educ.fxml" />
+         <fx:include fx:id="mainTesteVB" source="vbox_teste.fxml" />
+         <fx:include fx:id="mainLeiVB" source="vbox_lei.fxml" />
+      </fx:define>
       <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="homeVB" alignment="CENTER" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
@@ -120,7 +125,7 @@
       </VBox>
    </left>
    <center>
-      <VBox prefHeight="432.0" prefWidth="667.0" style="-fx-background-color: #52596b;" BorderPane.alignment="CENTER">
+      <VBox fx:id="navigationBox" prefHeight="432.0" prefWidth="667.0" style="-fx-background-color: #52596b;" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
