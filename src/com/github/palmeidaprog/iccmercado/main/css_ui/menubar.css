@@ -4,6 +4,13 @@ palmeidaprogramming@gmail.com
 Custom menus properties
 */
 
+/* CONTEXT MENU */
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #52596b;
+}
+
 
 /* MENU BAR */
 
@@ -15,21 +22,14 @@ Custom menus properties
 
 /* MENU */
 
+.menu {
+	-fx-background-color: #52596b;
+}
+
 .menu .label {
     -fx-text-fill: white;
     -fx-opacity: 0.9;
 }
-
-.menu:showing {
-	-fx-background-color: darkgray;
-}
-
-.menu:showing .label {
-	-fx-background-color: darkgray;
-    -fx-text-fill: white;
-    -fx-opacity: 0.9;
-}
-
 
 .menu:hover {
     -fx-background-color: darkgray;
@@ -43,8 +43,18 @@ Custom menus properties
 	-fx-background-color: #52596b;
 }
 
+
+
 .menu-item {
 	-fx-background-color: #52596b;	
+}
+
+.menu-item:focused .left-container { 
+	-fx-background-color: darkgray;
+}
+
+.menu-item:focused {
+	-fx-background-color: darkgray;	
 }
 
 .menu-item:focused .label {
