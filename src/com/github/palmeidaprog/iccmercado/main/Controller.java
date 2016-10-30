@@ -7,11 +7,14 @@
 package com.github.palmeidaprog.iccmercado.main;
 
 import javafx.animation.AnimationTimer;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
+import javafx.scene.effect.Reflection;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import javafx.animation.FadeTransition;
@@ -31,46 +34,47 @@ public class Controller implements Initializable {
     @FXML private VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
 
 
-    //effects
+    //effects / efeitos
     private FadeTransition ft, ftl;
+    private Reflection ref = new Reflection();
     private boolean effectStatus = false;
 
-    //--Initialization----------------------------------------------------------------
+    //--Initialization/Inicialização--------------------------------------------------
 
     public void initialize(URL u, ResourceBundle rb) {
 
     }
 
-
     public void closeAction() {
         Main.primaryStage.close();
     }
 
-
-    //--Mouse Click Events------------------------------------------------------------
+    //--Mouse Click Events/Eventos de cliques de mouse---------------------------------
 
     public void homeClickAction() {
-        normalColors(); // todos botoes para a cor padrão
+        normalColors(); // todos botoes para a cor padrão / change button colors to default
         homeVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Mercado de Trabalho de TI";
         tituloLbl.setText(tituloAntigo);
+        fadeBoxes(navigationBox.getChildren().get(1));
         navigationBox.getChildren().set(1, mainPanel);
         mouseExitAction();
         currentMenu = 1;
     }
 
     public void testClickAction() {
-        normalColors(); // todos botoes para a cor padrão
+        normalColors(); // todos botoes para a cor padrão / change button colors to default
         testVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
+        fadeBoxes(navigationBox.getChildren().get(1));
         navigationBox.getChildren().set(1, mainTesteVB);
         mouseExitAction();
         currentMenu = 2;
     }
 
     public void educacaoClickAction() {
-        normalColors(); // todos botoes para a cor padrão
+        normalColors(); // todos botoes para a cor padrão / change button colors to default
         educacaoVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Educação para TI";
         tituloLbl.setText(tituloAntigo);
@@ -80,7 +84,7 @@ public class Controller implements Initializable {
     }
 
     public void leiClickAction() {
-        normalColors(); // todos botoes para a cor padrão
+        normalColors(); // todos botoes para a cor padrão / change button colors to default
         leiVB.setStyle("-fx-background-color: #52596b");
         tituloAntigo = "Leis sobre Mercado de TI";
         tituloLbl.setText(tituloAntigo);
@@ -89,13 +93,15 @@ public class Controller implements Initializable {
         currentMenu = 4;
     }
 
-    //--Mouse Enter and Exit Events--------------------------------------------------------
+    //--Mouse Enter and Exit Events/Eventos de sobre mouse e saida de mouse------------------
 
     // mouse exit menu at the left event
     // evento de saida de mouse do eventos da esquerda
     public void mouseExitAction() {
         disableEffect = true;
+        System.out.println(tituloLbl.getEffect());
         tituloLbl.setText(tituloAntigo);
+        tituloLbl.setEffect(null);
         fadeAnim();
         opacityFull();
     }
@@ -104,9 +110,9 @@ public class Controller implements Initializable {
         if(currentMenu != 4) {
             disableEffect = false;
             tituloLbl.setText("Leis sobre Mercado de TI");
-            leiVB.setOpacity(0.8);
+            //leiVB.setOpacity(0.8);
             addBlur(true);
-            //anim.stop();
+            addReflecGlow(tituloLbl);
             fadeAnim(leiVB, tituloLbl);
         }
     }
@@ -116,8 +122,9 @@ public class Controller implements Initializable {
             disableEffect = false;
             tituloLbl.setText("Teste de Aptidão");
             //anim.start();
-            testVB.setOpacity(0.8);
+            //testVB.setOpacity(0.8);
             addBlur(true);
+            addReflecGlow(tituloLbl);
             fadeAnim(testVB, tituloLbl);
         }
     }
@@ -126,8 +133,9 @@ public class Controller implements Initializable {
         if(currentMenu != 1) {
             disableEffect = false;
             tituloLbl.setText("Mercado de Trabalho de TI");
-            homeVB.setOpacity(0.8);
+            //homeVB.setOpacity(0.8);
             addBlur(true);
+            addReflecGlow(tituloLbl);
             fadeAnim(homeVB, tituloLbl);
         }
     }
@@ -138,13 +146,14 @@ public class Controller implements Initializable {
             tituloLbl.setText("Educação para TI");
             //educacaoVB.setOpacity(0.8);
             addBlur(true);
-            //anim.start();
+            addReflecGlow(tituloLbl);
+            trans(tituloLbl);
             fadeAnim(educacaoVB, tituloLbl);
 
         }
     }
 
-    //--Effects------------------------------------------------------------
+    //--Effects/Efeitos-----------------------------------------------------------
 
     // resets all menus opacity
     // reinicia a opacidade de todos menus
@@ -154,6 +163,24 @@ public class Controller implements Initializable {
         educacaoVB.setOpacity(1.0);
         leiVB.setOpacity(1.0);
         tituloLbl.setOpacity(1.0);
+    }
+
+    // add glow anjavafx.scene.effect.Reflection@216089d reflection to a control
+    // adiciona brilho e reflexo a um controle
+    private void addReflecGlow(Control c) {
+        Reflection r = new Reflection();
+        r.setFraction(0.75);
+        Glow g = new Glow(0.27);
+        g.setInput(r);
+        c.setEffect(g);
+    }
+
+    private void fadeBoxes(Node c) { // todo:fix param
+        FadeTransition f = new FadeTransition(Duration.millis(750), c);
+        f.setFromValue(1.0);
+        f.setToValue(0.0);
+        f.setCycleCount(1);
+        f.play();
     }
 
     private void fadeAnim(VBox v, Label l) { //todo: implement rest
@@ -167,7 +194,7 @@ public class Controller implements Initializable {
         }
 
         effectStatus = true;
-        ft = new FadeTransition(Duration.millis(1000), v);
+        ft = new FadeTransition(Duration.millis(750), v);
         ft.setFromValue(1.0);
         ft.setToValue(0.3);
         ft.setCycleCount(Timeline.INDEFINITE);
@@ -180,6 +207,19 @@ public class Controller implements Initializable {
         ftl.setCycleCount(Timeline.INDEFINITE);
         ftl.setAutoReverse(true);
         ftl.play();
+    }
+
+    private void trans(Label l) {
+        TranslateTransition tt = new TranslateTransition(Duration.millis(25), l);
+        double x = l.getTranslateX();
+        double y = l.getTranslateY();
+
+        tt.setFromX(-5);
+        tt.setByX(5);
+        tt.setCycleCount(15);
+        tt.setAutoReverse(true);
+
+        tt.play();
     }
 
     private void fadeAnim() {
@@ -217,6 +257,7 @@ public class Controller implements Initializable {
     }
 
     // anonymous class
+    // classe anônima
     private AnimationTimer anim = new AnimationTimer() {
         @Override
         public void handle(long now) {
