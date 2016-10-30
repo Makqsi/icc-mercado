@@ -16,6 +16,7 @@ import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -72,6 +73,7 @@ public class Controller implements Initializable {
             navigationBox.getChildren().set(1, mainTesteVB);
             fadeBoxes(navigationBox.getChildren().get(1));
             mouseExitAction();
+            colorAnim(testVB);
             currentMenu = 2;
         }
     }
@@ -122,6 +124,7 @@ public class Controller implements Initializable {
             //leiVB.setOpacity(0.8);
             addBlur(true);
             addReflecGlow(tituloLbl);
+            trans(tituloLbl);
             fadeAnim(leiVB, tituloLbl);
         }
     }
@@ -134,6 +137,7 @@ public class Controller implements Initializable {
             //testVB.setOpacity(0.8);
             addBlur(true);
             addReflecGlow(tituloLbl);
+            trans(tituloLbl);
             fadeAnim(testVB, tituloLbl);
         }
     }
@@ -145,6 +149,7 @@ public class Controller implements Initializable {
             //homeVB.setOpacity(0.8);
             addBlur(true);
             addReflecGlow(tituloLbl);
+            trans(tituloLbl);
             fadeAnim(homeVB, tituloLbl);
         }
     }
@@ -162,6 +167,7 @@ public class Controller implements Initializable {
         }
     }
 
+
     //--Effects/Efeitos-----------------------------------------------------------
 
     // resets all menus opacity
@@ -172,6 +178,17 @@ public class Controller implements Initializable {
         educacaoVB.setOpacity(1.0);
         leiVB.setOpacity(1.0);
         tituloLbl.setOpacity(1.0);
+    }
+
+    private void colorAnim(VBox c) {
+        FillTransition tra = new FillTransition();
+        //tra.setShape(c);
+
+        tra.setDuration(new Duration(2000));
+        tra.setToValue(Color.GOLD);
+        tra.setCycleCount(10);
+        tra.setAutoReverse(true);
+        tra.play();
     }
 
     private void nodeScaling(Node n) {

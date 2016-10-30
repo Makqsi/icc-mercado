@@ -16,6 +16,7 @@
       <element id="archive" name="JavaFXApp.jar">
         <element id="module-output" name="icc-mercado" />
         <element id="file-copy" path="$PROJECT_DIR$/src/com/github/palmeidaprog/iccmercado/favicon.ico" />
+        <element id="file-copy" path="$PROJECT_DIR$/docs/ICC.doc" />
       </element>
     </root>
   </artifact>
