@@ -330,16 +330,15 @@
           <Menu mnemonicParsing="false" text="_Navegação">
             <items>
                   <RadioMenuItem mnemonicParsing="false" selected="true" text="Introdução" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
                   <RadioMenuItem mnemonicParsing="false" text="Teste de Aptidão" />
                   <RadioMenuItem mnemonicParsing="false" text="Educação" />
                   <RadioMenuItem mnemonicParsing="false" text="Leis de TI" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Sobre">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#closeAction" text="Sair" />
             </items>
           </Menu>
         </menus>
