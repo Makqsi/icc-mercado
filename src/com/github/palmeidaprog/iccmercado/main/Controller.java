@@ -68,7 +68,7 @@ public class Controller implements Initializable {
         if(currentMenu != 2) {
             normalColors(); // todos botoes para a cor padrão / change button colors to default
             testVB.setStyle("-fx-background-color: #52596b");
-            tituloAntigo = "Educação para TI";
+            tituloAntigo = "Teste de Aptidão";
             tituloLbl.setText(tituloAntigo);
             navigationBox.getChildren().set(1, mainTesteVB);
             fadeBoxes(navigationBox.getChildren().get(1));
@@ -255,16 +255,21 @@ public class Controller implements Initializable {
     }
 
     private void trans(Label l) {
-        TranslateTransition tt = new TranslateTransition(Duration.millis(25), l);
+        TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
         double x = l.getTranslateX();
         double y = l.getTranslateY();
 
-        tt.setFromX(-3);
+        tt.setFromX(500);
+        tt.setToX(0);
+        tt.setCycleCount(1);
+        tt.setAutoReverse(false);
+
+        /*tt.setFromX(-3);
         tt.setByX(3);
         tt.setFromY(-3);
         tt.setByY(3);
         tt.setCycleCount(10);
-        tt.setAutoReverse(true);
+        tt.setAutoReverse(true);*/
 
         tt.play();
     }
@@ -291,6 +296,7 @@ public class Controller implements Initializable {
         BoxBlur blur = new BoxBlur(1.0, 1.0, 3);
 
         if(b) {
+            //blur.setInput(blur);
             mainPanel.setEffect(blur);
             mainPanel.setEffect(glow);
         }

@@ -160,7 +160,7 @@
                <children>
                   <HBox>
                      <children>
-                        <Label text="Programa suporte de trabalho de Introdução à Ciência da Computação" textFill="WHITE">
+                        <Label text="Programa suporte ao trabalho de Introdução à Ciência da Computação" textFill="WHITE">
                            <font>
                               <Font name="Ubuntu" size="13.0" />
                            </font>
@@ -170,50 +170,79 @@
                         <Insets left="30.0" />
                      </padding>
                   </HBox>
-                  <Region prefHeight="39.0" prefWidth="659.0" />
-                  <HBox>
-                     <children>
-                        <Label text="UNICAP - Universidade Católica de Pernambuco" textFill="WHITE">
-                           <font>
-                              <Font name="Ubuntu Bold" size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                  </HBox>
-                  <HBox>
-                     <children>
-                        <Label text="Professor: " textFill="WHITE">
-                           <font>
-                              <Font name="Ubuntu Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label text="M.e Fernando César Brito Santos" textFill="WHITE">
-                           <font>
-                              <Font name="Ubuntu" size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                  </HBox>
-                  <HBox>
-                     <children>
-                        <Label text="Introdução à Ciência da Computação" textFill="WHITE">
-                           <font>
-                              <Font name="Ubuntu" size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                  </HBox>
                   <Region prefHeight="20.0" prefWidth="659.0" />
                   <HBox>
+                     <children>
+                        <VBox>
+                           <children>
+                              <ImageView fitHeight="86.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="CENTER" text="UNICAP - Universidade Católica de Pernambuco" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu Bold" size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Professor: " textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" text="M.e Fernando César Brito Santos" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="CENTER" text="Introdução à Ciência da Computação" textFill="WHITE">
+                                       <font>
+                                          <Font name="Ubuntu" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Region prefHeight="20.0" prefWidth="659.0" />
+                  <HBox alignment="TOP_CENTER">
                      <children>
                         <Label text="Alunos: " textFill="WHITE">
                            <font>
@@ -314,7 +343,7 @@
                         <Insets left="30.0" />
                      </padding>
                   </HBox>
-                  <Button mnemonicParsing="false" stylesheets="@css_ui/button.css" text="Salvar Trabalho Escrito" />
+                  <Button mnemonicParsing="false" stylesheets="@css_ui/button.css" text="Ver e Salvar Trabalho Escrito" />
                </children>
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -331,17 +360,17 @@
         <menus>
           <Menu mnemonicParsing="false" text="_Navegação">
             <items>
-                  <RadioMenuItem mnemonicParsing="false" selected="true" text="Introdução" />
-                  <RadioMenuItem mnemonicParsing="false" text="Teste de Aptidão" />
-                  <RadioMenuItem mnemonicParsing="false" text="Educação" />
-                  <RadioMenuItem mnemonicParsing="false" text="Leis de TI" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#homeClickAction" selected="true" text="Introdução" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem mnemonicParsing="false" text="Close" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#testClickAction" text="Teste de Aptidão" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#educacaoClickAction" text="Educação" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#leiClickAction" text="Leis de TI" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Sobre">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Sobre" />
+              <MenuItem mnemonicParsing="false" text="Sair" />
             </items>
           </Menu>
         </menus>
