@@ -4,3 +4,10 @@ palmeidaprogramming@gmail.com
 Custom VBox properties
 */
 
+.background {
+    /* -fx-background-color: #52596b; /* todo: Remove this */
+}
+
+.label {
+    -fx-text-fill: white;
+}

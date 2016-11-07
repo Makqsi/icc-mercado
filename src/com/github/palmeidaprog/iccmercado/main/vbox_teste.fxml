@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="699.0" spacing="10.0" style="-fx-background-color: #52596b;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="699.0" spacing="10.0" styleClass="background" stylesheets="@css_ui/vboxes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -32,7 +31,18 @@
                   </Label>
                </children>
             </HBox>
-            <Label text="Label" />
+            <HBox>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="O resultado do teste não tem a intenção ou finalidade de escolher a profissão do &#10;usuário, e sim guiar a pesquisa do usuário para o conhecimento das resp" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>
