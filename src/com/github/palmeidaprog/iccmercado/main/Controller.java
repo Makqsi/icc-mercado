@@ -57,8 +57,7 @@ public class Controller implements Initializable {
             homeVB.setStyle("-fx-background-color: #52596b");
             tituloAntigo = "Mercado de Trabalho de TI";
             tituloLbl.setText(tituloAntigo);
-            navigationBox.getChildren().set(1, mainPanel);
-            fadeBoxes(navigationBox.getChildren().get(1));
+            fadeTrans(mainPanel);
             mouseExitAction();
             currentMenu = 1;
         }
@@ -70,8 +69,7 @@ public class Controller implements Initializable {
             testVB.setStyle("-fx-background-color: #52596b");
             tituloAntigo = "Teste de Aptidão";
             tituloLbl.setText(tituloAntigo);
-            navigationBox.getChildren().set(1, mainTesteVB);
-            fadeBoxes(navigationBox.getChildren().get(1));
+            fadeTrans(mainTesteVB);
             mouseExitAction();
             colorAnim(testVB);
             currentMenu = 2;
@@ -84,8 +82,7 @@ public class Controller implements Initializable {
             educacaoVB.setStyle("-fx-background-color: #52596b");
             tituloAntigo = "Educação para TI";
             tituloLbl.setText(tituloAntigo);
-            navigationBox.getChildren().set(1, mainEducVB);
-            fadeBoxes(navigationBox.getChildren().get(1)); // todo: educ
+            fadeTrans(mainEducVB);
             mouseExitAction();
             currentMenu = 3;
         }
@@ -97,8 +94,7 @@ public class Controller implements Initializable {
             leiVB.setStyle("-fx-background-color: #52596b");
             tituloAntigo = "Leis sobre Mercado de TI";
             tituloLbl.setText(tituloAntigo);
-            navigationBox.getChildren().set(1, mainLeiVB);
-            fadeBoxes(navigationBox.getChildren().get(1));
+            fadeTrans(mainLeiVB);
             mouseExitAction();
             currentMenu = 4;
         }
@@ -170,6 +166,14 @@ public class Controller implements Initializable {
 
     //--Effects/Efeitos-----------------------------------------------------------
 
+    // change VBox and calls for fade effects.
+    // muda VBox e chama por efeitos de fade.
+    private void fadeTrans(VBox v) {
+        fadeBoxes(navigationBox.getChildren().get(1), 1);
+        navigationBox.getChildren().set(1, v);
+        fadeBoxes(navigationBox.getChildren().get(1), 0);
+    }
+
     // resets all menus opacity
     // reinicia a opacidade de todos menus
     private void opacityFull() {
@@ -220,10 +224,16 @@ public class Controller implements Initializable {
         c.setEffect(g);
     }
 
-    private void fadeBoxes(Node c) { // todo: test
+    private void fadeBoxes(Node c, int i) { // todo: test
         FadeTransition f = new FadeTransition(Duration.millis(500), c);
-        f.setFromValue(0.0);
-        f.setToValue(1.0);
+        if(i == 0) {
+            f.setFromValue(0.0);
+            f.setToValue(1.0);
+        }
+        else {
+            f.setFromValue(1.0);
+            f.setToValue(0.0);
+        }
         f.setCycleCount(1);
         f.play();
     }
