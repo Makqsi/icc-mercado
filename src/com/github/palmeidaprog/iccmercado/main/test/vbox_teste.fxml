@@ -15,47 +15,25 @@
    <children>
       <HBox>
          <children>
-            <Label prefHeight="131.0" prefWidth="659.0" text="O teste a seguir irá avaliar sua afinidade com as profissões disponíveis no mercado de trabaho na área de TI (Tecnologia da Informação) através de um algoritmo que analisa seu interesse nas habilidades necessárias para exercer respectivas profissões.&#10;&#10;&#10;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+            <Label text="O teste a seguir irá avaliar sua afinidade com as profissões disponíveis no mercado de trabaho na área de TI (Tecnologia da Informação) através de um algoritmo que analisa seu interesse nas habilidades necessárias para exercer respectivas profissões.&#10;&#10;&#10;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
                <HBox.margin>
-                  <Insets top="40.0" />
+                  <Insets left="25.0" right="25.0" top="40.0" />
                </HBox.margin>
             </Label>
          </children>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
       </HBox>
-      <VBox>
-         <children>
-            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="659.0">
-               <children>
-                  <Label style="-fx-text-fill: #B8B98E;" text="Atenção" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold Italic" size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <children>
-                  <Label text="O resultado do teste não tem a intenção ou finalidade de escolher a profissão que o usuário deva seguir, e sim criar uma ordem de pesquisa para assistí-lo no conhecimento das profissões da área." textAlignment="JUSTIFY" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
       <HBox alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" text="Começar" />
          </children>
          <VBox.margin>
-            <Insets top="30.0" />
+            <Insets top="60.0" />
          </VBox.margin>
       </HBox>
    </children>
