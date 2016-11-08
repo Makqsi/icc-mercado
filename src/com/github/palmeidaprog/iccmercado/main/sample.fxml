@@ -24,7 +24,7 @@
    <left>
       <fx:define>
          <fx:include fx:id="mainEducVB" source="vbox_educ.fxml" />
-         <fx:include fx:id="mainTesteVB" source="vbox_teste.fxml" />
+         <fx:include fx:id="mainTesteVB" source="test/vbox_teste.fxml" />
          <fx:include fx:id="mainLeiVB" source="vbox_lei.fxml" />
       </fx:define>
       <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">

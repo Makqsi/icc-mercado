@@ -214,7 +214,7 @@ public class Controller implements Initializable {
 
     }
 
-    // add glow anjavafx.scene.effect.Reflection@216089d reflection to a control
+    // add glow and reflection to a control
     // adiciona brilho e reflexo a um controle
     private void addReflecGlow(Control c) {
         Reflection r = new Reflection();
