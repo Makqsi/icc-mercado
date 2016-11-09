@@ -182,6 +182,12 @@ public class Controller implements Initializable {
         }
     }
 
+    //--Test Controller Methods---------------------------------------------------
+
+    public void startTest() {
+        fadeTrans(testPanel);
+    }
+
     //--Effects/Efeitos-----------------------------------------------------------
 
     // change VBox and calls for fade effects.

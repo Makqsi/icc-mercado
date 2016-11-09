@@ -17,8 +17,8 @@ public class ControllerTeste {
     private static Controller c = Controller.getInstance();
 
     //--Eventos------------------------------------------------
-    private void startBtnClick(){
-        c.fadeTrans(testPanel);
+    public void startBtnClick() {
+        c.startTest();
     }
 
 }
