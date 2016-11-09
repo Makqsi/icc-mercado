@@ -8,6 +8,9 @@ package com.github.palmeidaprog.iccmercado.main.test;
 
 public class ControllerTeste {
 
+    //--Eventos------------------------------------------------
+    public static void avancarBtnClick(){
 
+    }
 
 }

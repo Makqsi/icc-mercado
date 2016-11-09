@@ -12,6 +12,9 @@
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
+   <fx:define>
+      <fx:include fx:id="mainVBox" source="../sample.fxml" />
+   </fx:define>
    <children>
       <HBox>
          <children>

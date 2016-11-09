@@ -39,6 +39,22 @@ public class Controller implements Initializable {
     private Reflection ref = new Reflection();
     private boolean effectStatus = false;
 
+    //--Singleton-constructor--------------------------------------------------------
+
+    private static volatile Controller instance = null;
+    public Controller() {
+        getInstance();
+    }
+
+    private Controller(char x) { }
+    public synchronized static Controller getInstance() {
+        if(instance == null) {
+            instance = new Controller('x');
+        }
+        return instance;
+    }
+
+
     //--Initialization/Inicialização--------------------------------------------------
 
     public void initialize(URL u, ResourceBundle rb) {
