@@ -45,6 +45,8 @@ public class Controller implements Initializable {
     //--Singleton-constructor--------------------------------------------------------
 
     private static volatile Controller instance = null;
+    // used by FXMLLoader
+    // usado pelo FXML loader
     public Controller() {
         getInstance();
     }

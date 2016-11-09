@@ -16,6 +16,22 @@ public class ControllerTeste {
     @FXML private static BorderPane testPanel;
     private static Controller c = Controller.getInstance();
 
+    //--Singleton-Constructor----------------------------------
+    private static volatile ControllerTeste instance = null;
+
+    // FXMLoader
+    public ControllerTeste() {
+        getInstance();
+    }
+    private Controller(char x) {
+    }
+    public synchronized static ControllerTeste getInstance() {
+        if(instance == null) {
+            instance = new ControllerTeste('x');
+        }
+        return instance;
+    }
+
     //--Eventos------------------------------------------------
     public void startBtnClick() {
         c.startTest();
