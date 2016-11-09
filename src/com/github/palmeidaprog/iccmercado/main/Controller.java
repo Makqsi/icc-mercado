@@ -16,6 +16,7 @@ import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -181,16 +182,16 @@ public class Controller implements Initializable {
         }
     }
 
-
     //--Effects/Efeitos-----------------------------------------------------------
 
     // change VBox and calls for fade effects.
     // muda VBox e chama por efeitos de fade.
-    public void fadeTrans(VBox v) {
+    public void fadeTrans(Pane v) {
         fadeBoxes(navigationBox.getChildren().get(1), 1);
         navigationBox.getChildren().set(1, v);
         fadeBoxes(navigationBox.getChildren().get(1), 0);
     }
+
 
     // resets all menus opacity
     // reinicia a opacidade de todos menus

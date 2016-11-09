@@ -14,10 +14,10 @@ import javafx.scene.layout.BorderPane;
 public class ControllerTeste {
     @FXML private Button startBtn;
     @FXML private static BorderPane testPanel;
-    private Controller c = Controller.getInstance();
+    private static Controller c = Controller.getInstance();
 
     //--Eventos------------------------------------------------
-    public static void startBtnClick(){
+    private void startBtnClick(){
         c.fadeTrans(testPanel);
     }
 

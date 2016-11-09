@@ -1,8 +1,6 @@
 /* TI - Mercado de Trabalho
-Prof. Ana Eliza - Turma NA15 - 14/10/2016
-Aluno: Paulo Roberto Almeida Filho
+Paulo Roberto Almeida Filho
 pauloalmeidaf@gmail.com
-9a Lista - Exercício 1
 */
 
 package com.github.palmeidaprog.iccmercado.main;
