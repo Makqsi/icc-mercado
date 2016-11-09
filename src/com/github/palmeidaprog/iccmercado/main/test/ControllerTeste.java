@@ -6,11 +6,19 @@
 
 package com.github.palmeidaprog.iccmercado.main.test;
 
+import com.github.palmeidaprog.iccmercado.main.Controller;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+
 public class ControllerTeste {
+    @FXML private Button startBtn;
+    @FXML private static BorderPane testPanel;
+    private Controller c = Controller.getInstance();
 
     //--Eventos------------------------------------------------
-    public static void avancarBtnClick(){
-
+    public static void startBtnClick(){
+        c.fadeTrans(testPanel);
     }
 
 }

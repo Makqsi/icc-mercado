@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -32,6 +33,7 @@ public class Controller implements Initializable {
 
     // navigation panels / painéis de navegação
     @FXML private VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
+    @FXML private BorderPane testPanel;
 
 
     //effects / efeitos
@@ -184,7 +186,7 @@ public class Controller implements Initializable {
 
     // change VBox and calls for fade effects.
     // muda VBox e chama por efeitos de fade.
-    private void fadeTrans(VBox v) {
+    public void fadeTrans(VBox v) {
         fadeBoxes(navigationBox.getChildren().get(1), 1);
         navigationBox.getChildren().set(1, v);
         fadeBoxes(navigationBox.getChildren().get(1), 0);

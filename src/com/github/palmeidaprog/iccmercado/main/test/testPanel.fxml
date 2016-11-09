@@ -10,9 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="453.0" prefWidth="699.0" stylesheets="@../css_ui/vboxes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
+<BorderPane fx:id="mainPanel" prefHeight="453.0" prefWidth="699.0" stylesheets="@../css_ui/vboxes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
    <center>
+      <fx:define>
+         <fx:include fx:id="testPanel" source="testPanel.fxml" />
+      </fx:define>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="699.0" spacing="10.0" styleClass="background">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
