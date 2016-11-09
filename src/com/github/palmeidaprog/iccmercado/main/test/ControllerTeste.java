@@ -23,7 +23,7 @@ public class ControllerTeste {
     public ControllerTeste() {
         getInstance();
     }
-    private Controller(char x) {
+    private ControllerTeste(char x) {
     }
     public synchronized static ControllerTeste getInstance() {
         if(instance == null) {
