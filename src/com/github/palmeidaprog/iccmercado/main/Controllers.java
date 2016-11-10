@@ -1,8 +1,11 @@
+/*
+* Mercado de TI
+* @author Paulo R. Almeida Filho
+* pauloalmeidaf@gmail.com
+* */
+
 package com.github.palmeidaprog.iccmercado.main;
 
-/**
- * Created by paulo on 11/10/16.
- */
 public class Controllers {
 
     private Controller controller = null;
