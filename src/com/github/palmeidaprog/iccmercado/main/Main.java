@@ -6,6 +6,7 @@ pauloalmeidaf@gmail.com
 package com.github.palmeidaprog.iccmercado.main;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,13 +20,17 @@ public class Main extends Application {
     @Override
     public void start(Stage pStage) throws Exception{
         primaryStage = pStage;
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        loader.setController(Controller.getInstance());
+        Controllers.getInstance().setController(Controller.getInstance());
+        Parent root = loader.load();
         primaryStage.setTitle("TI - Mercado de Trabalho");
         try {
             InputStream f = getClass().getResourceAsStream("favicon.ico");
             primaryStage.getIcons().add(new Image(f));
         } catch(Exception e) { }
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 800, 620));
         primaryStage.show();
     }
 

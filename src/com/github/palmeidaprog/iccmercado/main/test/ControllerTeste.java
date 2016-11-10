@@ -34,7 +34,9 @@ public class ControllerTeste {
 
     //--Eventos------------------------------------------------
     public void startBtnClick() {
+        System.out.println(c.toString()); // @debug
         c.startTest();
+        //c.fadeTrans(testPanel);
     }
 
 

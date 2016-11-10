@@ -12,7 +12,7 @@
 
 <BorderPane fx:id="mainPanel" prefHeight="453.0" prefWidth="699.0" stylesheets="@../css_ui/vboxes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
    <center>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="699.0" spacing="10.0" styleClass="background">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="699.0" spacing="10.0" styleClass="background">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
@@ -64,24 +64,29 @@
       </VBox>
    </center>
    <bottom>
-      <HBox alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="699.0" spacing="30.0" styleClass="background" BorderPane.alignment="CENTER">
-         <stylesheets>
-            <URL value="@../css_ui/button.css" />
-            <URL value="@../css_ui/vboxes.css" />
-         </stylesheets>
-         <children>
-            <Button mnemonicParsing="false" text="&lt; Voltar" />
-            <Button mnemonicParsing="false" text="Avançar &gt;" />
-         </children>
+      <VBox alignment="BASELINE_CENTER" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
-         <padding>
-            <Insets right="40.0" />
-         </padding>
-         <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
-         </effect>
-      </HBox>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="699.0" spacing="30.0" styleClass="background">
+               <stylesheets>
+                  <URL value="@../css_ui/button.css" />
+                  <URL value="@../css_ui/vboxes.css" />
+                  <URL value="@../css_ui/navig_bar.css" />
+               </stylesheets>
+               <children>
+                  <Button mnemonicParsing="false" text="&lt; Voltar" />
+                  <Button mnemonicParsing="false" text="Avançar &gt;" />
+               </children>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
    </bottom>
 </BorderPane>

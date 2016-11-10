@@ -10,6 +10,7 @@ import javafx.animation.*;
 import javafx.scene.Node;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.effect.BoxBlur;
@@ -35,6 +36,7 @@ public class Controller implements Initializable {
     // navigation panels / painéis de navegação
     @FXML private VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
     @FXML private BorderPane testPanel;
+    @FXML private Button startBtn;
 
 
     //effects / efeitos
@@ -46,10 +48,10 @@ public class Controller implements Initializable {
 
     private static volatile Controller instance = null;
     // used by FXMLLoader
-    // usado pelo FXML loader
-    public Controller() {
-        getInstance();
-    }
+    // usado pelo FXML loaderś
+   /*public Controller() {
+        //getInstance();
+    }*/
 
     private Controller(char x) { }
     public synchronized static Controller getInstance() {
@@ -59,11 +61,15 @@ public class Controller implements Initializable {
         return instance;
     }
 
+    public synchronized static void setInst(Controller c) {
+        instance = Controllers.getInstance().getController();
+    }
 
     //--Initialization/Inicialização--------------------------------------------------
 
     public void initialize(URL u, ResourceBundle rb) {
-
+        //instance = this;
+        System.out.println(this.toString()); // @debug
     }
 
     public void closeAction() {
