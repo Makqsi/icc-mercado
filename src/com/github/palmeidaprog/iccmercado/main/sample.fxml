@@ -11,7 +11,6 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -19,6 +18,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+
 
 <BorderPane prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <left>
@@ -133,7 +133,7 @@
       </VBox>
    </left>
    <center>
-      <VBox fx:id="navigationBox" prefHeight="432.0" prefWidth="667.0" style="-fx-background-color: #52596b;" BorderPane.alignment="CENTER">
+      <VBox fx:id="navigationBox" prefHeight="432.0" prefWidth="667.0" style="-fx-background-color: #52596b;" BorderPane.alignment="BOTTOM_CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -148,11 +148,7 @@
                         <Insets />
                      </opaqueInsets>
                      <effect>
-                        <Reflection>
-                           <input>
-                              <Glow level="0.27" />
-                           </input>
-                        </Reflection>
+                        <DropShadow />
                      </effect>
                   </Label>
                </children>
@@ -165,6 +161,9 @@
                            <font>
                               <Font name="Ubuntu" size="13.0" />
                            </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </Label>
                      </children>
                      <padding>
@@ -203,6 +202,9 @@
                                        <HBox.margin>
                                           <Insets top="15.0" />
                                        </HBox.margin>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
                                     </Label>
                                  </children>
                                  <padding>
@@ -215,11 +217,17 @@
                                        <font>
                                           <Font name="Ubuntu Bold" size="16.0" />
                                        </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
                                     </Label>
                                     <Label alignment="CENTER" text="M.e Fernando César Brito Santos" textFill="WHITE">
                                        <font>
                                           <Font name="Ubuntu" size="16.0" />
                                        </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
                                     </Label>
                                  </children>
                                  <padding>
@@ -232,6 +240,9 @@
                                        <font>
                                           <Font name="Ubuntu" size="16.0" />
                                        </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
                                     </Label>
                                  </children>
                                  <padding>
@@ -350,7 +361,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
                <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+                  <Insets left="20.0" right="20.0" top="40.0" />
                </padding>
             </VBox>
          </children>
