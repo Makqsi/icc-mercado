@@ -80,6 +80,7 @@ public class Controller implements Initializable {
         tituloAntigo = antigo;
         tituloLbl.setText(tituloAntigo);
         effects.fadeTrans(newPanel);
+        effects.trans(newPanel);
     }
 
     public void homeClickAction() {
@@ -185,6 +186,7 @@ public class Controller implements Initializable {
 
     public void startTest() {
         effects.fadeTrans(testPanel);
+        effects.trans(testPanel);
     }
 
     protected Node getMainNode() {

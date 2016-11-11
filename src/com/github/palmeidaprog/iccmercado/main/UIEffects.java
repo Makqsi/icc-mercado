@@ -169,6 +169,26 @@ public class UIEffects {
         tt.play();
     }
 
+    protected void trans(Node l) {
+        TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
+        double x = l.getTranslateX();
+        double y = l.getTranslateY();
+
+        tt.setFromX(500);
+        tt.setToX(0);
+        tt.setCycleCount(1);
+        tt.setAutoReverse(false);
+
+        /*tt.setFromX(-3);
+        tt.setByX(3);
+        tt.setFromY(-3);
+        tt.setByY(3);
+        tt.setCycleCount(10);
+        tt.setAutoReverse(true);*/
+
+        tt.play();
+    }
+
     protected void fadeAnim() {
         //effectStatus = false;
         ft.stop();
