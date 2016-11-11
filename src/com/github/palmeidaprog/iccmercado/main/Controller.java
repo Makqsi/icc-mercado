@@ -41,33 +41,29 @@ public class Controller implements Initializable {
 
 
     //effects / efeitos
-    private UIEffects effects = UIEffects.getInstance();
+    private UIEffects effects;
 
     //--Singleton-constructor--------------------------------------------------------
 
     private static volatile Controller instance = null;
-    // used by FXMLLoader
-    // usado pelo FXML loader
-   /*public Controller() {
-        //getInstance();
-    }*/
-
-    private Controller(char x) { }
+    private Controller() { }
     public synchronized static Controller getInstance() {
         if(instance == null) {
-            instance = new Controller('x');
+            instance = new Controller();
         }
         return instance;
     }
 
-    public synchronized static void setInst(Controller c) {
+    /*public synchronized static void setInst(Controller c) {
         instance = Controllers.getInstance().getController();
-    }
+    }*/
 
     //--Initialization/Inicialização--------------------------------------------------
 
     public void initialize(URL u, ResourceBundle rb) {
+        effects = UIEffects.getInstance();
         //instance = this;
+        System.out.println(effects.toString()); // @debug
         System.out.println(this.toString()); // @debug
     }
 
@@ -79,17 +75,17 @@ public class Controller implements Initializable {
 
     // method called by VBox's Click action event
     // method chamado por Evento de clique nas VBoxes
-    private void clickAction(Pane pane, String antigo) {
+    private void clickAction(VBox menu, Pane newPanel, String antigo) {
         effects.normalColors();
-        pane.setStyle("-fx-background-color: #52596b");
+        menu.setStyle("-fx-background-color: #52596b");
         tituloAntigo = antigo;
         tituloLbl.setText(tituloAntigo);
-        effects.fadeTrans(mainPanel);
+        effects.fadeTrans(newPanel);
     }
 
     public void homeClickAction() {
         if(currentMenu != 1) {
-            clickAction(homeVB, "Mercado de Trabalho de TI");
+            clickAction(homeVB, mainPanel, "Mercado de Trabalho de TI");
             mouseExitAction();
             currentMenu = 1;
         }
@@ -97,7 +93,7 @@ public class Controller implements Initializable {
 
     public void testClickAction() {
         if(currentMenu != 2) {
-            clickAction(testVB, "Teste de Aptidão");
+            clickAction(testVB, mainTesteVB, "Teste de Aptidão");
             mouseExitAction();
             currentMenu = 2;
         }
@@ -105,7 +101,7 @@ public class Controller implements Initializable {
 
     public void educacaoClickAction() {
         if(currentMenu != 3) {
-            clickAction(educacaoVB, "Educação para TI");
+            clickAction(educacaoVB, mainEducVB, "Educação para TI");
             mouseExitAction();
             currentMenu = 3;
         }
@@ -113,7 +109,7 @@ public class Controller implements Initializable {
 
     public void leiClickAction() {
         if(currentMenu != 4) {
-            clickAction(leiVB, "Leis sobre Mercado de TI");
+            clickAction(leiVB, mainLeiVB, "Leis sobre Mercado de TI");
             mouseExitAction();
             currentMenu = 4;
         }
@@ -123,7 +119,7 @@ public class Controller implements Initializable {
 
     // mouse exit menu at the left event
     // evento de saida de mouse do eventos da esquerda
-    private void mouseExitAction() {
+    public void mouseExitAction() {
         disableEffect = true;
         tituloLbl.setText(tituloAntigo);
         tituloLbl.setEffect(null);
@@ -192,7 +188,9 @@ public class Controller implements Initializable {
         effects.fadeTrans(testPanel);
     }
 
-    //--Effects/Efeitos-----------------------------------------------------------
+    protected Pane getMainPane() {
+        return navigationBox.getChildren().get(1);
+    }
 
 
 

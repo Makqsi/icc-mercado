@@ -24,7 +24,7 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UIEffects implements Initializable {
+public class UIEffects {
     private Controller controller = Controller.getInstance();
 
     // Effects/Efeitos
@@ -42,12 +42,6 @@ public class UIEffects implements Initializable {
             instance = new UIEffects();
         }
         return instance;
-    }
-
-    //--Inialization------------------------------------------------------
-
-    public void initialize(URL u, ResourceBundle rb) {
-
     }
 
     //--Effects methods-------------------------------------------------
@@ -198,7 +192,8 @@ public class UIEffects implements Initializable {
 
         if(b) {
             //blur.setInput(blur);
-            controller.mainPanel.setEffect(blur);
+            //controller.mainPanel.setEffect(blur);
+            glow.setInput(blur);
             controller.mainPanel.setEffect(glow);
         }
         else {
