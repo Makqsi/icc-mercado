@@ -188,7 +188,7 @@ public class Controller implements Initializable {
         effects.fadeTrans(testPanel);
     }
 
-    protected Pane getMainPane() {
+    protected Node getMainNode() {
         return navigationBox.getChildren().get(1);
     }
 

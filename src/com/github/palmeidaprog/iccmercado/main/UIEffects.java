@@ -194,15 +194,15 @@ public class UIEffects {
             //blur.setInput(blur);
             //controller.mainPanel.setEffect(blur);
             glow.setInput(blur);
-            controller.mainPanel.setEffect(glow);
+            controller.getMainNode().setEffect(glow);
         }
         else {
-            controller.mainPanel.setEffect(null);
+            controller.getMainNode().setEffect(null);
         }
         blur.setHeight(10.0);
         blur.setWidth(10.0);
         glow.setLevel(1.0);
-        controller.mainPanel.setDisable(b);
+        controller.getMainNode().setDisable(b);
     }
 
 

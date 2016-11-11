@@ -1,3 +1,6 @@
 Noto Sans Carian 
 
-- Add Glow to selection
+- Writting letters at the top of navigation pane
+- trans for panels
+
+
