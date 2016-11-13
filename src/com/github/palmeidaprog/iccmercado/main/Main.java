@@ -16,9 +16,19 @@ import java.io.InputStream;
 
 public class Main extends Application {
     public static Stage primaryStage;
+    private static Image full, empty;
+
+    private static volatile Main instance;
+
+    public synchronized static Main getInstance() {
+        return instance;
+    }
+
 
     @Override
     public void start(Stage pStage) throws Exception{
+        instance = this;
+        System.out.println(this.toString()); // @debug
         primaryStage = pStage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -32,6 +42,14 @@ public class Main extends Application {
         } catch(Exception e) { }
         primaryStage.setScene(new Scene(root, 800, 620));
         primaryStage.show();
+    }
+
+    public static Image getImageResource(int i) {
+        if (i == 1) {
+            return new Image(Main.class.getResourceAsStream("star_full.png"));
+        } else {
+            return new Image(Main.class.getResourceAsStream("star_empty.png"));
+        }
     }
 
     public static void main(String[] args) {

@@ -10,9 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane fx:id="mainPanel" prefHeight="453.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.ControllerEduc">
+<BorderPane prefHeight="453.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.testPanelController">
    <bottom>
+      <fx:define>
+         <fx:include fx:id="test1" source="1_test.fxml" />
+      </fx:define>
       <HBox alignment="CENTER_RIGHT" fillHeight="false" minHeight="50.0" prefHeight="50.0" prefWidth="699.0" spacing="30.0" styleClass="background" BorderPane.alignment="CENTER">
          <stylesheets>
             <URL value="@../css_ui/button.css" />
@@ -21,14 +23,11 @@
          </stylesheets>
          <children>
             <Button mnemonicParsing="false" text="&lt; Voltar" />
-            <Button mnemonicParsing="false" text="Avançar &gt;" />
+            <Button mnemonicParsing="false" onMouseClicked="#avancarBtnClickAction" text="Avançar &gt;" />
          </children>
          <padding>
             <Insets right="40.0" />
          </padding>
-         <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
-         </effect>
       </HBox>
    </bottom>
    <center>

@@ -35,7 +35,7 @@ public class Controller implements Initializable {
     // navigation panels / painéis de navegação
     @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
     //@FXML protected BorderPane testPanel;
-    @FXML protected GridPane testPanel;
+    @FXML public BorderPane testPanel;
     @FXML private Button startBtn;
 
 

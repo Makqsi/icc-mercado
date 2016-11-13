@@ -1,0 +1,12 @@
+/*
+@author Paulo Roberto Almeida Filho
+@email palmeidaprogramming@gmail.com
+topic label properties
+*/
+
+
+.label {
+    -fx-text-fill: #e7655a;
+    /*-fx-text-fill: #06e3bd;*/
+}
+

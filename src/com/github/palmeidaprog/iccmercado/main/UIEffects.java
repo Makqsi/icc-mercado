@@ -59,7 +59,6 @@ public class UIEffects {
         fadeBoxes(controller.navigationBox.getChildren().get(1), 0);
     }
 
-
     // resets all menus opacity
     // reinicia a opacidade de todos menus
     protected void opacityFull() {
@@ -110,7 +109,7 @@ public class UIEffects {
         c.setEffect(g);
     }
 
-    protected void fadeBoxes(Node c, int i) { // todo: test
+    public void fadeBoxes(Node c, int i) { // todo: test
         FadeTransition f = new FadeTransition(Duration.millis(500), c);
         if(i == 0) {
             f.setFromValue(0.0);
@@ -149,7 +148,7 @@ public class UIEffects {
         ftl.play();
     }
 
-    protected void trans(Label l) {
+    public void trans(Label l) {
         TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
         double x = l.getTranslateX();
         double y = l.getTranslateY();
@@ -169,7 +168,7 @@ public class UIEffects {
         tt.play();
     }
 
-    protected void trans(Node l) {
+    public void trans(Node l) {
         TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
         double x = l.getTranslateX();
         double y = l.getTranslateY();
