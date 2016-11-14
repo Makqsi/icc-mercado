@@ -19,8 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="680.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <fx:define>
          <fx:include fx:id="mainEducVB" source="vbox_educ.fxml" />
@@ -153,7 +152,7 @@
                   </Label>
                </children>
             </HBox>
-            <VBox fx:id="mainPanel" alignment="TOP_CENTER" prefHeight="453.0" prefWidth="699.0" spacing="10.0">
+            <VBox fx:id="mainPanel" alignment="TOP_CENTER" prefHeight="520.0" prefWidth="699.0" spacing="10.0">
                <children>
                   <HBox>
                      <children>

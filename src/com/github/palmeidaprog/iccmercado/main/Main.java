@@ -15,15 +15,11 @@ import javafx.scene.image.Image;
 import java.io.InputStream;
 
 public class Main extends Application {
-    public static Stage primaryStage;
-    private static Image full, empty;
-
+    protected static Stage primaryStage;
     private static volatile Main instance;
-
     public synchronized static Main getInstance() {
         return instance;
     }
-
 
     @Override
     public void start(Stage pStage) throws Exception{
@@ -40,7 +36,7 @@ public class Main extends Application {
             InputStream f = getClass().getResourceAsStream("favicon.ico");
             primaryStage.getIcons().add(new Image(f));
         } catch(Exception e) { }
-        primaryStage.setScene(new Scene(root, 800, 700));
+        primaryStage.setScene(new Scene(root, 800, 680));
         primaryStage.show();
     }
 

@@ -4,6 +4,7 @@ Noto Sans Carian
 - trans for panels
 - Shadows on letters
 - choose attention label color
+- Solve 1_test design
 
 
 http://www.iconsdb.com/

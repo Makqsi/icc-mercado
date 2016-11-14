@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.Test1Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.Test1Controller">
    <padding>
       <Insets left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -35,24 +36,57 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="659.0" spacing="20.0">
+      <HBox alignment="CENTER" prefHeight="165.0" prefWidth="659.0" spacing="20.0">
          <children>
-            <Label prefHeight="78.0" prefWidth="659.0" text="Refere-se à area que lida com os dispositivos físicos, disco rígidos, placas lógicas, circuitos, fontes. " textAlignment="JUSTIFY" wrapText="true">
-               <font>
-                  <Font size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
+            <ImageView fitHeight="133.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../cpu-256.png" />
+               </image>
+            </ImageView>
+            <VBox>
                <HBox.margin>
-                  <Insets left="25.0" right="25.0" />
+                  <Insets left="25.0" right="15.0" />
                </HBox.margin>
-            </Label>
+               <children>
+                  <Label prefHeight="82.0" prefWidth="434.0" text="Refere-se à area que lida com os dispositivos físicos, disco rígidos, placas lógicas, circuitos, fontes. " textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <VBox prefHeight="64.0" prefWidth="73.0">
+                     <children>
+                        <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../youtube.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+            </VBox>
          </children>
          <padding>
-            <Insets top="20.0" />
+            <Insets left="30.0" top="10.0" />
          </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
       </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="659.0" spacing="20.0" />
       <Label alignment="CENTER" prefHeight="39.0" prefWidth="659.0" stylesheets="@../css_ui/label2.css" text="Escolha abaixo seu interesse em Hardware:" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="12.0" />
