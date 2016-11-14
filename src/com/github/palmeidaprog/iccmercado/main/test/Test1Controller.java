@@ -13,8 +13,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Test1Controller {
-    private Image full = Main.getInstance().getImageResource(1);
-    private Image empty = Main.getInstance().getImageResource(0);
+    private Image full = Main.getImageResource(1);
+    private Image empty = Main.getImageResource(0);
     @FXML private ImageView s1, s2, s3, s4, s5;
 
     private void mouseEnterStar(int pos) {
