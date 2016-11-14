@@ -40,7 +40,7 @@ public class Main extends Application {
             InputStream f = getClass().getResourceAsStream("favicon.ico");
             primaryStage.getIcons().add(new Image(f));
         } catch(Exception e) { }
-        primaryStage.setScene(new Scene(root, 800, 620));
+        primaryStage.setScene(new Scene(root, 800, 700));
         primaryStage.show();
     }
 

@@ -65,7 +65,7 @@
          <children>
             <VBox spacing="5.0">
                <children>
-                  <ImageView fx:id="s1" fitHeight="54.0" fitWidth="50.0" onMouseEntered="#star1Enter" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="s1" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star1Click" onMouseEntered="#star1Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../star_empty.png" />
                      </image>
@@ -85,7 +85,7 @@
             </VBox>
             <VBox layoutX="175.0" layoutY="10.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="s2" fitHeight="54.0" fitWidth="50.0" onMouseEntered="#star2Enter" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="s2" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star2Click" onMouseEntered="#star2Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../star_empty.png" />
                      </image>
@@ -105,7 +105,7 @@
             </VBox>
             <VBox layoutX="270.0" layoutY="10.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="s3" fitHeight="54.0" fitWidth="50.0" onMouseEntered="#star3Enter" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="s3" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star3Click" onMouseEntered="#star3Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../star_empty.png" />
                      </image>
@@ -125,7 +125,7 @@
             </VBox>
             <VBox layoutX="235.0" layoutY="10.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="s4" fitHeight="54.0" fitWidth="50.0" onMouseEntered="#star4Enter" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="s4" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star4Click" onMouseEntered="#star4Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../star_empty.png" />
                      </image>
@@ -145,7 +145,7 @@
             </VBox>
             <VBox layoutX="200.0" layoutY="10.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="s5" fitHeight="54.0" fitWidth="50.0" onMouseEntered="#star5Enter" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="s5" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star5Click" onMouseEntered="#star5Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../star_empty.png" />
                      </image>
