@@ -31,24 +31,24 @@
                   <DropShadow />
                </effect>
                <HBox.margin>
-                  <Insets top="25.0" />
+                  <Insets top="5.0" />
                </HBox.margin>
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="165.0" prefWidth="659.0" spacing="20.0">
+      <HBox alignment="CENTER" prefHeight="209.0" prefWidth="659.0" spacing="20.0">
          <children>
             <ImageView fitHeight="133.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../cpu-256.png" />
+                  <Image url="@../../notebook-256.png" />
                </image>
             </ImageView>
-            <VBox>
+            <VBox prefHeight="172.0" prefWidth="434.0">
                <HBox.margin>
                   <Insets left="25.0" right="15.0" />
                </HBox.margin>
                <children>
-                  <Label prefHeight="82.0" prefWidth="434.0" text="Refere-se à area que lida com os dispositivos físicos, disco rígidos, placas lógicas, circuitos, fontes. " textAlignment="JUSTIFY" wrapText="true">
+                  <Label prefHeight="114.0" prefWidth="434.0" text="Refere-se à area que lida com os dispositivos físicos, disco rígidos, placas lógicas, circuitos, fontes. " textAlignment="JUSTIFY" wrapText="true">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -56,26 +56,70 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <VBox prefHeight="64.0" prefWidth="73.0">
+                  <HBox prefHeight="68.0" prefWidth="434.0" spacing="30.0">
                      <children>
-                        <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../youtube.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                        </Label>
+                        <VBox alignment="CENTER" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../youtube.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../wiki.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Wikipedia" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="101.0" layoutY="10.0" prefHeight="68.0" prefWidth="55.0" spacing="12.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../google-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Procurar" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
                      </children>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </VBox>
+                  </HBox>
                </children>
             </VBox>
          </children>
@@ -86,15 +130,18 @@
             <Insets />
          </VBox.margin>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="659.0" spacing="20.0" />
-      <Label alignment="CENTER" prefHeight="39.0" prefWidth="659.0" stylesheets="@../css_ui/label2.css" text="Escolha abaixo seu interesse em Hardware:" textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font size="12.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="299.0" prefHeight="19.0" prefWidth="659.0" spacing="20.0" />
+      <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="659.0" stylesheets="@../css_ui/label2.css" text="Escolha abaixo seu interesse em Hardware:" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children></HBox>
       <HBox alignment="CENTER" prefHeight="83.0" prefWidth="659.0" spacing="20.0">
          <children>
             <VBox spacing="5.0">
