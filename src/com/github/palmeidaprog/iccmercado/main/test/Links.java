@@ -5,7 +5,7 @@ import java.net.URL;
 /**
  * Created by paulo on 11/21/16.
  */
-public class YoutubeVideos {
+public class Links {
     private static URL hardware = null;
 
     public static URL getHardwareVideo() {
