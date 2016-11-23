@@ -12,12 +12,51 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
+import java.net.URL;
+
 public class Test1Controller {
     private Image full = Main.getImageResource(1);
     private Image empty = Main.getImageResource(0);
     @FXML private ImageView s1, s2, s3, s4, s5;
     private int stars = 0;
 
+
+    //--Click on links events--------------------------------------------------------------------
+
+    private void openLink(URL link) {
+        String os = System.getProperty("os.name").toLowerCase();
+
+        // open default browser depending the OS
+        // abrir o navegador padrão dependendo do OS
+        try {
+            if(os.contains("linux")) {
+                new ProcessBuilder("sensible-browser", link.toString()).start();
+            }
+            else if(os.contains("mac")) {
+                new ProcessBuilder("open", link.toString()).start();
+            }
+            else {
+                new ProcessBuilder("start", link.toString()).start();
+            }
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getYoutube() {
+        openLink(Hardware.getInstance().getYoutube());
+    }
+
+    public void getWiki() {
+        openLink(Hardware.getInstance().getWiki());
+    }
+
+    public void getGoogle() {
+        openLink(Hardware.getInstance().getSearch());
+    }
+
+    //--Star-events--------------------------------------------------------------------
 
     // Turn off all the stars
     // Apaga todas estrelas
@@ -54,7 +93,6 @@ public class Test1Controller {
         mouseEnterStar(stars);
     }
 
-
     public void star1Enter() {
         mouseEnterStar(1);
     }
@@ -75,28 +113,33 @@ public class Test1Controller {
         mouseEnterStar(5);
     }
 
+    private void setStars(int s) {
+        stars = s;
+        Hardware.getInstance().setStars(s);
+    }
+
     public void star1Click() {
-        stars = 1;
+        setStars(1);
         mouseEnterStar(stars);
     }
 
     public void star2Click() {
-        stars = 2;
+        setStars(2);
         mouseEnterStar(stars);
     }
 
     public void star3Click() {
-        stars = 3;
+        setStars(3);
         mouseEnterStar(stars);
     }
 
     public void star4Click() {
-        stars = 4;
+        setStars(4);
         mouseEnterStar(stars);
     }
 
     public void star5Click() {
-        stars = 5;
+        setStars(5);
         mouseEnterStar(stars);
     }
 

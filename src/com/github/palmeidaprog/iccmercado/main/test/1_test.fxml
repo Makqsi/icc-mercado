@@ -4,6 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
@@ -42,13 +43,16 @@
                <image>
                   <Image url="@../../notebook-256.png" />
                </image>
+               <effect>
+                  <DropShadow />
+               </effect>
             </ImageView>
             <VBox prefHeight="172.0" prefWidth="434.0">
                <HBox.margin>
                   <Insets left="25.0" right="15.0" />
                </HBox.margin>
                <children>
-                  <Label prefHeight="114.0" prefWidth="434.0" text="Refere-se à area que lida com os dispositivos físicos, disco rígidos, placas lógicas, circuitos, fontes. " textAlignment="JUSTIFY" wrapText="true">
+                  <Label prefHeight="114.0" prefWidth="434.0" text="Refere-se à área que lida com dispositivos de entrada e saída (como disco rígidos), placas lógicas, circuitos, fontes e todos os demais dispositivos físicos rela- cionados a área de TI." textAlignment="JUSTIFY" wrapText="true">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -58,7 +62,7 @@
                   </Label>
                   <HBox prefHeight="68.0" prefWidth="434.0" spacing="30.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
+                        <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
                            <children>
                               <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -78,7 +82,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </VBox>
-                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#getWiki" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
                            <children>
                               <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -98,7 +102,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </VBox>
-                        <VBox alignment="CENTER" layoutX="101.0" layoutY="10.0" prefHeight="68.0" prefWidth="55.0" spacing="12.0">
+                        <VBox alignment="CENTER" layoutX="101.0" layoutY="10.0" onMouseClicked="#getGoogle" prefHeight="68.0" prefWidth="55.0" spacing="12.0">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -130,7 +134,13 @@
             <Insets />
          </VBox.margin>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="299.0" prefHeight="19.0" prefWidth="659.0" spacing="20.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="299.0" prefHeight="18.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="656.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="659.0" spacing="20.0">
          <children>
             <Label alignment="CENTER" prefHeight="39.0" prefWidth="659.0" stylesheets="@../css_ui/label2.css" text="Escolha abaixo seu interesse em Hardware:" textAlignment="CENTER" wrapText="true">
@@ -246,6 +256,12 @@
             </VBox>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="659.0" spacing="20.0" />
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="656.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></HBox>
    </children>
 </VBox>
