@@ -16,7 +16,15 @@ public interface Linkable {
     URL wikipedia;
     URL google;
 
-    URL getYoutube();
-    URL getWiki();
-    URL getSearch();
+    public static URL getYoutube() {
+        return youtube;
+    }
+
+    static URL getWiki() {
+        return wikipedia;
+    }
+
+    static URL getSearch() {
+        return google;
+    }
 }
