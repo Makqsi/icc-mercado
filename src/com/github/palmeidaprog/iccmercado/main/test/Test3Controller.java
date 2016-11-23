@@ -15,11 +15,12 @@ import javafx.scene.image.ImageView;
 import java.io.IOException;
 import java.net.URL;
 
-public class Test1Controller {
+public class Test3Controller {
     private Image full = Main.getImageResource(1);
     private Image empty = Main.getImageResource(0);
     @FXML private ImageView s1, s2, s3, s4, s5;
     private int stars = 0;
+
 
     //--Click on links events--------------------------------------------------------------------
 
@@ -44,15 +45,15 @@ public class Test1Controller {
     }
 
     public void getYoutube() {
-        openLink(Hardware.getInstance().getYoutube());
+        openLink(Criatividade.getInstance().getYoutube());
     }
 
     public void getWiki() {
-        openLink(Hardware.getInstance().getWiki());
+        openLink(Criatividade.getInstance().getWiki());
     }
 
     public void getGoogle() {
-        openLink(Hardware.getInstance().getSearch());
+        openLink(Criatividade.getInstance().getSearch());
     }
 
     //--Star-events--------------------------------------------------------------------
@@ -114,7 +115,7 @@ public class Test1Controller {
 
     private void setStars(int s) {
         stars = s;
-        Hardware.getInstance().setStars(s);
+        Criatividade.getInstance().setStars(s);
     }
 
     public void star1Click() {

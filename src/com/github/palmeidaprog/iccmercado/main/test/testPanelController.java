@@ -13,7 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 
 public class testPanelController {
-    @FXML protected VBox test1, test2;
+    @FXML protected VBox test1, test2, test3;
     private UIEffects e = UIEffects.getInstance();
     private Controller c = Controller.getInstance();
     private int box = 0;
@@ -27,6 +27,9 @@ public class testPanelController {
                 break;
             case 1:
                 avancar(test2);
+                break;
+            case 2:
+                avancar(test3);
                 break;
             default:
                 break;

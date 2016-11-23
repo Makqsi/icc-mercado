@@ -15,6 +15,7 @@
       <fx:define>
           <fx:include fx:id="test1" source="1_test.fxml" />
           <fx:include fx:id="test2" source="2_test.fxml" />
+          <fx:include fx:id="test3" source="3_test.fxml" />
       </fx:define>
       <HBox alignment="CENTER_RIGHT" fillHeight="false" minHeight="50.0" prefHeight="50.0" prefWidth="699.0" spacing="30.0" styleClass="background" BorderPane.alignment="CENTER">
          <stylesheets>
