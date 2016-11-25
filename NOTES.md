@@ -11,6 +11,9 @@ Noto Sans Carian
 - choose attention label color (XX)
 - Solve 1_test design
 - When hitting the attention vbox set all stars back to 0
+- Disable Back button when entering the test
+- Add label under the title (with stages) when reflection is off
+- Solve alignment in Home tab
 
 
 http://www.iconsdb.com/
@@ -22,7 +25,7 @@ http://www.iconsdb.com/
 - Criatividade ok 
 - Logica e Abstrato
 - Programação
-- Lecionar 
+- Lecionar ok
 - Interação Interpessoal
 - Pesquisa
 - 
