@@ -15,7 +15,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.Node;
 
 public class testPanelController {
-    @FXML private VBox test1, test2, test3, test4, test5;
+    @FXML private VBox test1, test2, test3, test4, test5, test6;
     @FXML private BorderPane testPanel;
     private UIEffects e = UIEffects.getInstance();
     private Controller c = Controller.getInstance();
@@ -49,6 +49,9 @@ public class testPanelController {
             case 4:
                 avancar(test5);
                 break;
+            case 5:
+                avancar(test6);
+                break;
             default:
                 break;
         }
@@ -73,8 +76,10 @@ public class testPanelController {
                 retornar(test3);
                 break;
             case 5:
-                retornar(test5);
+                retornar(test4);
                 break;
+            case 6:
+                retornar(test5);
             default:
                 break;
         }

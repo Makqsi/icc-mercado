@@ -3,3 +3,4 @@
 - 3: 3_test.fxml: Criatividade
 - 4: 4_test.fxml: Ensino
 - 5: 5_test.fxml: Relacionamento Interpessoal
+- 6: 6_test.fxml: Pesquisa
