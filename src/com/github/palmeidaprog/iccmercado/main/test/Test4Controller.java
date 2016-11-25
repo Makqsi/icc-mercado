@@ -45,15 +45,15 @@ public class Test4Controller {
     }
 
     public void getYoutube() {
-        openLink(Criatividade.getInstance().getYoutube());
+        openLink(Ensino.getInstance().getYoutube());
     }
 
     public void getWiki() {
-        openLink(Criatividade.getInstance().getWiki());
+        openLink(Ensino.getInstance().getWiki());
     }
 
     public void getGoogle() {
-        openLink(Criatividade.getInstance().getSearch());
+        openLink(Ensino.getInstance().getSearch());
     }
 
     //--Star-events--------------------------------------------------------------------
@@ -115,7 +115,7 @@ public class Test4Controller {
 
     private void setStars(int s) {
         stars = s;
-        Criatividade.getInstance().setStars(s);
+        Ensino.getInstance().setStars(s);
     }
 
     public void star1Click() {

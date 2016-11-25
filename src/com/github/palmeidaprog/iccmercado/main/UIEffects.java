@@ -168,6 +168,19 @@ public class UIEffects {
         tt.play();
     }
 
+    public void transBack(Node l) {
+        TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
+        double x = l.getTranslateX();
+        double y = l.getTranslateY();
+
+        tt.setFromX(-200);
+        tt.setToX(0);
+        tt.setCycleCount(1);
+        tt.setAutoReverse(false);
+
+        tt.play();
+    }
+
     public void trans(Node l) {
         TranslateTransition tt = new TranslateTransition(Duration.millis(300), l);
         double x = l.getTranslateX();

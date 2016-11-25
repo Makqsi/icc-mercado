@@ -23,10 +23,10 @@ public class Ensino implements Linkable {
     // constructor
     private Ensino() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=dgkxCLOfB50");
+            youtube = new URL("https://www.youtube.com/watch?v=QVendyeiM2A");
             wikipedia = new URL("https://pt.wikipedia.org/wiki/Ensino");
-            google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=Vic1" +
-                    "WInEB8em8we2gbHYBg&gws_rd=ssl#safe=off&q=%22o+que+%C3%A9+hardware%22");
+            google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=Vic1WInEB8em8we2g" +
+                    "bHYBg&gws_rd=ssl#safe=off&q=%22defini%C3%A7%C3%A3o+de+ensino%22");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
