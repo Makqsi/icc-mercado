@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.Test7Controller">
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../css_ui/vboxes.css" />
+      <URL value="@../css_ui/button.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Label fx:id="topic" stylesheets="@../css_ui/topic.css" text="Matemática">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="209.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="133.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../math-256.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <VBox prefHeight="172.0" prefWidth="434.0">
+               <HBox.margin>
+                  <Insets left="25.0" right="15.0" />
+               </HBox.margin>
+               <children>
+                  <Label prefHeight="114.0" prefWidth="434.0" text="A matemática é a ciência do raciocínio lógico e abs- trato, que estuda quantidades, medidas, espaços, es- truturas, variações e estatísticas, consistindo em procurar por padrões, formular conjecturas e, por meio de deduções rigorosas a partir de axiomas e definições, estabelecer novos resultados." textAlignment="JUSTIFY" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <HBox prefHeight="68.0" prefWidth="434.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../youtube.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#getWiki" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../wiki.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Wikipedia" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="101.0" layoutY="10.0" onMouseClicked="#getGoogle" prefHeight="68.0" prefWidth="55.0" spacing="12.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../google-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Procurar" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="30.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="299.0" prefHeight="18.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="656.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="659.0" stylesheets="@../css_ui/label2.css" text="Escolha abaixo seu interesse em Matemática:" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <ImageView fx:id="s1" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star1Click" onMouseEntered="#star1Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../star_empty.png" />
+                     </image>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l1" text="Nenhum&#10;Interesse&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="175.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <ImageView fx:id="s2" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star2Click" onMouseEntered="#star2Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../star_empty.png" />
+                     </image>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l2" text="Pouco&#10;Interesse&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="270.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <ImageView fx:id="s3" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star3Click" onMouseEntered="#star3Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../star_empty.png" />
+                     </image>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l3" text="Interesse&#10;Moderado&#10;&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="235.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <ImageView fx:id="s4" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star4Click" onMouseEntered="#star4Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../star_empty.png" />
+                     </image>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l4" text="Grande&#10;Interesse&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="200.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <ImageView fx:id="s5" fitHeight="54.0" fitWidth="50.0" onMouseClicked="#star5Click" onMouseEntered="#star5Enter" onMouseExited="#mouseExitStar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../star_empty.png" />
+                     </image>
+                     <effect>
+                        <Glow level="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l5" text="Maior&#10;Interesse&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="656.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></HBox>
+   </children>
+</VBox>

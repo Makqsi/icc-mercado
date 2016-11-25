@@ -24,8 +24,12 @@ http://www.iconsdb.com/
 - Hardware ok
 - Criatividade ok 
 - Logica e Abstrato
-- Programação 
-- Lecionar ok
+ 
+- Ensino ok
 - Interação Interpessoal ok
 - Pesquisa ok
-- 
+
+- Matemática
+- Abstração e Lógica
+
+- Programação
