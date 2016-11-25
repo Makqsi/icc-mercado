@@ -8,7 +8,7 @@ Noto Sans Carian
 - reverse trans for back button
 - set 0 on int box when seeing warning vbox
 - Shadows on letters
-- choose attention label color
+- choose attention label color (XX)
 - Solve 1_test design
 - When hitting the attention vbox set all stars back to 0
 
