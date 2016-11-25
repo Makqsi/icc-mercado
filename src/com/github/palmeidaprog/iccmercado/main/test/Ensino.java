@@ -30,6 +30,7 @@ public class Ensino implements Linkable {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
     }
 
     public synchronized static Ensino getInstance() {

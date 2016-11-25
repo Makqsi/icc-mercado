@@ -33,8 +33,9 @@ public class Main extends Application {
         Parent root = loader.load();
         primaryStage.setTitle("TI - Mercado de Trabalho");
         try {
-            InputStream f = getClass().getResourceAsStream("favicon.png");
-            primaryStage.getIcons().add(new Image(f));
+            //InputStream f = Main.class.getResourceAsStream("favicon.ico");
+            Image f = new Image(Main.class.getResourceAsStream("favicon.png"));
+            primaryStage.getIcons().add(f);
         } catch(Exception e) { }
         primaryStage.setScene(new Scene(root, 800, 680));
         primaryStage.show();
