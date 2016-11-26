@@ -19,11 +19,25 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TestResultController implements Initializable {
+public class TestResultController {
     @FXML private Label hard, lider, criati, ensino, relaci, pesq, matem,
             logic, resol, desig;
 
-    public void initialize(URL u, ResourceBundle rb) {
+    //--Singleton pattern--------------------------------------------------
+    private static volatile TestResultController instance = null;
+
+    // constructor
+    private TestResultController() { }
+    public synchronized static TestResultController getInstance() {
+        if(instance == null) {
+            instance = new TestResultController();
+        }
+        return instance;
+    }
+
+    // atualiza informações das Labels
+    // update info from the labels
+    public void update() {
         hard.setText("- Hardware: " + Hardware.getInstance().getStars());
         lider.setText("- Liderança: " + Lideranca.getInstance().getStars());
         criati.setText("- Criatividade: " + Criatividade.getInstance().getStars());

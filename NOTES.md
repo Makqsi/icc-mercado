@@ -14,10 +14,14 @@ Noto Sans Carian
 - Disable Back button when entering the test
 - Add label under the title (with stages) when reflection is off
 - Solve alignment in Home tab
+- Reset test after leaving
+- Check if links open on all 3 OSes
 
 
 http://www.iconsdb.com/
+fx:controller="com.github.palmeidaprog.iccmercado.main.test.TestResultController"
 
+<fx:include fx:id="resultTest" source="result_test.fxml" />
 * campos para teste:
 
 - Liderança ok

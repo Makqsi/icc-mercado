@@ -6,7 +6,9 @@
 
 package com.github.palmeidaprog.iccmercado.main;
 
+import com.github.palmeidaprog.iccmercado.main.test.TestResultController;
 import javafx.animation.*;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +22,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -33,11 +36,11 @@ public class Controller implements Initializable {
     private String tituloAntigo = "Mercado de Trabalho de TI";
 
     // navigation panels / painéis de navegação
-    @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox, resultTest;
+    @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB;
+    @FXML public VBox navigationBox, resultTest;
     //@FXML protected BorderPane testPanel;
     @FXML public BorderPane testPanel;
     @FXML private Button startBtn;
-
 
     //effects / efeitos
     private UIEffects effects;
@@ -64,6 +67,16 @@ public class Controller implements Initializable {
         //instance = this;
         System.out.println(effects.toString()); // @debug
         System.out.println(this.toString()); // @debug
+
+        // manually load FXML into result to properly use Singleton controller
+        // Carregar FXML manualmente para fazer uso de Singleton no Controller.
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("test/result_test.fxml"));
+        loader.setController(TestResultController.getInstance());
+        try {
+            resultTest = loader.load();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void closeAction() {

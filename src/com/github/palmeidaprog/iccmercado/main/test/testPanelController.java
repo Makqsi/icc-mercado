@@ -10,6 +10,7 @@ package com.github.palmeidaprog.iccmercado.main.test;
 import com.github.palmeidaprog.iccmercado.main.Controller;
 import com.github.palmeidaprog.iccmercado.main.UIEffects;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.Node;
@@ -66,13 +67,11 @@ public class testPanelController {
                 avancar(test10);
                 break;
             case 10:
-                fadeBoxes(c.navigationBox.getChildren().get(1), 1);
-                controller.navigationBox.getChildren().set(1, v);
-                fadeBoxes(controller.navigationBox.getChildren().get(1), 0);
-                e.fadeBoxes(c.testPanel.getCenter(), 1);
-                c.testPanel.setCenter(testPanel);
-                e.fadeBoxes(c.testPanel.getCenter(), 0);
-                e.trans(testPanel);
+                e.fadeBoxes(c.navigationBox.getChildren().get(1), 1);
+                c.navigationBox.getChildren().set(1, c.resultTest);
+                e.fadeBoxes(c.navigationBox.getChildren().get(1), 0);
+                e.trans(c.resultTest);
+                TestResultController.getInstance().update();
                 break;
             default:
                 break;

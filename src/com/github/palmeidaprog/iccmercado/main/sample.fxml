@@ -26,7 +26,6 @@
          <fx:include fx:id="mainTesteVB" source="test/vbox_teste.fxml" />
          <fx:include fx:id="testPanel" source="test/testPanel.fxml" />
          <fx:include fx:id="mainLeiVB" source="vbox_lei.fxml" />
-         <fx:include fx:id="resultTest" source="test/result_test.fxml" />
       </fx:define>
       <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
          <children>
@@ -254,7 +253,7 @@
                      </children>
                   </HBox>
                   <Region prefHeight="20.0" prefWidth="659.0" />
-                  <HBox alignment="TOP_CENTER">
+                  <HBox>
                      <children>
                         <Label text="Alunos: " textFill="WHITE">
                            <font>
@@ -352,7 +351,7 @@
                         </VBox>
                      </children>
                      <padding>
-                        <Insets left="30.0" />
+                        <Insets left="60.0" />
                      </padding>
                   </HBox>
                   <Button mnemonicParsing="false" stylesheets="@css_ui/button.css" text="Ver e Salvar Trabalho Escrito" />
