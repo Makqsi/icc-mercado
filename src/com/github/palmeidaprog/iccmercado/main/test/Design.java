@@ -23,10 +23,10 @@ public class Design implements Linkable {
     // constructor
     private Design() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=OtoY44KS2og");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/L%C3%B3gica");
-            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&e" +
-                    "spv=2&ie=UTF-8#q=logica%20e%20abstra%C3%A7%C3%A3o");
+            youtube = new URL("https://www.youtube.com/watch?v=zfBzIfH6LEc");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/Design");
+            google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=5tU5WOCxGs3K8gef2YP" +
+                    "QCw&gws_rd=ssl#safe=off&q=design");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
