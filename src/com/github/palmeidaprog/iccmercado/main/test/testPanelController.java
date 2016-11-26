@@ -16,7 +16,7 @@ import javafx.scene.Node;
 
 public class testPanelController {
     @FXML private VBox test1, test2, test3, test4, test5, test6, test7,
-            test8, test9, test10;
+            test8, test9, test10, resultTest;
     @FXML private BorderPane testPanel;
     private UIEffects e = UIEffects.getInstance();
     private Controller c = Controller.getInstance();
@@ -64,6 +64,15 @@ public class testPanelController {
                 break;
             case 9:
                 avancar(test10);
+                break;
+            case 10:
+                fadeBoxes(c.navigationBox.getChildren().get(1), 1);
+                controller.navigationBox.getChildren().set(1, v);
+                fadeBoxes(controller.navigationBox.getChildren().get(1), 0);
+                e.fadeBoxes(c.testPanel.getCenter(), 1);
+                c.testPanel.setCenter(testPanel);
+                e.fadeBoxes(c.testPanel.getCenter(), 0);
+                e.trans(testPanel);
                 break;
             default:
                 break;

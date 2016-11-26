@@ -33,7 +33,7 @@ public class Controller implements Initializable {
     private String tituloAntigo = "Mercado de Trabalho de TI";
 
     // navigation panels / painéis de navegação
-    @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox;
+    @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB, navigationBox, resultTest;
     //@FXML protected BorderPane testPanel;
     @FXML public BorderPane testPanel;
     @FXML private Button startBtn;

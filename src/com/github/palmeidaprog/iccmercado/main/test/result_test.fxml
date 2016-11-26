@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.TestResultController">
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../css_ui/vboxes.css" />
+      <URL value="@../css_ui/button.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="659.0" spacing="20.0">
+         <children>
+            <Label fx:id="topic" stylesheets="@../css_ui/topic.css" text="Resumo">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="26.0" prefWidth="659.0" spacing="20.0" />
+      <VBox>
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="topic1" text="Suas escolhas, notas dadas de 1 a 5:">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="hard" text="- Hardware: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="lider" text="- LIderança: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="criati" text="- Criatividade: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="ensino" text="- Ensino: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="relaci" text="- Relacionamento Interpessoal: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="pesq" text="- Pesquisa: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="matem" text="- Matemática: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="logic" text="- Lógica e Abstração: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="resol" text="- Resolução de Problemas: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <Label fx:id="desig" text="- Design e Artes: 0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Mostrar Resultado" />
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
