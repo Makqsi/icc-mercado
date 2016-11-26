@@ -4,3 +4,5 @@
 - 4: 4_test.fxml: Ensino
 - 5: 5_test.fxml: Relacionamento Interpessoal
 - 6: 6_test.fxml: Pesquisa
+- 7: 7_test.fxml: Matemática
+- 8: 8_test.fxml: Logica e Abstração
