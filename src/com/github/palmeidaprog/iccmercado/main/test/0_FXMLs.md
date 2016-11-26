@@ -6,3 +6,5 @@
 - 6: 6_test.fxml: Pesquisa
 - 7: 7_test.fxml: Matemática
 - 8: 8_test.fxml: Logica e Abstração
+- 9: 9_test.fxml: Resolução de Problemas
+- 10: 10_test.fxml: Design e artes
