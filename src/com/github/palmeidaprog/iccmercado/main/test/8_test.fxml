@@ -47,16 +47,25 @@
                   <DropShadow />
                </effect>
             </ImageView>
-            <VBox prefHeight="172.0" prefWidth="434.0">
+            <VBox prefHeight="172.0" prefWidth="434.0" spacing="15.0">
                <HBox.margin>
                   <Insets left="25.0" right="15.0" />
                </HBox.margin>
                <children>
-                  <Label prefHeight="114.0" prefWidth="434.0" text="A matemática é a ciência do raciocínio lógico e abs- trato, que estuda quantidades, medidas, espaços, es- truturas, variações e estatísticas, consistindo em procurar por padrões, formular conjecturas e, por meio de deduções rigorosas a partir de axiomas e definições, estabelecer novos resultados." textAlignment="JUSTIFY" wrapText="true">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
+                  <VBox>
+                     <children>
+                        <Label prefHeight="67.0" prefWidth="434.0" text="A lógica examina de forma genérica as formas que a argumentação pode tomar, quais dessas formas são válidas e quais são falaciosas." textAlignment="JUSTIFY" wrapText="true">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="60.0" prefWidth="434.0" text="Abstração é uma operação intelectual que consiste em isolar, por exemplo num conceito, um elemento à exclusão de outros, do qual então se faz abstração." textAlignment="JUSTIFY" wrapText="true">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
                   <HBox prefHeight="68.0" prefWidth="434.0" spacing="30.0">
                      <children>
                         <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">

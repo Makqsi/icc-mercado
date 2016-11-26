@@ -23,10 +23,10 @@ public class Logica implements Linkable {
     // constructor
     private Logica() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=dgkxCLOfB50");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/Hardware");
-            google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=Vic1" +
-                    "WInEB8em8we2gbHYBg&gws_rd=ssl#safe=off&q=%22o+que+%C3%A9+hardware%22");
+            youtube = new URL("https://www.youtube.com/watch?v=OtoY44KS2og");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/L%C3%B3gica");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&e" +
+                    "spv=2&ie=UTF-8#q=logica%20e%20abstra%C3%A7%C3%A3o");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
