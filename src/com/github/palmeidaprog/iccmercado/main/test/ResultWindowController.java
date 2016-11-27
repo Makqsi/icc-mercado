@@ -7,11 +7,13 @@
 package com.github.palmeidaprog.iccmercado.main.test;
 
 
+import com.github.palmeidaprog.iccmercado.main.test.Professions.AnalistaDeSistema;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.stage.Stage;
 
 public class ResultWindowController {
     @FXML private Label nr1, prof1, area1, perc1;
@@ -31,8 +33,8 @@ public class ResultWindowController {
     }
 
     public void btn1Clicked() {
-        prof1.setText("Programador");
+        Stage details = new Stage();
+        details.setScene(AnalistaDeSistema.getInstance().getDetails());
+        details.show();
     }
-
-
 }

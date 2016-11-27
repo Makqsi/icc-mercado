@@ -2,6 +2,12 @@ package com.github.palmeidaprog.iccmercado.main.test.Professions;
 
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Linkable;
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Professionable;
+import com.github.palmeidaprog.iccmercado.main.test.ResultWindowController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -31,6 +37,11 @@ public class AnalistaDeSistema implements Professionable, Linkable {
     private int number = 7;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
+    private int percentual = 0;
+
+    private final String AREA = "Análise de Sistemas";
+    private final String PROFESSION = "Analista de Sistemas";
+
 
     //--Singleton pattern--------------------------------------------------
     private static volatile AnalistaDeSistema instance = null;
@@ -38,10 +49,10 @@ public class AnalistaDeSistema implements Professionable, Linkable {
     // constructor
     private AnalistaDeSistema() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=T-7ykWKbrc8");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/Relacionamento");
-            google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=eE04WNf4IOPM8Afs0q24CA#s" +
-                    "afe=off&q=%22relacionamento+interpessoal+no+trabalho%22");
+            youtube = new URL("https://www.youtube.com/watch?v=zTj9pyCD3Vo");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/An%C3%A1lise_de_sistemas");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1" +
+                    "&espv=2&ie=UTF-8#q=Analista+de+Sistemas");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -114,6 +125,37 @@ public class AnalistaDeSistema implements Professionable, Linkable {
     @Override
     public int getDesign() {
         return design;
+    }
+
+    @Override
+    public Scene getDetails() {
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("analise_de_sistemas.fxml"));
+        loaderResult.setController(AnaliseDeSistemasController.getInstance());
+        Parent root = null;
+        try {
+            root = loaderResult.load();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+
+        Scene sceneReturn = new Scene(root, 750, 750);
+
+        return sceneReturn;
+    }
+
+    @Override
+    public String getArea() {
+        return AREA;
+    }
+
+    @Override
+    public String getProfession() {
+        return PROFESSION;
+    }
+
+    @Override
+    public int getPercentual() {
+        return percentual;
     }
 
     //--Linkable methods----------------------------------------------------

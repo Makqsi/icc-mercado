@@ -6,6 +6,8 @@ package com.github.palmeidaprog.iccmercado.main.Interfaces;
 * pauloalmeidaf@gmail.com
 * */
 
+import javafx.scene.Scene;
+
 import java.util.ArrayList;
 
 public interface Professionable {
@@ -21,4 +23,8 @@ public interface Professionable {
     int getLogica();
     int getProblemas();
     int getDesign();
+    Scene getDetails();
+    String getArea();
+    String getProfession();
+    int getPercentual();
 }

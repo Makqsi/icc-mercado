@@ -16,6 +16,7 @@ Noto Sans Carian
 - Solve alignment in Home tab
 - Reset test after leaving
 - Check if links open on all 3 OSes
+- Solve multiple windows opening
 
 
 http://www.iconsdb.com/
