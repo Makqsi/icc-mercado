@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="750.0" maxWidth="750.0" minHeight="425.0" minWidth="750.0" prefHeight="614.0" prefWidth="750.0" style="-fx-background-color: #52596b;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="750.0" maxWidth="750.0" minHeight="425.0" minWidth="750.0" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #52596b;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <HBox alignment="CENTER" prefHeight="41.0" prefWidth="600.0" spacing="75.0" style="-fx-background-color: #2f2f2f;" stylesheets="@../../css_ui/toggle_button.css" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -24,7 +24,7 @@
             <DropShadow />
          </effect>
          <children>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Análise de Sistemas" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Suporte Técnico" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -44,25 +44,32 @@
             <HBox layoutX="10.0" layoutY="40.0" prefHeight="24.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="38.0" style="-fx-text-fill: #F1B86C;" text="Área:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Análise de Sistema" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Sistema de Computação" textAlignment="CENTER" wrapText="true" />
                   <Label prefHeight="20.0" prefWidth="113.0" style="-fx-text-fill: #F1B86C;" text="Média Salarial:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 4.100,00" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 1.080,00" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
             <HBox prefHeight="23.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="51.0" style="-fx-text-fill: #F1B86C;" text="Vagas: " textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="2000 vagas" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="1300 vagas" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
-            <VBox>
+            <VBox prefHeight="186.0" prefWidth="730.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="72.0" style="-fx-text-fill: #F1B86C;" text="Descrição:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="165.0" prefWidth="727.0" style="-fx-text-fill: white;" text="Os profissionais da área geram softwares (programas), que são executados em hardwares (equipamentos) operados por usuários (indivíduos), preparados e treinados em procedimentos operacionais padronizados, dotados de conhecimentos do software e hardware para seu trabalho. A partir de então a análise de sistemas é uma profissão cujas responsabilidades concentram-se na análise do sistema e na administração de sistemas computacionais. Cabe a este profissional parte da organização, implantação e manutenção de aplicativos e redes de computadores, ou seja, o analista de sistemas é o responsável pelo levantamento de informações sobre uma empresa a fim de utilizá-las no desenvolvimento de um sistema para a mesma ou para o levantamento de uma necessidade específica do cliente para desenvolver este programa específico com base nas informações colhidas." textAlignment="JUSTIFY" wrapText="true">
+                  <Label prefHeight="117.0" prefWidth="710.0" style="-fx-text-fill: white;" text="O Técnico de suporte é um profissional de TI que presta suporte técnico presencial ou por telefone ao usuário o help desk, resolvendo problemas relativo ao funcionamento dos computadores de uma empresa." textAlignment="JUSTIFY" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="90.0" style="-fx-text-fill: #F1B86C;" text="Atribuições:" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="30.0" prefWidth="727.0" style="-fx-text-fill: white;" text="1. prestar manutenção em redes de computadores;" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="45.0" prefWidth="727.0" style="-fx-text-fill: white;" text="2. Instalar e manter os diversos Sistemas Operacionais;" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="35.0" prefWidth="727.0" style="-fx-text-fill: white;" text="3. Configurar as contas de correio eletrônico (E-mail);" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="727.0" style="-fx-text-fill: white;" text="4. Suporte aos usuários da empresa ou organização;" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="11.0" prefWidth="727.0" style="-fx-text-fill: white;" text="5. Prestar suporte Help Desk de segundo nível;" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="39.0" prefWidth="727.0" style="-fx-text-fill: white;" textAlignment="JUSTIFY" wrapText="true" />
                </children>
             </VBox>
             <HBox>
@@ -73,22 +80,22 @@
                   <VBox prefHeight="84.0" prefWidth="332.0">
                      <children>
                         <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Ramos que mais pagam:" textAlignment="CENTER" wrapText="true" />
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="1 - Bancário / Financeiro" textAlignment="JUSTIFY" wrapText="true">
+                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="1 - Recursos Humanos" textAlignment="JUSTIFY" wrapText="true">
                            <VBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="2 - Alimentos" textAlignment="JUSTIFY" wrapText="true">
+                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="2 - Informática" textAlignment="JUSTIFY" wrapText="true">
                            <VBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="3 - Telemarketing / Call Center" textAlignment="JUSTIFY" wrapText="true">
+                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="3 - Saúde" textAlignment="JUSTIFY" wrapText="true">
                            <VBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="4 - Recursos Humanos" textAlignment="JUSTIFY" wrapText="true">
+                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="4 - Internet / Sites" textAlignment="JUSTIFY" wrapText="true">
                            <VBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </VBox.margin>
@@ -161,15 +168,15 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox layoutX="10.0" layoutY="293.0" prefHeight="106.0" prefWidth="730.0">
+            <VBox layoutX="10.0" layoutY="293.0" prefHeight="137.0" prefWidth="730.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Estágio:" textAlignment="CENTER" wrapText="true" />
-                  <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Salário em torno de R$1.500,00" textAlignment="JUSTIFY" wrapText="true">
+                  <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Salário em torno de R$900,00" textAlignment="JUSTIFY" wrapText="true">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Deverá estar cursando: Ensino Superior em Análise de Sistemas ou Ciência da Computação." textAlignment="JUSTIFY" wrapText="true">
+                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="33.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Deverá estar cursando: Ensino Superior em Ciência da Computação, Sistema de Informação ou algum curso técnico da área." textAlignment="JUSTIFY" wrapText="true">
                      <VBox.margin>
                         <Insets left="10.0" right="10.0" />
                      </VBox.margin>

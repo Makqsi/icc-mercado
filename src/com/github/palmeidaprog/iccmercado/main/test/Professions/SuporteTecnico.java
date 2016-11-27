@@ -2,7 +2,6 @@ package com.github.palmeidaprog.iccmercado.main.test.Professions;
 
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Linkable;
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Professionable;
-import com.github.palmeidaprog.iccmercado.main.test.ResultWindowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,50 +16,50 @@ import java.net.URL;
 * pauloalmeidaf@gmail.com
 * */
 
-public class AnalistaDeSistema implements Professionable, Linkable {
+public class SuporteTecnico implements Professionable, Linkable {
     // Links
     private URL youtube;
     private URL wikipedia;
     private URL google;
 
     // Requirements
-    private int hardware = 3;
-    private int lideranca = 3;
-    private int criatividade = 3;
-    private int ensino = 3;
+    private int hardware = 4;
+    private int lideranca = 0;
+    private int criatividade = 0;
+    private int ensino = 0;
     private int relacionamento = 4;
-    private int pesquisa = 3;
+    private int pesquisa = 2;
     private int matematica = 0;
-    private int logica = 0;
+    private int logica = 2;
     private int problemas = 3;
     private int design = 0;
-    private int number = 7;
+    private int number = 5;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
     private int percentual = 0;
 
-    private final String AREA = "Análise de Sistemas";
-    private final String PROFESSION = "Analista de Sistemas";
+    private final String AREA = "Sistemas de Computação/Atendimento";
+    private final String PROFESSION = "Suporte Técnico";
 
 
     //--Singleton pattern--------------------------------------------------
-    private static volatile AnalistaDeSistema instance = null;
+    private static volatile SuporteTecnico instance = null;
 
     // constructor
-    private AnalistaDeSistema() {
+    private SuporteTecnico() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=zTj9pyCD3Vo");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/An%C3%A1lise_de_sistemas");
-            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1" +
-                    "&espv=2&ie=UTF-8#q=Analista+de+Sistemas");
+            youtube = new URL("https://www.youtube.com/watch?v=FWUW4jbY6LE");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/T%C3%A9cnico_de_suporte");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&i" +
+                    "e=UTF-8#safe=off&q=%22suporte+tecnico%22+TI");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
 
-    public synchronized static AnalistaDeSistema getInstance() {
+    public synchronized static SuporteTecnico getInstance() {
         if(instance == null) {
-            instance = new AnalistaDeSistema();
+            instance = new SuporteTecnico();
         }
         return instance;
     }
@@ -129,8 +128,8 @@ public class AnalistaDeSistema implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("analise_de_sistemas.fxml"));
-        loaderResult.setController(AnaliseDeSistemasController.getInstance());
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        loaderResult.setController(SuporteTecnicoController.getInstance());
         Parent root = null;
         try {
             root = loaderResult.load();
