@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" >
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <padding>
       <Insets left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -178,7 +178,7 @@
       </VBox>
       <HBox alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Mostrar Resultado" />
+            <Button mnemonicParsing="false" onMouseClicked="#showResult" text="Mostrar Resultado" />
          </children>
          <padding>
             <Insets top="25.0" />

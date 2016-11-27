@@ -7,10 +7,12 @@
 package com.github.palmeidaprog.iccmercado.main.test;
 
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Linkable;
+import com.github.palmeidaprog.iccmercado.main.Interfaces.Rateable;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Hardware implements Linkable {
+public class Hardware implements Linkable, Rateable {
     private URL youtube;
     private URL wikipedia;
     private URL google;

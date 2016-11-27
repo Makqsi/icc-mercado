@@ -12,6 +12,4 @@ public interface Linkable {
     URL getYoutube();
     URL getWiki();
     URL getSearch();
-    void setStars(int s);
-    int getStars();
 }
