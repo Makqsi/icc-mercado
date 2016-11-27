@@ -66,7 +66,7 @@ public class TestResultController {
         } catch(IOException e) {
             e.printStackTrace();
         }
-        resultWindow.setScene(new Scene(root, 800, 600));
+        resultWindow.setScene(new Scene(root, 750, 750));
 
         try {
             Image f = new Image(Main.class.getResourceAsStream("favicon.png"));

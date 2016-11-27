@@ -1,0 +1,9 @@
+/* Toggle Button UI */
+
+.hbox {
+    -fx-border-radius: 50;
+    -fx-border-color: #F1B86C;
+    -fx-background-radius: 50;
+    -fx-background-color: #2f2f2f;
+}
+

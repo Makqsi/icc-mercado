@@ -12,6 +12,7 @@ import java.net.URL;
 * */
 
 public class AnalistaDeSistema implements Professionable, Linkable {
+    // Links
     private URL youtube;
     private URL wikipedia;
     private URL google;
