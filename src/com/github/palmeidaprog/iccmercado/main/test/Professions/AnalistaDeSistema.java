@@ -55,64 +55,79 @@ public class AnalistaDeSistema implements Professionable, Linkable {
 
     //--Professionable methods----------------------------------------------------
 
+    @Override
     public int[] getArray() {
         return array;
     }
 
+    @Override
     public int getNumber() {
         return number;
     }
 
+    @Override
     public int getHardware() {
         return hardware;
     }
 
+    @Override
     public int getLideranca() {
         return lideranca;
     }
 
+    @Override
     public int getCriatividade() {
         return criatividade;
     }
 
+    @Override
     public int getEnsino() {
         return ensino;
     }
 
+    @Override
     public int getRelacionamento() {
         return relacionamento;
     }
 
+    @Override
     public int getPesquisa() {
         return pesquisa;
     }
 
+    @Override
     public int getMatematica() {
         return matematica;
     }
 
+    @Override
     public int getLogica() {
         return logica;
     }
 
+    @Override
     public int getProblemas() {
         return problemas;
     }
 
+    @Override
     public int getDesign() {
         return design;
     }
 
     //--Linkable methods----------------------------------------------------
 
+    @Override
     public URL getYoutube() {
         return youtube;
     }
 
+    @Override
     public URL getWiki() {
         return wikipedia;
     }
 
+    @Override
     public URL getSearch() {
         return google;
     }
