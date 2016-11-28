@@ -16,50 +16,50 @@ import java.net.URL;
 * pauloalmeidaf@gmail.com
 * */
 
-public class TecnicoDeRede implements Professionable, Linkable {
+public class Professor implements Professionable, Linkable {
     // Links
     private URL youtube;
     private URL wikipedia;
     private URL google;
 
     // Requirements
-    private int hardware = 4;
-    private int lideranca = 0;
-    private int criatividade = 0;
-    private int ensino = 0;
-    private int relacionamento = 0;
-    private int pesquisa = 2;
-    private int matematica = 2;
-    private int logica = 0;
-    private int problemas = 3;
+    private int hardware = 0;
+    private int lideranca = 3;
+    private int criatividade = 2;
+    private int ensino = 4;
+    private int relacionamento = 4;
+    private int pesquisa = 4;
+    private int matematica = 0;
+    private int logica = 3;
+    private int problemas = 0;
     private int design = 0;
-    private int number = 4;
+    private int number = 6;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
     private int percentual = 0;
 
-    private final String AREA = "Rede";
-    private final String PROFESSION = "Técnico de Rede";
+    private final String AREA = "Ensino / Pesquisa";
+    private final String PROFESSION = "Professor Universitário";
 
 
     //--Singleton pattern--------------------------------------------------
-    private static volatile TecnicoDeRede instance = null;
+    private static volatile Professor instance = null;
 
     // constructor
-    private TecnicoDeRede() {
+    private Professor() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=Qu_aKaQx9u0");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/Rede_de_computadores");
-            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=U" +
-                    "TF-8#safe=off&q=%22t%C3%A9cnico+de+rede%22");
+            youtube = new URL("https://www.youtube.com/watch?v=-EBAkH36_wE");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/T%C3%A9cnico_de_suporte");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF" +
+                    "-8#q=%22professor%20universit%C3%A1rio%22");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
 
-    public synchronized static TecnicoDeRede getInstance() {
+    public synchronized static Professor getInstance() {
         if(instance == null) {
-            instance = new TecnicoDeRede();
+            instance = new Professor();
         }
         return instance;
     }
@@ -128,8 +128,8 @@ public class TecnicoDeRede implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("tecnico_de_rede.fxml"));
-        loaderResult.setController(TecnicoDeRedeController.getInstance());
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("professor.fxml"));
+        loaderResult.setController(SuporteTecnicoController.getInstance());
         Parent root = null;
         try {
             root = loaderResult.load();

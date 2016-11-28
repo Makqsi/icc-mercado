@@ -128,7 +128,7 @@ public class AnalistaDeSeguranca implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("analista_de_seguranca.fxml"));
         loaderResult.setController(AnaliseDeSistemasController.getInstance());
         Parent root = null;
         try {

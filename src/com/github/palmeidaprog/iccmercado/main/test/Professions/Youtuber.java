@@ -128,7 +128,7 @@ public class Youtuber implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("youtuber.fxml"));
         loaderResult.setController(YoutuberController.getInstance());
         Parent root = null;
         try {

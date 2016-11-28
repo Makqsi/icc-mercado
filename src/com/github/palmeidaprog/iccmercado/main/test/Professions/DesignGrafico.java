@@ -128,7 +128,7 @@ public class DesignGrafico implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("design_grafico.fxml"));
         loaderResult.setController(DesignGraficoController.getInstance());
         Parent root = null;
         try {

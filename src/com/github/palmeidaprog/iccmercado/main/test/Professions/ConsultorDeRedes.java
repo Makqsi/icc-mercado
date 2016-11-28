@@ -128,7 +128,7 @@ public class ConsultorDeRedes implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("consultor_de_redes.fxml"));
         loaderResult.setController(ConsultorDeRedesController.getInstance());
         Parent root = null;
         try {

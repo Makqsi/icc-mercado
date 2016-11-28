@@ -128,7 +128,7 @@ public class AdministradorDeBancoDados implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("administrador_banco_dados.fxml"));
         loaderResult.setController(AdministradorDeBancoDadosController.getInstance());
         Parent root = null;
         try {

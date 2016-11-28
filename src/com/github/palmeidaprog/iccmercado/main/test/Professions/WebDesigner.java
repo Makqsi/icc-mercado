@@ -128,7 +128,7 @@ public class WebDesigner implements Professionable, Linkable {
 
     @Override
     public Scene getDetails() {
-        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("suporte_tecnico.fxml"));
+        FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("web_designer.fxml"));
         loaderResult.setController(WebDesignerController.getInstance());
         Parent root = null;
         try {
