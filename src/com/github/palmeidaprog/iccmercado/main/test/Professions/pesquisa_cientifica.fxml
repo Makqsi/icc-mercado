@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="750.0" maxWidth="750.0" minHeight="425.0" minWidth="750.0" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #52596b;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="600.0" spacing="75.0" style="-fx-background-color: #2f2f2f;" stylesheets="@../../css_ui/toggle_button.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" style="-fx-text-fill: #F1B86C;" text="Doutorando em Ciência da Computação (Pesquisa Científica)" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../css_ui/result_button.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox layoutX="10.0" layoutY="40.0" prefHeight="24.0" prefWidth="730.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="38.0" style="-fx-text-fill: #F1B86C;" text="Área:" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Pesquisa" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="113.0" style="-fx-text-fill: #F1B86C;" text="Média Salarial:" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 3.000,00" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="23.0" prefWidth="730.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="51.0" style="-fx-text-fill: #F1B86C;" text="Vagas: " textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="10 vagas" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </HBox>
+            <VBox prefHeight="228.0" prefWidth="730.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="72.0" style="-fx-text-fill: #F1B86C;" text="Descrição:" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="73.0" prefWidth="710.0" style="-fx-text-fill: white;" text="Doutoramento (português europeu) ou doutorado (português brasileiro) é um grau académico concedido por uma instituição de ensino superior universitário, que pode ser uma universidade, um centro universitário, uma faculdade isolada, com o propósito de certificar a capacidade do candidato para desenvolver investigação num determinado campo da ciência (no seu conceito mais abrangente)." textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="37.0" prefHeight="105.0" prefWidth="710.0" style="-fx-text-fill: white;" text="Neste grau acadêmico espera-se que o aluno adquira capacidade de trabalho independente e criativo. Essa capacidade deve ser demonstrada pela criação de novo conhecimento e será validada por publicações em bons veículos científicos ou pela obtenção de patentes. É essencial para a seleção ao doutoramento a demonstração de qualidades e experiência em pesquisa. Um bom currículo acadêmico na graduação é condição indispensável, além da elaboração de uma tese original, que deverá ser avaliada por uma banca, composta de professores de, no mínimo, doutores." textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="695.0" spacing="75.0">
+                     <children>
+                        <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../youtube.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#getWiki" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../wiki.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Wikipedia" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="101.0" layoutY="10.0" onMouseClicked="#getGoogle" prefHeight="68.0" prefWidth="55.0" spacing="12.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../google-64.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Procurar" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
