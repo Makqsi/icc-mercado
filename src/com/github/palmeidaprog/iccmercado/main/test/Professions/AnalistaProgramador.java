@@ -22,18 +22,18 @@ public class AnalistaProgramador implements Professionable, Linkable {
     private URL wikipedia;
     private URL google;
 
-    // Requirements
-    private int hardware = 4;
-    private int lideranca = 0;
+    // Requirements 
+    private int hardware = 3;
+    private int lideranca = 3;
     private int criatividade = 0;
-    private int ensino = 0;
+    private int ensino = 3;
     private int relacionamento = 4;
-    private int pesquisa = 2;
-    private int matematica = 0;
-    private int logica = 2;
-    private int problemas = 3;
+    private int pesquisa = 3;
+    private int matematica = 3;
+    private int logica = 4;
+    private int problemas = 4;
     private int design = 0;
-    private int number = 5;
+    private int number = 8;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
     private int percentual = 0;
@@ -48,7 +48,7 @@ public class AnalistaProgramador implements Professionable, Linkable {
     // constructor
     private AnalistaProgramador() {
         try {
-            youtube = new URL("https://www.youtube.com/watch?v=BN8N2O7UIp0");
+            youtube = new URL("");
             wikipedia = new URL("https://pt.wikipedia.org/wiki/Analista_programador");
             google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&es" +
                     "pv=2&ie=UTF-8#q=Analista+Programador");

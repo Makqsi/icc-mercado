@@ -71,53 +71,8 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
                <children>
-                  <VBox prefHeight="84.0" prefWidth="332.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="729.0" spacing="150.0">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Ramos que mais pagam:" textAlignment="CENTER" wrapText="true" />
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="1 - Recursos Humanos" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="2 - Informática" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="3 - Saúde" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="4 - Internet / Sites" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <HBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="468.0" spacing="75.0">
-                     <children>
-                        <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
-                           <children>
-                              <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../youtube.png" />
-                                 </image>
-                              </ImageView>
-                              <Label text="Ver vídeo &#10;no Youtube" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </Label>
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </VBox>
                         <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#getWiki" prefHeight="68.0" prefWidth="55.0" spacing="10.0">
                            <children>
                               <ImageView fitHeight="74.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -162,31 +117,6 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox layoutX="10.0" layoutY="293.0" prefHeight="137.0" prefWidth="730.0">
-               <children>
-                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Estágio:" textAlignment="CENTER" wrapText="true" />
-                  <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Salário em torno de R$900,00" textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="33.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Deverá estar cursando: Ensino Superior em Ciência da Computação, Sistema de Informação ou algum curso técnico da área." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" prefHeight="34.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Auxiliar na implantação de projetos e sistemas de digitalização de documentos GED, ECM e BPM. Atuar com programação, análises, entre demais atividades." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Ter informática nível avançado. Conhecimentos em fluxogramas, programação e Banco de dados." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-               </children>
-            </VBox>
          </children>
          <padding>
             <Insets top="30.0" />
