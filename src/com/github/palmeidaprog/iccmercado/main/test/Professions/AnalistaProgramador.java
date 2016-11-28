@@ -38,7 +38,7 @@ public class AnalistaProgramador implements Professionable, Linkable {
             pesquisa, matematica, logica, problemas, design};
     private int percentual = 0;
 
-    private final String AREA = "Programação";
+    private final String AREA = "Programação / Desenvolvimento";
     private final String PROFESSION = "Analista Programador";
 
 
@@ -49,9 +49,9 @@ public class AnalistaProgramador implements Professionable, Linkable {
     private AnalistaProgramador() {
         try {
             youtube = new URL("https://www.youtube.com/watch?v=BN8N2O7UIp0");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/T%C3%A9cnico_de_suporte");
-            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&i" +
-                    "e=UTF-8#safe=off&q=%22suporte+tecnico%22+TI");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/Analista_programador");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&es" +
+                    "pv=2&ie=UTF-8#q=Analista+Programador");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

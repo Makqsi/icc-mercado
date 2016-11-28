@@ -24,7 +24,7 @@
             <DropShadow />
          </effect>
          <children>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Suporte Técnico" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Analista Programador" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -44,31 +44,25 @@
             <HBox layoutX="10.0" layoutY="40.0" prefHeight="24.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="38.0" style="-fx-text-fill: #F1B86C;" text="Área:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Sistema de Computação" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Programação / Desenvolvimento" textAlignment="CENTER" wrapText="true" />
                   <Label prefHeight="20.0" prefWidth="113.0" style="-fx-text-fill: #F1B86C;" text="Média Salarial:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 1.080,00" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 4.800,00" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
             <HBox prefHeight="23.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="51.0" style="-fx-text-fill: #F1B86C;" text="Vagas: " textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="1300 vagas" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="750 vagas" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
             <VBox prefHeight="186.0" prefWidth="730.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="72.0" style="-fx-text-fill: #F1B86C;" text="Descrição:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="117.0" prefWidth="710.0" style="-fx-text-fill: white;" text="O Técnico de suporte é um profissional de TI que presta suporte técnico presencial ou por telefone ao usuário o help desk, resolvendo problemas relativo ao funcionamento dos computadores de uma empresa." textAlignment="JUSTIFY" wrapText="true">
+                  <Label prefHeight="106.0" prefWidth="710.0" style="-fx-text-fill: white;" text="Realiza as fases de elaboração de requisitos e da programação de sistemas, desenvolve, testa e implementa. Conhece tecnicamente as fases das atividades, identifica e orienta na solução de problemas. Elabora, coordena e orienta atividades de correção e manutenção dos programas. Codifica e realiza os testes, prepara documentação e produz manuais de operação. Realiza a implementação e a manutenção de novos sistemas. Ajusta sistemas existentes para acompanha as mudanças e necessidades dos usuários. " textAlignment="JUSTIFY" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="90.0" style="-fx-text-fill: #F1B86C;" text="Atribuições:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="30.0" prefWidth="727.0" style="-fx-text-fill: white;" text="1. prestar manutenção em redes de computadores;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="45.0" prefWidth="727.0" style="-fx-text-fill: white;" text="2. Instalar e manter os diversos Sistemas Operacionais;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="35.0" prefWidth="727.0" style="-fx-text-fill: white;" text="3. Configurar as contas de correio eletrônico (E-mail);" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="727.0" style="-fx-text-fill: white;" text="4. Suporte aos usuários da empresa ou organização;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="11.0" prefWidth="727.0" style="-fx-text-fill: white;" text="5. Prestar suporte Help Desk de segundo nível;" textAlignment="JUSTIFY" wrapText="true" />
                   <Label prefHeight="39.0" prefWidth="727.0" style="-fx-text-fill: white;" textAlignment="JUSTIFY" wrapText="true" />
                </children>
             </VBox>
