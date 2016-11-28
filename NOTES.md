@@ -17,12 +17,17 @@ Noto Sans Carian
 - Reset test after leaving
 - Check if links open on all 3 OSes
 - Solve multiple windows opening
+- remove @debug and useless old commented code
+
+- Maxwell text: Fix analista de segurança 
 
 
 http://www.iconsdb.com/
 fx:controller="com.github.palmeidaprog.iccmercado.main.test.TestResultController"
 
 <fx:include fx:id="resultTest" source="result_test.fxml" />
+
+-------------Done---------------
 * campos para teste:
 
 - Liderança ok
