@@ -24,7 +24,7 @@
             <DropShadow />
          </effect>
          <children>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Suporte Técnico" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="204.0" style="-fx-text-fill: #F1B86C;" text="Professor Universitário" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -44,31 +44,30 @@
             <HBox layoutX="10.0" layoutY="40.0" prefHeight="24.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="38.0" style="-fx-text-fill: #F1B86C;" text="Área:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Sistema de Computação" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="380.0" style="-fx-text-fill: white;" text="Ensino / Pesquisa" textAlignment="CENTER" wrapText="true" />
                   <Label prefHeight="20.0" prefWidth="113.0" style="-fx-text-fill: #F1B86C;" text="Média Salarial:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 1.080,00" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: white;" text="R$ 3.500,00" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
             <HBox prefHeight="23.0" prefWidth="730.0" spacing="5.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="51.0" style="-fx-text-fill: #F1B86C;" text="Vagas: " textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="1300 vagas" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="20.0" prefWidth="78.0" style="-fx-text-fill: white;" text="60 vagas" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
-            <VBox prefHeight="186.0" prefWidth="730.0">
+            <VBox prefHeight="162.0" prefWidth="730.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="72.0" style="-fx-text-fill: #F1B86C;" text="Descrição:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="117.0" prefWidth="710.0" style="-fx-text-fill: white;" text="O Técnico de suporte é um profissional de TI que presta suporte técnico presencial ou por telefone ao usuário o help desk, resolvendo problemas relativo ao funcionamento dos computadores de uma empresa." textAlignment="JUSTIFY" wrapText="true">
+                  <Label prefHeight="51.0" prefWidth="710.0" style="-fx-text-fill: white;" text="Professor ou docente é uma pessoa que ensina ciência, arte, técnica ou outros conhecimentos. Para o exercício dessa profissão, requer-se qualificações académicas e pedagógicas, para que consiga transmitir/ensinar a matéria de estudo da melhor forma possível ao aluno." textAlignment="JUSTIFY" wrapText="true">
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="90.0" style="-fx-text-fill: #F1B86C;" text="Atribuições:" textAlignment="CENTER" wrapText="true" />
-                  <Label prefHeight="30.0" prefWidth="727.0" style="-fx-text-fill: white;" text="1. prestar manutenção em redes de computadores;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="45.0" prefWidth="727.0" style="-fx-text-fill: white;" text="2. Instalar e manter os diversos Sistemas Operacionais;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="35.0" prefWidth="727.0" style="-fx-text-fill: white;" text="3. Configurar as contas de correio eletrônico (E-mail);" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="20.0" prefWidth="727.0" style="-fx-text-fill: white;" text="4. Suporte aos usuários da empresa ou organização;" textAlignment="JUSTIFY" wrapText="true" />
-                  <Label prefHeight="11.0" prefWidth="727.0" style="-fx-text-fill: white;" text="5. Prestar suporte Help Desk de segundo nível;" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="20.0" layoutY="36.0" prefHeight="36.0" prefWidth="710.0" style="-fx-text-fill: white;" text="É uma das profissões mais importantes, tendo em vista que as demais, na sua maioria, dependem dela. Já Platão, na sua obra A República, alertava para a importância do papel do professor na formação do cidadão." textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <Label prefHeight="39.0" prefWidth="727.0" style="-fx-text-fill: white;" textAlignment="JUSTIFY" wrapText="true" />
                </children>
             </VBox>
@@ -77,32 +76,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
                <children>
-                  <VBox prefHeight="84.0" prefWidth="332.0">
-                     <children>
-                        <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Ramos que mais pagam:" textAlignment="CENTER" wrapText="true" />
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="1 - Recursos Humanos" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="2 - Informática" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="3 - Saúde" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="4 - Internet / Sites" textAlignment="JUSTIFY" wrapText="true">
-                           <VBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <HBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="468.0" spacing="75.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="709.0" spacing="75.0">
                      <children>
                         <VBox alignment="CENTER" onMouseClicked="#getYoutube" prefHeight="68.0" prefWidth="61.0" spacing="2.0">
                            <children>
@@ -168,31 +142,6 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox layoutX="10.0" layoutY="293.0" prefHeight="137.0" prefWidth="730.0">
-               <children>
-                  <Label prefHeight="20.0" prefWidth="165.0" style="-fx-text-fill: #F1B86C;" text="Estágio:" textAlignment="CENTER" wrapText="true" />
-                  <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Salário em torno de R$900,00" textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="40.0" prefHeight="33.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Deverá estar cursando: Ensino Superior em Ciência da Computação, Sistema de Informação ou algum curso técnico da área." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" prefHeight="34.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Auxiliar na implantação de projetos e sistemas de digitalização de documentos GED, ECM e BPM. Atuar com programação, análises, entre demais atividades." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="62.0" prefHeight="0.0" prefWidth="710.0" style="-fx-text-fill: white;" text="- Ter informática nível avançado. Conhecimentos em fluxogramas, programação e Banco de dados." textAlignment="JUSTIFY" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </Label>
-               </children>
-            </VBox>
          </children>
          <padding>
             <Insets top="30.0" />

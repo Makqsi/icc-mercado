@@ -49,9 +49,9 @@ public class Professor implements Professionable, Linkable {
     private Professor() {
         try {
             youtube = new URL("https://www.youtube.com/watch?v=-EBAkH36_wE");
-            wikipedia = new URL("https://pt.wikipedia.org/wiki/T%C3%A9cnico_de_suporte");
-            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF" +
-                    "-8#q=%22professor%20universit%C3%A1rio%22");
+            wikipedia = new URL("https://pt.wikipedia.org/wiki/Professor");
+            google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&" +
+                    "ie=UTF-8#q=%22professor%20universit%C3%A1rio%22");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -129,7 +129,7 @@ public class Professor implements Professionable, Linkable {
     @Override
     public Scene getDetails() {
         FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("professor.fxml"));
-        loaderResult.setController(SuporteTecnicoController.getInstance());
+        loaderResult.setController(ProfessorController.getInstance());
         Parent root = null;
         try {
             root = loaderResult.load();
