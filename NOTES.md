@@ -18,6 +18,7 @@ Noto Sans Carian
 - Check if links open on all 3 OSes
 - Solve multiple windows opening
 - remove @debug and useless old commented code
+- DSENVOLV HARD DEFINICAO 
 
 - Maxwell text: Fix analista de segurança 
 
