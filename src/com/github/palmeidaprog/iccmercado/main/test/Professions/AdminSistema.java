@@ -48,7 +48,7 @@ public class AdminSistema implements Professionable, Linkable {
     // constructor
     private AdminSistema() {
         try {
-            youtube = new URL("");
+            //youtube = new URL("");
             wikipedia = new URL("https://pt.wikipedia.org/wiki/Administrador_de_sistemas");
             google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&esp" +
                     "v=2&ie=UTF-8#q=%22Administrador+de+Sistemas%22");

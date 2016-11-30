@@ -48,7 +48,7 @@ public class ConsultorDeRedes implements Professionable, Linkable {
     // constructor
     private ConsultorDeRedes() {
         try {
-            youtube = new URL("");
+            //youtube = new URL("");
             wikipedia = new URL("https://pt.wikipedia.org/wiki/Rede_de_computadores");
             google = new URL("https://www.google.com.br/?gfe_rd=cr&ei=lvg7WMLnDOmp8wf-9pnoAQ&gws_rd=ssl" +
                     "#safe=off&q=%22consultor+de+rede%22");

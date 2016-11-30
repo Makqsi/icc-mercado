@@ -21,10 +21,13 @@ import javafx.stage.Stage;
 import java.util.List;
 
 public class ResultWindowController {
-    @FXML private Label nr1, prof1, area1, perc1;
-    @FXML private ProgressBar bar1;
+    @FXML private Label prof1, area1, perc1, prof2, area2, perc2, prof3, area3, perc3,
+            prof4, area4, perc4, prof5, area5, perc5, prof6, area6, perc6, prof7, area7, perc7,
+            prof8, area8, perc8;
+    @FXML private ProgressBar bar1, bar2, bar3, bar4, bar5, bar6, bar7, bar8;
     @FXML private Button btn1;
     private Stage details = new Stage();
+    private List<Professionable> l = Choices.getInstance().getList();
 
     //--Singleton pattern--------------------------------------------------
     private static volatile ResultWindowController instance = null;
@@ -40,20 +43,72 @@ public class ResultWindowController {
 
     //---------------------------------------------------------------------
 
-    public void update() {
-        List<Professionable> l = Choices.getInstance().getList();
-
-
+    private void professionPosition(Label pr, Label ar, Label pe, ProgressBar pB, Professionable p) {
+        pr.setText(p.getProfession());
+        ar.setText(p.getArea());
+        pe.setText(p.getPercentual() + "%");
+        pB.setProgress(p.getPercentual() / 100.0);
     }
 
-    public void btn1Clicked() {
-        details.setScene(AnalistaDeSistema.getInstance().getDetails());
+    public void update() {
+        professionPosition(prof1, area1, perc1, bar1, l.get(0));
+        professionPosition(prof2, area2, perc2, bar2, l.get(1));
+        professionPosition(prof3, area3, perc3, bar3, l.get(2));
+        professionPosition(prof4, area4, perc4, bar4, l.get(3));
+        professionPosition(prof5, area5, perc5, bar5, l.get(4));
+        professionPosition(prof6, area6, perc6, bar6, l.get(5));
+        professionPosition(prof7, area7, perc7, bar7, l.get(6));
+        professionPosition(prof8, area8, perc8, bar8, l.get(7));
+    }
+
+    private void getIcon() {
         try {
             Image f = new Image(Main.class.getResourceAsStream("favicon.png"));
             details.getIcons().add(f);
         } catch(Exception e) { }
+    }
 
-        details.setTitle("Detalhes: " + AnalistaDeSistema.getInstance().getProfession());
+    private void buttonClick(Professionable p) {
+        details.setScene(p.getDetails());
+        getIcon();
+        details.setTitle("Detalhes: " + p.getProfession());
         details.show();
     }
+
+    //--Button Click Events-----------------------------------------------------
+
+    public void btn1Click() {
+        buttonClick(l.get(0));
+    }
+
+    public void btn2Click() {
+        buttonClick(l.get(1));
+    }
+
+    public void btn3Click() {
+        buttonClick(l.get(2));
+    }
+
+    public void btn4Click() {
+        buttonClick(l.get(3));
+    }
+
+    public void btn5Click() {
+        buttonClick(l.get(4));
+    }
+
+    public void btn6Click() {
+        buttonClick(l.get(5));
+    }
+
+    public void btn7Click() {
+        buttonClick(l.get(6));
+    }
+
+    public void btn8Click() {
+        buttonClick(l.get(7));
+    }
+
+
+
 }

@@ -116,8 +116,8 @@ public class Choices {
     // BubbleSort
     public void orderingProfessions() {
         for(int i = 0; i < professionsList.size() / 2; i++) {
-            for (int j = 0; j < professionsList.size() - 1; j++) {
-                if (professionsList.get(j).getPercentual() < professionsList.get(j + 1)
+            for(int j = 0; j < professionsList.size() - 1; j++) {
+                if(professionsList.get(j).getPercentual() < professionsList.get(j + 1)
                         .getPercentual()) {
                     Professionable aux = professionsList.get(j); // auxiliar temp object
                     professionsList.set(j, professionsList.get(j + 1));

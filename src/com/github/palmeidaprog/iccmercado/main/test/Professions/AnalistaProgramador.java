@@ -48,7 +48,7 @@ public class AnalistaProgramador implements Professionable, Linkable {
     // constructor
     private AnalistaProgramador() {
         try {
-            youtube = new URL("");
+           // youtube = new URL("");
             wikipedia = new URL("https://pt.wikipedia.org/wiki/Analista_programador");
             google = new URL("https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&es" +
                     "pv=2&ie=UTF-8#q=Analista+Programador");
