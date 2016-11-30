@@ -27,6 +27,7 @@ public class TestResultController {
     @FXML private Label hard, lider, criati, ensino, relaci, pesq, matem,
             logic, resol, desig;
     private Parent root;
+    private Stage resultWindow = new Stage();
 
 
     //--Singleton pattern--------------------------------------------------
@@ -57,7 +58,7 @@ public class TestResultController {
     }
 
     public void showResult() {
-        Stage resultWindow = new Stage();
+
 
         FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("result_window.fxml"));
         loaderResult.setController(ResultWindowController.getInstance());

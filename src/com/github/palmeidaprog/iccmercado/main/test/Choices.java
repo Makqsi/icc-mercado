@@ -28,4 +28,8 @@ public class Choices {
         return hardware;
     }
 
+    public void compare(int[] profession) {
+
+    }
+
 }
