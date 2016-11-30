@@ -21,6 +21,8 @@ public class Choices {
     // holds all professions objects
     // guarda todos objetos das profissoes
     private List<Professionable> professionsList = new ArrayList<>();
+    private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
+            pesquisa, matematica, logica, problemas, design};
 
     // Singleton contructor
     private Choices() {
@@ -46,6 +48,21 @@ public class Choices {
 
 
     //--Set and get methods--------------------------------------------------
+
+
+    private int[] getArray() {
+        array[0] = hardware;
+        array[1] = lideranca;
+        array[2] = criatividade;
+        array[3] = ensino;
+        array[4] = relacionamento;
+        array[5] = pesquisa;
+        array[6] = matematica;
+        array[7] = logica;
+        array[8] = problemas;
+        array[9] = design;
+        return array;
+    }
 
     public List<Professionable> getList() {
         return professionsList;
@@ -101,6 +118,7 @@ public class Choices {
 
     public void calculateProfessions() {
         double percChoke;
+        int
         for(Professionable p : professionsList) {
             percChoke = 100.0 / p.getNumber();
 
