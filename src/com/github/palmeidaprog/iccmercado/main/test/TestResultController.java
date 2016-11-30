@@ -17,8 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import sun.security.krb5.internal.crypto.Des;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -66,10 +64,12 @@ public class TestResultController {
         ch.setProblemas(Problemas.getInstance().getStars());
         desig.setText("- Design e Artes: " + Design.getInstance().getStars());
         ch.setDesign(Design.getInstance().getStars());
+        ch.calculateProfessions();
     }
 
     public void showResult() {
         Choices cc = Choices.getInstance();
+        cc.orderingProfessions();
 
         FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("result_window.fxml"));
         loaderResult.setController(ResultWindowController.getInstance());
@@ -86,7 +86,9 @@ public class TestResultController {
         } catch(Exception e) { }
 
         resultWindow.setTitle("Resultado do Teste de Aptidão");
+        ResultWindowController.getInstance().update(); // update professions before calling Stage
         resultWindow.show();
+
 
     }
 }

@@ -49,7 +49,6 @@ public class Choices {
 
     //--Set and get methods--------------------------------------------------
 
-
     private int[] getArray() {
         array[0] = hardware;
         array[1] = lideranca;
@@ -108,26 +107,62 @@ public class Choices {
         design = s;
     }
 
-    public void organizeProfessions() {
-        calculateProfessions();
-
-        for(Professionable x : professionsList) {
-            //Choices
-        }
-    }
-
     public void calculateProfessions() {
-        double percChoke;
-        int
         for(Professionable p : professionsList) {
-            percChoke = 100.0 / p.getNumber();
-
+           calculatePercentual(p);
         }
     }
 
-
-    public void compare(int[] profession) {
-
+    // BubbleSort
+    public void orderingProfessions() {
+        for(int i = 0; i < professionsList.size() / 2; i++) {
+            for (int j = 0; j < professionsList.size() - 1; j++) {
+                if (professionsList.get(j).getPercentual() < professionsList.get(j + 1)
+                        .getPercentual()) {
+                    Professionable aux = professionsList.get(j); // auxiliar temp object
+                    professionsList.set(j, professionsList.get(j + 1));
+                    professionsList.set(j + 1, aux);
+                }
+            }
+        }
     }
+
+    // calcula os percentuais de compatibildade com cada profissões
+    // calculate compatibility percentage with each profession
+    private void calculatePercentual(Professionable p) {
+        double percPart = 100.0 / p.getNumber();
+        double total = 0;
+        int[] array_prof = p.getArray();
+        int[] ar = getArray();
+
+        for(int i = 0; i < ar.length; i++) {
+            if(array_prof[i] != 0 && ar[i] >= array_prof[i]) {
+                total = total + percPart;
+
+                // reduz 10% caso seja uma habilidade importante na profissao e o usuario nao tenha
+                // escolhido como área de maior interesse
+                // reduce 10% if the important skill (4) and user didnt choose as their favorite area
+                if(array_prof[i] == 4 && ar[i] < 5) {
+                    total = total - percPart * 0.1;
+                }
+            }
+        }
+        p.setPercentual(roundNumber(total));
+    }
+
+    // round number to intenger
+    // aredonda numero para inteiro
+    private int roundNumber(double d) {
+        double decimal;
+
+        decimal = d - (int) d;
+        if(decimal <= 0.5) {
+            return (int) d;
+        }
+        else {
+            return (int) d + 1;
+        }
+    }
+
 
 }

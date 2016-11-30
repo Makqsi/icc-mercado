@@ -7,6 +7,7 @@
 package com.github.palmeidaprog.iccmercado.main.test;
 
 
+import com.github.palmeidaprog.iccmercado.main.Interfaces.Professionable;
 import com.github.palmeidaprog.iccmercado.main.Main;
 import com.github.palmeidaprog.iccmercado.main.test.Professions.AnalistaDeSistema;
 import javafx.fxml.FXML;
@@ -16,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class ResultWindowController {
     @FXML private Label nr1, prof1, area1, perc1;
@@ -33,6 +36,14 @@ public class ResultWindowController {
             instance = new ResultWindowController();
         }
         return instance;
+    }
+
+    //---------------------------------------------------------------------
+
+    public void update() {
+        List<Professionable> l = Choices.getInstance().getList();
+
+
     }
 
     public void btn1Clicked() {
