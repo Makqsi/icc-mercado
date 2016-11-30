@@ -68,9 +68,18 @@ public class AnalistaProgramador implements Professionable, Linkable {
 
     @Override
     public int[] getArray() {
+        array[0] = hardware;
+        array[1] = lideranca;
+        array[2] = criatividade;
+        array[3] = ensino;
+        array[4] = relacionamento;
+        array[5] = pesquisa;
+        array[6] = matematica;
+        array[7] = logica;
+        array[8] = problemas;
+        array[9] = design;
         return array;
     }
-
     @Override
     public int getNumber() {
         return number;
