@@ -33,6 +33,7 @@ public class AdministradorDeBancoDados implements Professionable, Linkable {
     private int logica = 4;
     private int problemas = 3;
     private int design = 0;
+
     private int number = 5;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
@@ -155,6 +156,11 @@ public class AdministradorDeBancoDados implements Professionable, Linkable {
     @Override
     public int getPercentual() {
         return percentual;
+    }
+
+    @Override
+    public void setPercentual(int p) {
+        percentual = p;
     }
 
     //--Linkable methods----------------------------------------------------

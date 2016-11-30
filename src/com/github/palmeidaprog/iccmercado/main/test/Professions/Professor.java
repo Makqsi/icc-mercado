@@ -157,6 +157,11 @@ public class Professor implements Professionable, Linkable {
         return percentual;
     }
 
+    @Override
+    public void setPercentual(int p) {
+        percentual = p;
+    }
+
     //--Linkable methods----------------------------------------------------
 
     @Override

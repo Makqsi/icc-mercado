@@ -157,6 +157,11 @@ public class EngenheiroEletronico implements Professionable, Linkable {
         return percentual;
     }
 
+    @Override
+    public void setPercentual(int p) {
+        percentual = p;
+    }
+
     //--Linkable methods----------------------------------------------------
 
     @Override
@@ -173,5 +178,4 @@ public class EngenheiroEletronico implements Professionable, Linkable {
     public URL getSearch() {
         return google;
     }
-
 }

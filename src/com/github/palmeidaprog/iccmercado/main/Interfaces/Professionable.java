@@ -27,4 +27,5 @@ public interface Professionable {
     String getArea();
     String getProfession();
     int getPercentual();
+    void setPercentual(int p);
 }

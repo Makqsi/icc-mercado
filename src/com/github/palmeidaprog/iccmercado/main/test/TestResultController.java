@@ -45,20 +45,31 @@ public class TestResultController {
     // atualiza informações das Labels
     // update info from the labels
     public void update() {
+        Choices ch = Choices.getInstance();
         hard.setText("- Hardware: " + Hardware.getInstance().getStars());
+        ch.setHardware(Hardware.getInstance().getStars());
         lider.setText("- Liderança: " + Lideranca.getInstance().getStars());
+        ch.setLideranca(Lideranca.getInstance().getStars());
         criati.setText("- Criatividade: " + Criatividade.getInstance().getStars());
+        ch.setCriatividade(Criatividade.getInstance().getStars());
         ensino.setText("- Ensino: " + Ensino.getInstance().getStars());
+        ch.setEnsino(Ensino.getInstance().getStars());
         relaci.setText("- Relacionamento Interpessoal: " + Relacionamento.getInstance().getStars());
+        ch.setRelacionamento(Relacionamento.getInstance().getStars());
         pesq.setText("- Pesquisa: " + Pesquisa.getInstance().getStars());
+        ch.setPesquisa(Pesquisa.getInstance().getStars());
         matem.setText("- Matemática: " + Matematica.getInstance().getStars());
+        ch.setMatematica(Matematica.getInstance().getStars());
         logic.setText("- Lógica e Abstração: " + Logica.getInstance().getStars());
+        ch.setLogica(Logica.getInstance().getStars());
         resol.setText("- Resolução de Problemas: " + Problemas.getInstance().getStars());
+        ch.setProblemas(Problemas.getInstance().getStars());
         desig.setText("- Design e Artes: " + Design.getInstance().getStars());
+        ch.setDesign(Design.getInstance().getStars());
     }
 
     public void showResult() {
-
+        Choices cc = Choices.getInstance();
 
         FXMLLoader loaderResult = new FXMLLoader(getClass().getResource("result_window.fxml"));
         loaderResult.setController(ResultWindowController.getInstance());
