@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="leiVB2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="324.0" style="-fx-text-fill: #06e3bd;" text="1 - Conselho de Auto-Regulação" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="659.0" />
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="A SBC propõe a constituição de um Conselho Nacional de Auto-Regulação, a ser formado por um conjunto de entidades representativas da Sociedade Civil com a finalidade de definir, manter um Código de ética e aplicá-lo no setor de Informática, visando a proteção da Sociedade e defesa da Área do ponto de vista ético e político." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="O cenário idealizado pela SBC para o exercício das atividades de Informática no País é caracterizado pelos seguintes elementos conciliadores dos diversos interesses da Sociedade e dos profissionais:" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="128.0" prefHeight="29.0" prefWidth="619.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <VBox style="-fx-border-color: #06e3bd;">
+         <children>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="1." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Regime de liberdade ao trabalho na profissão de Informática em todo o País;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="2." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Competência profissional e posse do conhecimento como principais diferenciais a serem utilizados pela Sociedade e pelas empresas na contratação de serviços profissionais;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="3." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="A área deve ser Auto-Regulada." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="4." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Uso do controle de qualidade de produto para garantia da satisfação do consumidor;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="5." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Uso da legislação pertinente (Cível, Penal, Comercial, Código do Consumidor, etc) para resolver divergências, punir irregularidades e promover a defesa de direitos;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="6." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Sindicatos atuantes para defender os interesses legítimos direitos da categoria profissional;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="7." textFill="WHITE" wrapText="true" />
+                  <Label contentDisplay="CENTER" text="Conselho de Auto-Regulação atuante para a defesa da Sociedade por meio da vigilância do cumprimento da ética e de defesa da área do ponto de vista político." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="229.0" prefHeight="9.0" prefWidth="659.0" />
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>
