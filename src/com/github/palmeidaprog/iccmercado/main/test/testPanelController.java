@@ -59,7 +59,7 @@ public class testPanelController {
                     avancar(test3);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 3:
@@ -67,7 +67,7 @@ public class testPanelController {
                     avancar(test4);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 4:
@@ -75,7 +75,7 @@ public class testPanelController {
                     avancar(test5);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 5:
@@ -83,7 +83,7 @@ public class testPanelController {
                     avancar(test6);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 6:
@@ -91,7 +91,7 @@ public class testPanelController {
                     avancar(test7);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 7:
@@ -99,7 +99,7 @@ public class testPanelController {
                     avancar(test8);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             case 8:
@@ -107,7 +107,7 @@ public class testPanelController {
                     avancar(test9);
                 }
                 else {
-                    //disab
+                    errorDialog();
                 }
                 break;
             case 9:
@@ -115,10 +115,10 @@ public class testPanelController {
                     avancar(test10);
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
-            case 10: //todo: Solve not advancing to design vbox
+            case 10:
                 if(Design.getInstance().getStars() != 0) {
                     e.fadeBoxes(c.navigationBox.getChildren().get(1), 1);
                     c.navigationBox.getChildren().set(1, c.resultTest);
@@ -127,7 +127,7 @@ public class testPanelController {
                     TestResultController.getInstance().update();
                 }
                 else {
-                    //
+                    errorDialog();
                 }
                 break;
             default:
