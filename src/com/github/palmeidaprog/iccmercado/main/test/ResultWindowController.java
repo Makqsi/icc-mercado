@@ -66,10 +66,10 @@ public class ResultWindowController implements Initializable {
         }
 
         //load page3
-        FXMLLoader res2 = new FXMLLoader(getClass().getResource("result_window2.fxml"));
-        res2.setController(ResultWindowController2.getInstance());
+        FXMLLoader res3 = new FXMLLoader(getClass().getResource("result_window3.fxml"));
+        res3.setController(ResultWindowController3.getInstance());
         try {
-            resultPage2 = res2.load();
+            resultPage3 = res3.load();
         } catch (IOException e) {
             e.printStackTrace();
         }

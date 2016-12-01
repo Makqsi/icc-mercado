@@ -18,8 +18,9 @@ import javafx.stage.Stage;
 import java.util.List;
 
 public class ResultWindowController3 {
-    @FXML private Label prof18, area18, perc18, prof19, area19, perc19, prof20, area20, perc20;
-    @FXML private ProgressBar bar18, bar19, bar20;
+    @FXML private Label prof17, area17, perc17, prof18, area18, perc18, prof19, area19,
+            perc19, prof20, area20, perc20;
+    @FXML private ProgressBar bar17, bar18, bar19, bar20;
     private Stage details = new Stage();
     private List<Professionable> l = Choices.getInstance().getList();
 
@@ -45,14 +46,10 @@ public class ResultWindowController3 {
     }
 
     public void update() {
-        professionPosition(prof9, area9, perc9, bar9, l.get(8));
-        professionPosition(prof10, area10, perc10, bar10, l.get(9));
-        professionPosition(prof11, area11, perc11, bar11, l.get(10));
-        professionPosition(prof12, area12, perc12, bar12, l.get(11));
-        professionPosition(prof13, area13, perc13, bar13, l.get(12));
-        professionPosition(prof14, area14, perc14, bar14, l.get(13));
-        professionPosition(prof15, area15, perc15, bar15, l.get(14));
-        professionPosition(prof16, area16, perc16, bar16, l.get(15));
+        professionPosition(prof17, area17, perc17, bar17, l.get(16));
+        professionPosition(prof18, area18, perc18, bar18, l.get(17));
+        professionPosition(prof19, area19, perc19, bar19, l.get(18));
+        professionPosition(prof20, area20, perc20, bar20, l.get(19));
     }
 
     private void getIcon() {
