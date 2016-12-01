@@ -115,7 +115,7 @@ public class Test9Controller {
 
     private void setStars(int s) {
         stars = s;
-        Logica.getInstance().setStars(s);
+        Problemas.getInstance().setStars(s);
     }
 
     public void star1Click() {
