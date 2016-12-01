@@ -115,7 +115,10 @@ public class EngenhariaReversa implements Professionable, Linkable {
     public int getPesquisa() {
         return pesquisa;
     }
+ public void page2() {
 
+
+    }
     @Override
     public int getMatematica() {
         return matematica;

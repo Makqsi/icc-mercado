@@ -9,23 +9,32 @@ package com.github.palmeidaprog.iccmercado.main.test;
 
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Professionable;
 import com.github.palmeidaprog.iccmercado.main.Main;
+import com.github.palmeidaprog.iccmercado.main.UIEffects;
 import com.github.palmeidaprog.iccmercado.main.test.Professions.AnalistaDeSistema;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class ResultWindowController {
+public class ResultWindowController implements Initializable {
     @FXML private Label prof1, area1, perc1, prof2, area2, perc2, prof3, area3, perc3,
             prof4, area4, perc4, prof5, area5, perc5, prof6, area6, perc6, prof7, area7, perc7,
             prof8, area8, perc8;
     @FXML private ProgressBar bar1, bar2, bar3, bar4, bar5, bar6, bar7, bar8;
     @FXML private Button btn1;
+    @FXML public VBox resultPage2, resultPage1, resultPage3;
+    @FXML public BorderPane mainPaneResult;
     private Stage details = new Stage();
     private List<Professionable> l = Choices.getInstance().getList();
 
@@ -33,13 +42,39 @@ public class ResultWindowController {
     private static volatile ResultWindowController instance = null;
 
     // constructor
-    private ResultWindowController() { }
+    private ResultWindowController() {
+    }
+
     public synchronized static ResultWindowController getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new ResultWindowController();
         }
         return instance;
     }
+
+    //-Initialize----------------------------------------------------------
+
+    public void initialize(URL u, ResourceBundle rb) {
+
+        // load page2
+        FXMLLoader res2 = new FXMLLoader(getClass().getResource("result_window2.fxml"));
+        res2.setController(ResultWindowController2.getInstance());
+        try {
+            resultPage2 = res2.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //load page3
+        FXMLLoader res2 = new FXMLLoader(getClass().getResource("result_window2.fxml"));
+        res2.setController(ResultWindowController2.getInstance());
+        try {
+            resultPage2 = res2.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     //---------------------------------------------------------------------
 
@@ -65,7 +100,8 @@ public class ResultWindowController {
         try {
             Image f = new Image(Main.class.getResourceAsStream("favicon.png"));
             details.getIcons().add(f);
-        } catch(Exception e) { }
+        } catch (Exception e) {
+        }
     }
 
     private void buttonClick(Professionable p) {
@@ -86,6 +122,7 @@ public class ResultWindowController {
     }
 
     public void btn3Click() {
+
         buttonClick(l.get(2));
     }
 
@@ -108,6 +145,27 @@ public class ResultWindowController {
     public void btn8Click() {
         buttonClick(l.get(7));
     }
+
+    public void page2() {
+        ResultWindowController2.getInstance().update();
+        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
+        mainPaneResult.setCenter(resultPage2);
+        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);
+    }
+
+    public void page1() {
+        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
+        mainPaneResult.setCenter(resultPage1);
+        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);
+    }
+
+    public void page3() {
+        ResultWindowController3.getInstance().update();
+        /*UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
+        mainPaneResult.setCenter(resultPage1);
+        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);*/
+    }
+
 
 
 

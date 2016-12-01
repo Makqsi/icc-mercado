@@ -29,6 +29,9 @@ fx:controller="com.github.palmeidaprog.iccmercado.main.test.TestResultController
 <fx:include fx:id="resultTest" source="result_test.fxml" />
 
 -------------Done---------------
+                   <fx:define>
+                       <fx:include fx:id="resultPage2" source="result_window2.fxml" />
+                   </fx:define>
 * campos para teste:
 
 - Liderança ok
