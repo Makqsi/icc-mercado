@@ -10,10 +10,13 @@ package com.github.palmeidaprog.iccmercado.main;
 import javafx.animation.*;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.Glow;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -22,6 +25,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class UIEffects {
@@ -237,5 +241,30 @@ public class UIEffects {
         controller.getMainNode().setDisable(b);
     }
 
+    //--Specific Result Window Effects-----------------------------------------------
 
+    // Disable Button Effects / desabilita efeitos nos botões
+    public void disableFX(ToggleButton b) {
+        b.setSelected(false);
+        b.setEffect(null);
+        b.setStyle("-fx-background-color: #729FCD");
+    }
+
+    /*Enable effects to the selected button
+    * Liga efeitos no botão selecionado*/
+    public void turnOn(ToggleButton on, ToggleButton b2, ToggleButton b3) {
+        InnerShadow innerShadow = new InnerShadow();
+        innerShadow.widthProperty().set(21);
+        innerShadow.heightProperty().set(21);
+        innerShadow.setRadius(10);
+
+        /*Disabling effects on unselected button
+        * Desabilitando efeitos nos botões não selecionados*/
+        disableFX(b2);
+        disableFX(b3);
+
+        on.setSelected(true);
+        on.setEffect(innerShadow);
+        on.setStyle("-fx-background-color: #F1B86C");
+    }
 }

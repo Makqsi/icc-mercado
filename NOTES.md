@@ -19,6 +19,7 @@ Noto Sans Carian
 - Solve multiple windows opening
 - remove @debug and useless old commented code
 - DSENVOLV HARD DEFINICAO 
+- ALIGN CONTROLS IN RESULT WINDOW
 
 - Maxwell text: Fix analista de segurança 
 

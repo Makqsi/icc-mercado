@@ -14,9 +14,7 @@ import com.github.palmeidaprog.iccmercado.main.test.Professions.AnalistaDeSistem
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -24,6 +22,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -32,11 +31,12 @@ public class ResultWindowController implements Initializable {
             prof4, area4, perc4, prof5, area5, perc5, prof6, area6, perc6, prof7, area7, perc7,
             prof8, area8, perc8;
     @FXML private ProgressBar bar1, bar2, bar3, bar4, bar5, bar6, bar7, bar8;
-    @FXML private Button btn1;
+    @FXML private ToggleButton select1, select2, select3;
     @FXML public VBox resultPage2, resultPage1, resultPage3;
     @FXML public BorderPane mainPaneResult;
     private Stage details = new Stage();
     private List<Professionable> l = Choices.getInstance().getList();
+    private UIEffects fx = UIEffects.getInstance();
 
     //--Singleton pattern--------------------------------------------------
     private static volatile ResultWindowController instance = null;
@@ -146,24 +146,42 @@ public class ResultWindowController implements Initializable {
         buttonClick(l.get(7));
     }
 
-    public void page2() {
-        ResultWindowController2.getInstance().update();
-        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
-        mainPaneResult.setCenter(resultPage2);
-        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);
-    }
+    //--Top Box Buttons Events-----------------------------------------------------------
 
+    /*
+    * Top Button "1" Click Event
+    * Evento de Clique do Botão 1 do Topo
+    * */
     public void page1() {
-        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
+        fx.turnOn(select1, select2, select3);
+        ResultWindowController.getInstance().update();
+        fx.fadeBoxes(mainPaneResult.getCenter(), 1);
         mainPaneResult.setCenter(resultPage1);
-        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);
+        fx.fadeBoxes(mainPaneResult.getCenter(), 0);
     }
 
+    /*
+    * Top Button "3" Click Event
+    * Evento de Clique do Botão 3 do Topo
+    * */
+    public void page2() {
+        fx.turnOn(select2, select1, select3);
+        ResultWindowController2.getInstance().update();
+        fx.fadeBoxes(mainPaneResult.getCenter(), 1);
+        mainPaneResult.setCenter(resultPage2);
+        fx.fadeBoxes(mainPaneResult.getCenter(), 0);
+    }
+
+    /*
+    * Top Button "3" Click Event
+    * Evento de Clique do Botão 3 do Topo
+    * */
     public void page3() {
+        fx.turnOn(select3, select2, select1);
         ResultWindowController3.getInstance().update();
-        /*UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 1);
-        mainPaneResult.setCenter(resultPage1);
-        UIEffects.getInstance().fadeBoxes(mainPaneResult.getCenter(), 0);*/
+        fx.fadeBoxes(mainPaneResult.getCenter(), 1);
+        mainPaneResult.setCenter(resultPage3);
+        fx.fadeBoxes(mainPaneResult.getCenter(), 0);
     }
 
 

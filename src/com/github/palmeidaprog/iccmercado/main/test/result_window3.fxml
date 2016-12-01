@@ -53,7 +53,7 @@
       </HBox>
       <HBox layoutX="20.0" layoutY="25.0" prefHeight="49.0" prefWidth="698.0" spacing="20.0">
          <children>
-            <Label fx:id="nr1" prefHeight="46.0" prefWidth="36.0" style="-fx-text-fill: #F1B86C;" text="18" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="nr1" prefHeight="46.0" prefWidth="36.0" style="-fx-text-fill: #F1B86C;" text="17" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -66,15 +66,15 @@
                   <Insets top="5.0" />
                </HBox.margin>
                <children>
-                  <Label fx:id="prof18" alignment="CENTER" prefHeight="47.0" prefWidth="223.0" style="-fx-text-fill: #F1B86C;" text="Analista de Sistemas" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="prof17" alignment="CENTER" prefHeight="47.0" prefWidth="223.0" style="-fx-text-fill: #F1B86C;" text="Analista de Sistemas" textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
-            <Label fx:id="area18" alignment="CENTER" layoutX="49.0" layoutY="15.0" prefHeight="42.0" prefWidth="130.0" style="-fx-text-fill: #F1B86C;" text="Sistema de Informações" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="area17" alignment="CENTER" layoutX="49.0" layoutY="15.0" prefHeight="42.0" prefWidth="130.0" style="-fx-text-fill: #F1B86C;" text="Sistema de Informações" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="perc18" layoutX="205.0" layoutY="15.0" prefHeight="41.0" prefWidth="39.0" style="-fx-text-fill: #F1B86C;" text="70%" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="perc17" layoutX="205.0" layoutY="15.0" prefHeight="41.0" prefWidth="39.0" style="-fx-text-fill: #F1B86C;" text="70%" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -84,12 +84,12 @@
                   <Insets top="5.0" />
                </HBox.margin>
                <children>
-                  <ProgressBar fx:id="bar18" prefHeight="20.0" prefWidth="83.0" progress="0.7" />
+                  <ProgressBar fx:id="bar17" prefHeight="20.0" prefWidth="83.0" progress="0.7" />
                </children>
             </VBox>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btn18" mnemonicParsing="false" onMouseClicked="#btn9Click" prefHeight="30.0" prefWidth="112.0" text="Detalhes" />
+                  <Button fx:id="btn17" mnemonicParsing="false" onMouseClicked="#btn9Click" prefHeight="30.0" prefWidth="112.0" text="Detalhes" />
                </children>
             </VBox>
          </children>
@@ -100,7 +100,7 @@
       <Separator prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
       <HBox layoutX="20.0" layoutY="82.0" prefHeight="49.0" prefWidth="698.0" spacing="20.0">
          <children>
-            <Label fx:id="nr2" prefHeight="49.0" prefWidth="27.0" style="-fx-text-fill: #F1B86C;" text="19" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="nr2" prefHeight="49.0" prefWidth="27.0" style="-fx-text-fill: #F1B86C;" text="18" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -110,10 +110,10 @@
             </Label>
             <VBox prefHeight="49.0" prefWidth="215.0">
                <children>
-                  <Label fx:id="prof19" alignment="CENTER" prefHeight="47.0" prefWidth="225.0" style="-fx-text-fill: #F1B86C;" text="Suporte Técnico" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="prof18" alignment="CENTER" prefHeight="47.0" prefWidth="225.0" style="-fx-text-fill: #F1B86C;" text="Suporte Técnico" textAlignment="CENTER" wrapText="true" />
                </children>
             </VBox>
-            <Label fx:id="area19" alignment="CENTER" layoutX="49.0" layoutY="15.0" prefHeight="42.0" prefWidth="130.0" style="-fx-text-fill: #F1B86C;" text="Sistemas de Computação" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="area18" alignment="CENTER" layoutX="49.0" layoutY="15.0" prefHeight="42.0" prefWidth="130.0" style="-fx-text-fill: #F1B86C;" text="Sistemas de Computação" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -121,7 +121,51 @@
                   <Font size="12.0" />
                </font>
             </Label>
-            <Label fx:id="perc19" layoutX="205.0" layoutY="15.0" prefHeight="41.0" prefWidth="37.0" style="-fx-text-fill: #F1B86C;" text="55%" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="perc18" layoutX="205.0" layoutY="15.0" prefHeight="41.0" prefWidth="37.0" style="-fx-text-fill: #F1B86C;" text="55%" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <VBox alignment="CENTER">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+               <children>
+                  <ProgressBar fx:id="bar18" prefHeight="20.0" prefWidth="83.0" progress="0.55" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Button fx:id="btn18" mnemonicParsing="false" onMouseClicked="#btn10Click" prefHeight="30.0" prefWidth="106.0" text="Detalhes" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Separator layoutX="10.0" layoutY="141.0" prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
+      <HBox layoutX="20.0" layoutY="154.0" prefHeight="49.0" prefWidth="698.0" spacing="20.0">
+         <children>
+            <Label fx:id="nr3" prefHeight="46.0" prefWidth="29.0" style="-fx-text-fill: #F1B86C;" text="19" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="49.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="prof19" alignment="CENTER" prefHeight="47.0" prefWidth="223.0" style="-fx-text-fill: #F1B86C;" text="Arquiteto de Sistemas" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+            <Label fx:id="area19" alignment="CENTER" layoutX="49.0" layoutY="15.0" prefHeight="42.0" prefWidth="130.0" style="-fx-text-fill: #F1B86C;" text="Sistemas de Informações" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="perc19" layoutX="205.0" layoutY="15.0" prefHeight="41.0" prefWidth="36.0" style="-fx-text-fill: #F1B86C;" text="55%" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -136,18 +180,18 @@
             </VBox>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btn19" mnemonicParsing="false" onMouseClicked="#btn10Click" prefHeight="30.0" prefWidth="106.0" text="Detalhes" />
+                  <Button fx:id="btn19" mnemonicParsing="false" onMouseClicked="#btn11Click" prefHeight="30.0" prefWidth="112.0" text="Detalhes" />
                </children>
             </VBox>
          </children>
          <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <Separator layoutX="10.0" layoutY="141.0" prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
-      <HBox layoutX="20.0" layoutY="154.0" prefHeight="49.0" prefWidth="698.0" spacing="20.0">
+      <Separator layoutX="10.0" layoutY="213.0" prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
+      <HBox layoutX="30.0" layoutY="246.0" prefHeight="49.0" prefWidth="698.0" spacing="20.0">
          <children>
-            <Label fx:id="nr3" prefHeight="46.0" prefWidth="29.0" style="-fx-text-fill: #F1B86C;" text="20" textAlignment="CENTER" wrapText="true">
+            <Label prefHeight="46.0" prefWidth="29.0" style="-fx-text-fill: #F1B86C;" text="20" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -188,7 +232,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <Separator layoutX="10.0" layoutY="213.0" prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
+      <Separator layoutX="20.0" layoutY="305.0" prefWidth="200.0" style="-fx-background-color: #F1B86C;" />
    </children>
    <opaqueInsets>
       <Insets />
