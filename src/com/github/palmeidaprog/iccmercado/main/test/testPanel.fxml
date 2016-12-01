@@ -41,7 +41,7 @@
       </HBox>
    </bottom>
    <center>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" BorderPane.alignment="CENTER">
+      <VBox fx:id="atencaoBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" spacing="10.0" styleClass="background" BorderPane.alignment="CENTER">
          <padding>
             <Insets left="20.0" right="20.0" top="20.0" />
          </padding>

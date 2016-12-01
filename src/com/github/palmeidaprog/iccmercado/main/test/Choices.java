@@ -107,6 +107,31 @@ public class Choices {
         design = s;
     }
 
+    //--Test Result algorithm-----------------------------------------------------
+
+    public void resetTest() {
+        hardware = 0;
+        lideranca = 0;
+        criatividade = 0;
+        ensino = 0;
+        relacionamento = 0;
+        pesquisa = 0;
+        matematica = 0;
+        logica = 0;
+        problemas = 0;
+        design = 0;
+        Hardware.getInstance().setStars(0);
+        Lideranca.getInstance().setStars(0);
+        Criatividade.getInstance().setStars(0);
+        Ensino.getInstance().setStars(0);
+        Relacionamento.getInstance().setStars(0);
+        Pesquisa.getInstance().setStars(0);
+        Matematica.getInstance().setStars(0);
+        Logica.getInstance().setStars(0);
+        Problemas.getInstance().setStars(0);
+        Design.getInstance().setStars(0);
+    }
+
     public void calculateProfessions() {
         for(Professionable p : professionsList) {
            calculatePercentual(p);

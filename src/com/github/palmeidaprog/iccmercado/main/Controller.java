@@ -6,6 +6,7 @@
 
 package com.github.palmeidaprog.iccmercado.main;
 
+import com.github.palmeidaprog.iccmercado.main.test.Choices;
 import com.github.palmeidaprog.iccmercado.main.test.TestResultController;
 import javafx.animation.*;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +21,7 @@ import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -29,7 +31,8 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML protected Label tituloLbl;
-    @FXML protected VBox testVB, homeVB, educacaoVB, leiVB, mainPanel;
+    @FXML protected VBox testVB, homeVB, educacaoVB, leiVB, mainPanel, vbox1;
+    @FXML private BorderPane mainWindow;
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
     private boolean disableEffect = false;
@@ -41,6 +44,8 @@ public class Controller implements Initializable {
     //@FXML protected BorderPane testPanel;
     @FXML public BorderPane testPanel;
     @FXML private Button startBtn;
+    public Stage dError = new Stage();
+
 
     //effects / efeitos
     private UIEffects effects;
@@ -108,6 +113,7 @@ public class Controller implements Initializable {
         if(currentMenu != 2) {
             clickAction(testVB, mainTesteVB, "Teste de Aptidão");
             mouseExitAction();
+            Choices.getInstance().resetTest();
             currentMenu = 2;
         }
     }
@@ -206,6 +212,18 @@ public class Controller implements Initializable {
         return navigationBox.getChildren().get(1);
     }
 
+    //--Others methods-------------------------------------------------------------
 
+    public void disable(boolean b) {
+        navigationBox.setDisable(b);
+        vbox1.setDisable(b);
+    }
 
+    /*Event to Click on window when disabled
+    * Evento de quando a janela estiver desabilitada e for clicada*/
+    public void disabledEvent() {
+        if(navigationBox.isDisabled()) {
+            dError.requestFocus();
+        }
+    }
 }

@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="680.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainWindow" onMouseClicked="#disabledEvent" prefHeight="680.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <fx:define>
          <fx:include fx:id="mainEducVB" source="vbox_educ.fxml" />
@@ -27,7 +27,7 @@
          <fx:include fx:id="testPanel" source="test/testPanel.fxml" />
          <fx:include fx:id="mainLeiVB" source="vbox_lei.fxml" />
       </fx:define>
-      <VBox fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbox1" fillWidth="false" maxWidth="101.0" prefHeight="432.0" prefWidth="101.0" style="-fx-background-color: #323e42;" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="homeVB" alignment="CENTER" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
                <children>

@@ -7,19 +7,17 @@ Noto Sans Carian
 - prompt when exiting on going test
 - reverse trans for back button
 - set 0 on int box when seeing warning vbox
-- Shadows on letters
 - choose attention label color (XX)
-- Solve 1_test design
 - When hitting the attention vbox set all stars back to 0
 - Disable Back button when entering the test
 - Add label under the title (with stages) when reflection is off
-- Solve alignment in Home tab
 - Reset test after leaving
-- Check if links open on all 3 OSes
-- Solve multiple windows opening
+- Check if links open on all 3 OSes (2 checked)
+
 - remove @debug and useless old commented code
 - DSENVOLV HARD DEFINICAO 
 - ALIGN CONTROLS IN RESULT WINDOW
+
 
 - Maxwell text: Fix analista de segurança 
 

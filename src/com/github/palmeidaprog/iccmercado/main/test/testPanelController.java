@@ -11,17 +11,24 @@ import com.github.palmeidaprog.iccmercado.main.Controller;
 import com.github.palmeidaprog.iccmercado.main.UIEffects;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Control;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.Node;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class testPanelController {
     @FXML private VBox test1, test2, test3, test4, test5, test6, test7,
-            test8, test9, test10, resultTest;
+            test8, test9, test10, resultTest, atencaoBox;
     @FXML private BorderPane testPanel;
     private UIEffects e = UIEffects.getInstance();
     private Controller c = Controller.getInstance();
     private int box = 0;
+
 
     private volatile static testPanelController instance = null;
     public testPanelController() {
@@ -40,38 +47,88 @@ public class testPanelController {
                 avancar(test1);
                 break;
             case 1:
-                avancar(test2);
+                if(Hardware.getInstance().getStars() != 0) {
+                    avancar(test2);
+                }
+                else {
+                    errorDialog();
+                }
                 break;
             case 2:
-                avancar(test3);
+                if(Lideranca.getInstance().getStars() != 0) {
+                    avancar(test3);
+                }
+                else {
+                    //
+                }
                 break;
             case 3:
-                avancar(test4);
+                if(Criatividade.getInstance().getStars() != 0) {
+                    avancar(test4);
+                }
+                else {
+                    //
+                }
                 break;
             case 4:
-                avancar(test5);
+                if(Ensino.getInstance().getStars() != 0) {
+                    avancar(test5);
+                }
+                else {
+                    //
+                }
                 break;
             case 5:
-                avancar(test6);
+                if(Relacionamento.getInstance().getStars() != 0) {
+                    avancar(test6);
+                }
+                else {
+                    //
+                }
                 break;
             case 6:
-                avancar(test7);
+                if(Pesquisa.getInstance().getStars() != 0) {
+                    avancar(test7);
+                }
+                else {
+                    //
+                }
                 break;
             case 7:
-                avancar(test8);
+                if(Matematica.getInstance().getStars() != 0) {
+                    avancar(test8);
+                }
+                else {
+                    //
+                }
                 break;
             case 8:
-                avancar(test9);
+                if(Logica.getInstance().getStars() != 0) {
+                    avancar(test9);
+                }
+                else {
+                    //disab
+                }
                 break;
             case 9:
-                avancar(test10);
+                if(Problemas.getInstance().getStars() != 0) {
+                    avancar(test10);
+                }
+                else {
+                    //
+                }
                 break;
-            case 10:
-                e.fadeBoxes(c.navigationBox.getChildren().get(1), 1);
-                c.navigationBox.getChildren().set(1, c.resultTest);
-                e.fadeBoxes(c.navigationBox.getChildren().get(1), 0);
-                e.trans(c.resultTest);
-                TestResultController.getInstance().update();
+            case 10: //todo: Solve not advancing to design vbox
+                if(Design.getInstance().getStars() != 0) {
+                    e.fadeBoxes(c.navigationBox.getChildren().get(1), 1);
+                    c.navigationBox.getChildren().set(1, c.resultTest);
+                    e.fadeBoxes(c.navigationBox.getChildren().get(1), 0);
+                    e.trans(c.resultTest);
+                    TestResultController.getInstance().update();
+                }
+                else {
+                    //
+                }
                 break;
             default:
                 break;
@@ -137,5 +194,20 @@ public class testPanelController {
         c.testPanel.setCenter(vB);
         e.fadeBoxes(c.testPanel.getCenter(), 0);
         e.transBack(vB);
+    }
+
+    //Dialog Window Error
+    public void errorDialog() {
+        FXMLLoader dlg = new FXMLLoader(getClass().getResource("error_dialog.fxml"));
+        dlg.setController(DialogController.getInstance());
+        Parent root = null;
+        try {
+            root = dlg.load();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+        c.dError.setScene(new Scene(root, 321, 206)); // c is main application controller
+        c.disable(true);
+        c.dError.showAndWait();
     }
 }
