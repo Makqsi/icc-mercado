@@ -31,15 +31,16 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML protected Label tituloLbl;
-    @FXML protected VBox testVB, homeVB, educacaoVB, leiVB, mainPanel, vbox1;
+    @FXML protected VBox testVB, homeVB, educacaoVB, mainPanel, vbox1, leiVB;
     @FXML private BorderPane mainWindow;
+    @FXML protected BorderPane mainLeiVB;
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
     private boolean disableEffect = false;
     private String tituloAntigo = "Mercado de Trabalho de TI";
 
     // navigation panels / painéis de navegação
-    @FXML protected VBox mainEducVB, mainTesteVB, mainLeiVB;
+    @FXML protected VBox mainEducVB, mainTesteVB;
     @FXML public VBox navigationBox, resultTest;
     //@FXML protected BorderPane testPanel;
     @FXML public BorderPane testPanel;
@@ -92,7 +93,7 @@ public class Controller implements Initializable {
 
     // method called by VBox's Click action event
     // method chamado por Evento de clique nas VBoxes
-    private void clickAction(VBox menu, Pane newPanel, String antigo) {
+    private void clickAction(Pane menu, Pane newPanel, String antigo) {
         effects.normalColors();
         menu.setStyle("-fx-background-color: #52596b");
         tituloAntigo = antigo;

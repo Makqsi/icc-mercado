@@ -127,7 +127,7 @@ public class UIEffects {
         f.play();
     }
 
-    protected void fadeAnim(VBox v, Label l) { //todo: implement rest
+    protected void fadeAnim(Pane v, Label l) { //todo: implement rest
 
         opacityFull(); // resets menu's opacity / reinicia opacidade dos menus
         if(ft != null) {
