@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.effect.DropShadow?>
@@ -31,7 +30,7 @@
          <children>
             <VBox fx:id="homeVB" alignment="CENTER" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #52596b;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#homeClickAction" onMouseEntered="#homeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../home.png" />
                      </image>
@@ -44,50 +43,77 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </VBox>
-            <VBox fx:id="testVB" alignment="CENTER" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #e7655a;">
+            <VBox fx:id="testVB" alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #e7655a;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../network.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
+                  <HBox alignment="CENTER" onMouseClicked="#testClickAction" onMouseEntered="#testeMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="93.0" prefWidth="91.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="49.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../network.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
             </VBox>
-            <VBox fx:id="educacaoVB" alignment="CENTER" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #fcc666;">
+            <VBox fx:id="educacaoVB" alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #fcc666;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../school.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
+                  <HBox alignment="CENTER" onMouseClicked="#educacaoClickAction" onMouseEntered="#educacaoMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="95.0" prefWidth="101.0">
+                     <children>
+                        <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../school.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
             </VBox>
-            <VBox fx:id="leiVB" alignment="CENTER" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #06e3bd;">
+            <VBox fx:id="leiVB" alignment="CENTER" prefHeight="101.0" prefWidth="101.0" style="-fx-background-color: #06e3bd;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../text.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
+                  <HBox alignment="CENTER" onMouseClicked="#leiClickAction" onMouseEntered="#leiMouseEnterAction" onMouseExited="#mouseExitAction" prefHeight="94.0" prefWidth="101.0">
+                     <children>
+                        <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../text.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
             </VBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="102.0" VBox.vgrow="ALWAYS">
                <VBox.margin>
@@ -388,12 +414,6 @@
                   <RadioMenuItem mnemonicParsing="false" onAction="#testClickAction" text="Teste de Aptidão" />
                   <RadioMenuItem mnemonicParsing="false" onAction="#educacaoClickAction" text="Educação" />
                   <RadioMenuItem mnemonicParsing="false" onAction="#leiClickAction" text="Leis de TI" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Sobre">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Sobre" />
-              <MenuItem mnemonicParsing="false" text="Sair" />
             </items>
           </Menu>
         </menus>

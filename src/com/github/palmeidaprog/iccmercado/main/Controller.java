@@ -74,9 +74,7 @@ public class Controller implements Initializable {
 
     public void initialize(URL u, ResourceBundle rb) {
         effects = UIEffects.getInstance();
-        //instance = this;
-        System.out.println(effects.toString()); // @debug
-        System.out.println(this.toString()); // @debug
+
 
         // manually load FXML into result to properly use Singleton controller
         // Carregar FXML manualmente para fazer uso de Singleton no Controller.
@@ -109,9 +107,9 @@ public class Controller implements Initializable {
     public void homeClickAction() {
         if(currentMenu != 1) {
             clickAction(homeVB, mainPanel, "Mercado de Trabalho de TI");
+            currentMenu = 1;
             mouseExitAction();
 
-            currentMenu = 1;
         }
     }
 
@@ -150,6 +148,9 @@ public class Controller implements Initializable {
     public void mouseExitAction() {
         if(currentMenu != 1) {
             etapaLbl.setVisible(true);
+        }
+        else {
+            etapaLbl.setVisible(false);
         }
         disableEffect = true;
         tituloLbl.setText(tituloAntigo);

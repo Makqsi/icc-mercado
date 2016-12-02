@@ -24,7 +24,6 @@ public class Main extends Application {
     @Override
     public void start(Stage pStage) throws Exception{
         instance = this;
-        System.out.println(this.toString()); // @debug
         primaryStage = pStage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
