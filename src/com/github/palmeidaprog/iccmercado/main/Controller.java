@@ -225,7 +225,8 @@ public class Controller implements Initializable {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Todos Arquivos", "*.*"),
                 new FileChooser.ExtensionFilter("Arquivos PDF", "*.pdf"));
-        String selectedFile = fileChooser.showOpenDialog(Main.primaryStage).toString();
+        fileChooser.setInitialFileName("ICC.pdf");
+        String selectedFile = fileChooser.showSaveDialog(Main.primaryStage).toString();
 
         //File openFile = new File(selectedDir + "/ICC.pdf");
         File openFile = new File(selectedFile);
@@ -249,13 +250,17 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
 
-/*        if (Desktop.isDesktopSupported()) {
-            try {
-                Desktop.getDesktop().open(openFile);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }*/
+        if (Desktop.isDesktopSupported()) {
+            // open in a new thread
+            // abre numa nova thread
+            new Thread(() -> {
+                try {
+                    Desktop.getDesktop().open(openFile);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }).start();
+        }
 
 
     }
