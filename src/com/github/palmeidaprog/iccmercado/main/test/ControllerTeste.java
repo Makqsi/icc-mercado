@@ -36,6 +36,7 @@ public class ControllerTeste {
     public void startBtnClick() {
         System.out.println(c.toString()); // @debug
         c.startTest();
+        c.setEtapa("Aviso (Etapa 2 de 13)");
         //c.fadeTrans(testPanel);
     }
 

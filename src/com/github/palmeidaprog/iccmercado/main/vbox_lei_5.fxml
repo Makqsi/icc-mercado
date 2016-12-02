@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="leiVB5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="Em 02/10/2009, senadora Lúcia Vânia propõe uma emenda ao PLS 607/2007 para modificar a alínea I do Art. 2º para: &quot;I – os possuidores de diploma de nível superior em Análise de Sistemas, Engenharia de Software, Ciência da Computação ou Processamento de Dados, expedido por escolas oficiais ou reconhecidas;&quot;." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="O texto original do substitutivo do senador M. Perillo é: &quot;I – os possuidores de diploma de nível superior em Análise de Sistemas, Ciência da Computação ou Processamento de Dados, expedido por escolas oficiais ou reconhecidas;&quot;; e o da emenda do senador Expedito Júnior é: &quot;I – os possuidores de diploma de nível superior em Análise de Sistemas, Informática, Ciência ou Engenharia da Computação, Processamento de Dados e Sistemas ou Tecnologia da Informação, expedido por escolas oficiais ou reconhecidas;&quot;." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="143.0" prefHeight="50.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="53.0" prefWidth="619.0" text="Em 30/10/2009, o senador Expedito Júnior, autor do PLS 607/2007, foi declarado, por decisão judicial, impedido de exercer seu mandato no Senado." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="107.0" prefWidth="619.0" text="Em 07/07/2010, aprovou-se na CAS, o Substitutivo Emenda número 3-CAS, oferecido ao PLS número 607, de 2007, em Turno único, acatando a Emenda número 2-CCJ e a Emenda da Senadora Lúcia Vânia, e rejeitando a Emenda do senador Expedito Júnior, relatados pelo Senador Raimundo Colombo. Ficou prejudicado o Projeto. O Substitutivo será submetido a Turno Suplementar, nos termos do disposto no rt. 282 c/c art. 92 do RISF. Após essa aprovação o Substitutivo será encaminhado à Câmara." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="64.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 21/12/2010 CAS, tendo em vista o fim da 53a Legislatura e em cumprimento ao disposto no art. 332 do Regimento Interno do Senado Federal, envia o substitutivo do PLS 607/2007 à SCLSF." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

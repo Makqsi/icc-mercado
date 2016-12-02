@@ -15,6 +15,10 @@
       <HBox alignment="CENTER_RIGHT" fillHeight="false" minHeight="50.0" prefHeight="50.0" prefWidth="699.0" spacing="30.0" styleClass="background" BorderPane.alignment="CENTER">
          <fx:define>
             <fx:include fx:id="leiVB2" source="vbox_lei_2.fxml" />
+            <fx:include fx:id="leiVB3" source="vbox_lei_3.fxml" />
+             <fx:include fx:id="leiVB4" source="vbox_lei_4.fxml" />
+             <fx:include fx:id="leiVB5" source="vbox_lei_5.fxml" />
+             <fx:include fx:id="leiVB6" source="vbox_lei_6.fxml" />
          </fx:define>
          <stylesheets>
             <URL value="@css_ui/button.css" />

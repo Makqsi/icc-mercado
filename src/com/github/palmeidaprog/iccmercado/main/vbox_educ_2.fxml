@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="leiVB2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="Esses cursos, dados suas características, preferencialmente, devem ser desenvolvidos nos turnos matutino ou vespertino. Estima-se que o mercado necessite de 25 a 50% de egressos desses cursos sobre o total de egressos necessários para o mercado de computação. Esses cursos são denominados de Bacharelado em Ciência da Computação ou Engenharia de Computação." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="128.0" prefHeight="10.0" prefWidth="619.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <VBox style="-fx-border-color: #fcc666;">
+         <children>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="1." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="37.0" prefWidth="584.0" text="Física, Eletricidade e Controle de sistemas, para o projeto dos sistemas controladores de processo;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="2." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="55.0" prefWidth="584.0" text="Arquitetura de Computadores, para a especificação e projeto de sistemas que atendam os requisitos funcionais das aplicações a serem controladas, projeto das interfaces de supervisão e controle (aquisição de dados e atuação sobre o ambiente controlado);" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="3." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="66.0" prefWidth="584.0" text="Sistemas de Tempo-Real, na verificação dos aspectos temporais dos processos, desde a especificação de requisitos, passando pelas características específicas dos sistemas operacionais e até a arquitetura e comunicação dos processadores que satisfazem tais condições;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="4." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="35.0" prefWidth="584.0" text="Redes de Computadores, principalmente as locais, com suas diversas configurações e protocolos de comunicação;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="5." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Sistemas Distribuídos, principalmente quanto ao software, sincronização, trabalho cooperativo;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="6." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Engenharia de Software, para o projeto de sistemas que envolvam requisitos temporais;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label contentDisplay="CENTER" text="7." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Confiabilidade de Sistemas, em ambientes com diversos graus de hostilidade, arquiteturas redundantes, robustez de hardware e software;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox layoutX="21.0" layoutY="262.0">
+               <children>
+                  <Label contentDisplay="CENTER" text="8." textFill="WHITE" wrapText="true" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Outras áreas em Computação: Redes Neurais e sistemas Fuzzy Robótica, como matéria que pode ser vista como uma ferramenta de automação industrial." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="229.0" prefHeight="0.0" prefWidth="619.0" />
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

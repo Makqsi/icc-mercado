@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="educVB2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="456.0" style="-fx-text-fill: #fcc666;" text="2 – Cursos que predomina a ATIVIDADE MEIO" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="Os cursos que tem a computação como atividade meio visam a formação de recursos humanos para automação dos sistemas de informação das organizações. Os cursos devem dar uma forte ênfase no uso de laboratórios para capacitar os egressos &quot;no uso&quot; eficiente das tecnologias nas organizações. Esses cursos reúnem a tecnologia da computação e a tecnologia da administração e, portanto, possuem, de ambas as áreas, um enfoque pragmático forte e pouco teórico." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="128.0" prefHeight="10.0" prefWidth="619.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="229.0" prefHeight="0.0" prefWidth="619.0" />
+      <HBox layoutX="50.0" layoutY="70.0">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="85.0" prefWidth="619.0" text="É muito importante que os alunos realizem estágios nas organizações e que parte do corpo docente tenha uma boa experiência profissional de mercado na área de sistemas de informação. São recursos humanos importantes para atender as necessidades do mercado de trabalho corrente." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="70.0">
+         <children>
+            <Label contentDisplay="CENTER" text="O currículo desses cursos devem incluir um Trabalho de Diplomação (trabalho de conclusão de curso), a ser desenvolvido durante um semestre, que contribua para a melhoria da automação, do desempenho, da eficiência e da racionalização dos serviços administrativos das organizações. Esses cursos, dados suas características podem, também, ser desenvolvidos no turno noturno. É recomendável que os cursos desta categoria sejam desenvolvidos em centros universitários, faculdades integradas e faculdades." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="261.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="Cursos:" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="- Sistema da Informação." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="- Engenharia da Computação." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

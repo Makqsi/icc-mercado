@@ -120,6 +120,7 @@ public class testPanelController {
                 break;
             case 10:
                 if(Design.getInstance().getStars() != 0) {
+                    c.setEtapa("Etapa 13 de 13");
                     e.fadeBoxes(c.navigationBox.getChildren().get(1), 1);
                     c.navigationBox.getChildren().set(1, c.resultTest);
                     e.fadeBoxes(c.navigationBox.getChildren().get(1), 0);
@@ -180,6 +181,7 @@ public class testPanelController {
     // mudar VBox e utilizar o efeitos apropriados
     private void avancar(VBox vB) {
         box++;
+        c.setEtapa("Etapa " + (box + 2) + " de 13");
         e.fadeBoxes(c.testPanel.getCenter(), 1);
         c.testPanel.setCenter(vB);
         e.fadeBoxes(c.testPanel.getCenter(), 0);
@@ -190,6 +192,7 @@ public class testPanelController {
     // mudar VBox e utilizar o efeitos apropriados
     private void retornar(Node vB) {
         box--;
+        c.setEtapa("Etapa " + (box + 2) + " de 13");
         e.fadeBoxes(c.testPanel.getCenter(), 1);
         c.testPanel.setCenter(vB);
         e.fadeBoxes(c.testPanel.getCenter(), 0);

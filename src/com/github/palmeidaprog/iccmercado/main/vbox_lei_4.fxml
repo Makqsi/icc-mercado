@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="leiVB4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="547.0" style="-fx-text-fill: #06e3bd;" text="3 - Projetos de Lei tramitados na última legislatura do Senado Federal" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="659.0" />
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="Tramitou até 26/dezembro/2014, no Senado Federal, o projeto PLS 607/2007, de autoria do senador Expedito Júnior, apresentado em outubro de 2007. Este projeto segue a receita tradicional de criar conselhos de profissão com reserva de mercado para alguns diplomas." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Após sua apresentação em 23 de outubro de 2007, a Mesa do Senado encaminhou o PLS às Comissões de Ciência, Tecnologia, Comunicação e Informática; e de Assuntos Sociais, cabendo à última decisão terminativa." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="143.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 05 de março de 2008, o PLS 607/2007 foi aprovado na CCTCI nos termos de um substitutivo do senador Eduardo Azeredo, que, essencialmente, apenas removeu do projeto original os artigos relativos à criação do conselho de profissão, por ser a iniciativa inconstitucional." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="O Projeto foi então remetido à CAS para prosseguir sua tramitação." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 05 de novembro de 2008, por requisição do senado Jarbas Vasconcellos, o PLS 607/27 foi enviado à CCJ para ser discutido em Audiência Pública, ocorrida em 11/11/2008, e posteriormente votado pela Comissão." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 18/08/2009, o PLS foi aprovado pela CCJ nos termos do substitutivo do senador Marconi Perillo e então devolvido à CAS, onde recebeu uma emenda substitutiva do seu autor, senador Expedito Júnior, que procura, por meio desta emenda, restaurar sua proposta inicial, com a criação do conselho de profissão para a Área de Informática." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

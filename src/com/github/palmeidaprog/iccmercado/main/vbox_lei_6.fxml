@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="leiVB6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" text="No período de 22/12/2010 a 08/08/2011, o projeto teve dois relatores: a senadora Marisa Serrano, que se afastou antes de apresentar o Relatório, e o senador Paulo Paim, que, em 08/08/2011, entregou seu Relatório à Comissão de Assuntos Sociais, com voto pela rejeição das Emendas Número 1 e Número 2 oferecidas, durante o Turno Suplementar, pelo Senador Roberto Cavalcanti ao Substitutivo ao Projeto aprovado por esta Comissão. Durante a reunião da CAS, em 15/02/2012, senador Paim pediu a retirada do PLS da pauta da Comissão." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 01/03/2012, senador Wellington Dias foi designado novo relator do PLS 607/2009 na CAS." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="50.0" layoutY="143.0" prefHeight="67.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="58.0" prefWidth="619.0" text="Em 05/06/2012, Senador Wellington Dias, entrega à CAS relatório com voto pela rejeição das Emendas Número 1 e Número 2, oferecidas durante o Turno Suplementar, pelo Senador Roberto Cavalcanti, ao Substitutivo ao projeto aprovado pela CAS em primeiro turno." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="0.0" prefWidth="619.0" text="Em 14/06/2012, o relatório foi devolvido pela CAS ao Relator para re-exame da matéria." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="48.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 07/10/2014, o relatório foi devolvido, sem alteração, à CAS, que, em 09/10/2014, decidiu indicar novo Relator." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="275.0" prefHeight="34.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Em 26/12/2014, o PLS 607/2007 foi arquivado devido ao témino da 54a Legislatura." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="275.0" prefHeight="35.0" prefWidth="619.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Detalhes podem ser encontrados em Tramitação dos PLs no Senado Federal." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

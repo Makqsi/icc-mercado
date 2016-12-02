@@ -30,17 +30,18 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    @FXML protected Label tituloLbl;
+    @FXML protected Label tituloLbl, etapaLbl;
     @FXML protected VBox testVB, homeVB, educacaoVB, mainPanel, vbox1, leiVB;
     @FXML private BorderPane mainWindow;
-    @FXML protected BorderPane mainLeiVB;
+    @FXML protected BorderPane mainLeiVB, mainEducVB;
     @FXML private int currentMenu = 1;
     private boolean blinkFlag;
     private boolean disableEffect = false;
-    private String tituloAntigo = "Mercado de Trabalho de TI";
+    private String tituloAntigo = "Mercado de Trabalho de TI", leiLabel = "Página 1 de 6",
+            educLabel = "Pagina 1 de 6";
 
     // navigation panels / painéis de navegação
-    @FXML protected VBox mainEducVB, mainTesteVB;
+    @FXML protected VBox mainTesteVB;
     @FXML public VBox navigationBox, resultTest;
     //@FXML protected BorderPane testPanel;
     @FXML public BorderPane testPanel;
@@ -106,6 +107,7 @@ public class Controller implements Initializable {
         if(currentMenu != 1) {
             clickAction(homeVB, mainPanel, "Mercado de Trabalho de TI");
             mouseExitAction();
+
             currentMenu = 1;
         }
     }
@@ -113,6 +115,7 @@ public class Controller implements Initializable {
     public void testClickAction() {
         if(currentMenu != 2) {
             clickAction(testVB, mainTesteVB, "Teste de Aptidão");
+            setEtapa("Inicio (Etapa 1 de 13)");
             mouseExitAction();
             Choices.getInstance().resetTest();
             currentMenu = 2;
@@ -123,6 +126,7 @@ public class Controller implements Initializable {
         if(currentMenu != 3) {
             clickAction(educacaoVB, mainEducVB, "Educação para TI");
             mouseExitAction();
+            setEtapa(getPagEduc());
             currentMenu = 3;
         }
     }
@@ -131,6 +135,7 @@ public class Controller implements Initializable {
         if(currentMenu != 4) {
             clickAction(leiVB, mainLeiVB, "Leis sobre Mercado de TI");
             mouseExitAction();
+            setEtapa(getPagina());
             currentMenu = 4;
         }
     }
@@ -140,6 +145,9 @@ public class Controller implements Initializable {
     // mouse exit menu at the left event
     // evento de saida de mouse do eventos da esquerda
     public void mouseExitAction() {
+        if(currentMenu != 1) {
+            etapaLbl.setVisible(true);
+        }
         disableEffect = true;
         tituloLbl.setText(tituloAntigo);
         tituloLbl.setEffect(null);
@@ -148,57 +156,45 @@ public class Controller implements Initializable {
         effects.opacityFull();
     }
 
-    private void mouseEnterAction() {
-
+    private void mouseEnterAction(Pane p, String s) {
+        disableEffect = false;
+        tituloLbl.setText(s);
+        etapaLbl.setVisible(false);
+        effects.addBlur(true);
+        effects.addReflecGlow(tituloLbl);
+        effects.trans(tituloLbl);
+        effects.fadeAnim(p, tituloLbl);
     }
 
     public void leiMouseEnterAction() {
         if(currentMenu != 4) {
-            disableEffect = false;
+            mouseEnterAction(leiVB, "Leis sobre Mercado de TI");
+            /*disableEffect = false;
             tituloLbl.setText("Leis sobre Mercado de TI");
+
             //leiVB.setOpacity(0.8);
             effects.addBlur(true);
             effects.addReflecGlow(tituloLbl);
             effects.trans(tituloLbl);
-            effects.fadeAnim(leiVB, tituloLbl);
+            effects.fadeAnim(leiVB, tituloLbl);*/
         }
     }
 
     public void testeMouseEnterAction() {
         if(currentMenu != 2) {
-            disableEffect = false;
-            tituloLbl.setText("Teste de Aptidão");
-            //anim.start();
-            //testVB.setOpacity(0.8);
-            effects.addBlur(true);
-            effects.addReflecGlow(tituloLbl);
-            effects.trans(tituloLbl);
-            effects.fadeAnim(testVB, tituloLbl);
+            mouseEnterAction(testVB, "Teste de Aptidão");
         }
     }
 
     public void homeMouseEnterAction() {
         if(currentMenu != 1) {
-            disableEffect = false;
-            tituloLbl.setText("Mercado de Trabalho de TI");
-            //homeVB.setOpacity(0.8);
-            effects.addBlur(true);
-            effects.addReflecGlow(tituloLbl);
-            effects.trans(tituloLbl);
-            effects.fadeAnim(homeVB, tituloLbl);
+            mouseEnterAction(homeVB, "Mercado de Trabalho de TI");
         }
     }
 
     public void educacaoMouseEnterAction() {
         if(currentMenu != 3) {
-            disableEffect = false;
-            tituloLbl.setText("Educação para TI");
-            //educacaoVB.setOpacity(0.8);
-            effects.addBlur(true);
-            effects.addReflecGlow(tituloLbl);
-            effects.trans(tituloLbl);
-            effects.fadeAnim(educacaoVB, tituloLbl);
-
+            mouseEnterAction(educacaoVB, "Educação para TI");
         }
     }
 
@@ -226,5 +222,25 @@ public class Controller implements Initializable {
         if(navigationBox.isDisabled()) {
             dError.requestFocus();
         }
+    }
+
+    public void setEtapa(String s) {
+        etapaLbl.setText(s);
+    }
+
+    public void setPagina(String s) {
+        leiLabel = s;
+    }
+
+    public String getPagina() {
+        return leiLabel;
+    }
+
+    public void setPagEduc(String s) {
+        educLabel = s;
+    }
+
+    public String getPagEduc() {
+        return educLabel;
     }
 }

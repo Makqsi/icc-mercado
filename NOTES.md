@@ -15,6 +15,8 @@ Noto Sans Carian
 - remove @debug and useless old commented code
 - DSENVOLV HARD DEFINICAO 
 - ALIGN CONTROLS IN RESULT WINDOW
+- ADD INICIO Button to Leis part
+- CHECAR 3 4 5 5 5 5 5 4 5 4
 
 
 - Maxwell text: Fix analista de segurança 
@@ -24,7 +26,7 @@ http://www.iconsdb.com/
 fx:controller="com.github.palmeidaprog.iccmercado.main.test.TestResultController"
 
 <fx:include fx:id="resultTest" source="result_test.fxml" />
-
+3 4 5 5 5 5 5 4 5 4
 -------------Done---------------
                    <fx:define>
                        <fx:include fx:id="resultPage2" source="result_window2.fxml" />
