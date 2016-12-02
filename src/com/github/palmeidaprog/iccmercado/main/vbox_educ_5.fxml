@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="educVB5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="699.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="40.0" right="40.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" style="-fx-text-fill: #fcc666;" text="4 – Cursos de Tecnologia" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="59.0" prefWidth="619.0" text="Os Cursos de tecnologia, nos termos da legislação, são cursos de nível superior que visam atender necessidades emergenciais do mercado de trabalho e, por isso, são de curta duração e terminais." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="56.0" prefWidth="584.0" text="Uma vez atendida a demanda de profissionais os cursos devem ser extintos. Não há regras para concepção dos currículos. Deve haver uma coerência entre currículo e denominação do curso." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="222.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="72.0" prefWidth="584.0" text="A área de computação e informática, por ser dinâmica, encontra nos cursos de tecnologia uma solução eficiente para resolver necessidades imediatas e urgentes do mercado de trabalho. Nos termos da legislação vigente eles podem ser enquadrados como cursos sequenciais." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="183.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="101.0" prefWidth="584.0" text="É recomendável que os cursos desta categoria sejam desenvolvidos em centros universitários, faculdades integradas e faculdades. Os cursos de Tecnologia em Processamento de Dados, criados na década de 70 para substituir a formação de recursos humanos pelas empresas fornecedoras de computadores, devem ser extintos/convertidos, uma vez que há necessidade contínua de formação de recursos humanos para atender esse segmento do mercado." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="252.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="41.0" prefWidth="584.0" text="Os cursos plenos de Bacharelado em Sistemas de Informação substituem os atuais cursos de Tecnologia em Processamento de Dados com grandes vantagens." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox layoutX="50.0" layoutY="261.0" prefHeight="63.0" prefWidth="619.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="Cursos:" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="- Sistemas da Informação." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label contentDisplay="CENTER" text="- Engenharia da Computação" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@css_ui/vboxes.css" />
+      <URL value="@css_ui/button.css" />
+   </stylesheets>
+</VBox>

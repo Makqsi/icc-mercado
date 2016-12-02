@@ -38,7 +38,7 @@ public class Controller implements Initializable {
     private boolean blinkFlag;
     private boolean disableEffect = false;
     private String tituloAntigo = "Mercado de Trabalho de TI", leiLabel = "Página 1 de 6",
-            educLabel = "Pagina 1 de 6";
+            educLabel = "Pagina 1 de 5";
 
     // navigation panels / painéis de navegação
     @FXML protected VBox mainTesteVB;
