@@ -127,6 +127,21 @@ public class UIEffects {
         f.play();
     }
 
+    public void fadeTitle(Label l, int i) {
+        FadeTransition f = new FadeTransition(Duration.millis(2000), l);
+        if(i == 0) {
+            f.setFromValue(0.0);
+            f.setToValue(1.0);
+        }
+        else {
+            f.setFromValue(1.0);
+            f.setToValue(0.0);
+        }
+        f.setCycleCount(1);
+        f.play();
+    }
+
+
     protected void fadeAnim(Pane v, Label l) { //todo: implement rest
 
         opacityFull(); // resets menu's opacity / reinicia opacidade dos menus

@@ -17,6 +17,7 @@ Noto Sans Carian
 - ALIGN CONTROLS IN RESULT WINDOW
 - ADD INICIO Button to Leis part
 - CHECAR 3 4 5 5 5 5 5 4 5 4
+- FONT ******************************
 
 
 - Maxwell text: Fix analista de segurança 

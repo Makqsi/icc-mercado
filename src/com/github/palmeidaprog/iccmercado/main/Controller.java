@@ -165,7 +165,8 @@ public class Controller implements Initializable {
         etapaLbl.setVisible(false);
         effects.addBlur(true);
         effects.addReflecGlow(tituloLbl);
-        effects.trans(tituloLbl);
+        //effects.trans(tituloLbl);
+        effects.fadeTitle(tituloLbl, 0);
         effects.fadeAnim(p, tituloLbl);
     }
 
@@ -215,11 +216,6 @@ public class Controller implements Initializable {
     //--Others methods-------------------------------------------------------------
 
     public void savePDF() {
-        /*DirectoryChooser dirChooser = new DirectoryChooser();
-        dirChooser.setTitle("Escolha onde salvar o trabalho escrito:");
-        String selectedDir = dirChooser.showDialog(Main.primaryStage).toString();*/
-
-
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Abrir vídeo escolhido");
         fileChooser.getExtensionFilters().addAll(
@@ -235,7 +231,8 @@ public class Controller implements Initializable {
             final int BUFFER = 4096;
             byte data[] = new byte[BUFFER];
 
-            // write the files to the disk
+            /*Write/Save the PDF file to the chosen destination
+            * Salva o arquivo no destino escolhido*/
             FileOutputStream fos = new
                     FileOutputStream(selectedFile);
             BufferedOutputStream dest = new BufferedOutputStream(fos, BUFFER);
@@ -262,9 +259,10 @@ public class Controller implements Initializable {
             }).start();
         }
 
-
     }
 
+    /*Desabilita aplicação
+    * disable main application*/
     public void disable(boolean b) {
         navigationBox.setDisable(b);
         vbox1.setDisable(b);
