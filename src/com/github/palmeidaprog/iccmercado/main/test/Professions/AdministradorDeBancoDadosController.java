@@ -39,7 +39,7 @@ public class AdministradorDeBancoDadosController {
                 new ProcessBuilder("open", link.toString()).start();
             }
             else {
-                new ProcessBuilder("start", link.toString()).start();
+                new ProcessBuilder(link.toString()).start();
             }
         } catch(IOException e) {
             e.printStackTrace();
