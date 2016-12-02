@@ -52,7 +52,6 @@ public class AdministradorDeBancoDadosController {
                         }
                     }).start();
                 }
-                new ProcessBuilder(link.toString()).start();
             }
         } catch(IOException e) {
             e.printStackTrace();

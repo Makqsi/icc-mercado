@@ -33,7 +33,7 @@ public class ArquitetoDeSistemas implements Professionable, Linkable {
     private int logica = 0;
     private int problemas = 3;
     private int design = 2;
-    private int number = 7;
+    private int number = 8;
     private int[] array = {hardware, lideranca, criatividade, ensino, relacionamento,
             pesquisa, matematica, logica, problemas, design};
     private int percentual = 0;

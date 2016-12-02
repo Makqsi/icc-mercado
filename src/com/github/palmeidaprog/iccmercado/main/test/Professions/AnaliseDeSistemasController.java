@@ -13,7 +13,9 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class AnaliseDeSistemasController {
@@ -45,7 +47,17 @@ public class AnaliseDeSistemasController {
                 new ProcessBuilder("open", link.toString()).start();
             }
             else {
-                new ProcessBuilder("start", link.toString()).start();
+                if (Desktop.isDesktopSupported()) {
+                    // open in a new thread
+                    // abre numa nova thread
+                    new Thread(() -> {
+                        try {
+                            Desktop.getDesktop().browse(link.toURI());
+                        } catch (IOException | URISyntaxException e1) {
+                            e1.printStackTrace();
+                        }
+                    }).start();
+                }
             }
         } catch(IOException e) {
             e.printStackTrace();
