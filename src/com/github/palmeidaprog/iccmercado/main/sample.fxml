@@ -366,7 +366,7 @@
                         <Insets left="60.0" />
                      </padding>
                   </HBox>
-                  <Button mnemonicParsing="false" stylesheets="@css_ui/button.css" text="Ver e Salvar Trabalho Escrito" />
+                  <Button mnemonicParsing="false" onMouseClicked="#savePDF" stylesheets="@css_ui/button.css" text="Ver e Salvar Trabalho Escrito" />
                </children>
                <VBox.margin>
                   <Insets top="20.0" />

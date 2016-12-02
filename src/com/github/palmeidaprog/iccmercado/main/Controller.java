@@ -21,10 +21,13 @@ import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -210,6 +213,52 @@ public class Controller implements Initializable {
     }
 
     //--Others methods-------------------------------------------------------------
+
+    public void savePDF() {
+        /*DirectoryChooser dirChooser = new DirectoryChooser();
+        dirChooser.setTitle("Escolha onde salvar o trabalho escrito:");
+        String selectedDir = dirChooser.showDialog(Main.primaryStage).toString();*/
+
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Abrir vídeo escolhido");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Todos Arquivos", "*.*"),
+                new FileChooser.ExtensionFilter("Arquivos PDF", "*.pdf"));
+        String selectedFile = fileChooser.showOpenDialog(Main.primaryStage).toString();
+
+        //File openFile = new File(selectedDir + "/ICC.pdf");
+        File openFile = new File(selectedFile);
+        try{
+            int count;
+            final int BUFFER = 4096;
+            byte data[] = new byte[BUFFER];
+
+            // write the files to the disk
+            FileOutputStream fos = new
+                    FileOutputStream(selectedFile);
+            BufferedOutputStream dest = new BufferedOutputStream(fos, BUFFER);
+            InputStream res = getClass().getResourceAsStream("ICC.pdf");
+            while ((count = res.read(data, 0, BUFFER))
+                    != -1) {
+                dest.write(data, 0, count);
+            }
+            dest.flush();
+            dest.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+/*        if (Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().open(openFile);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }*/
+
+
+    }
 
     public void disable(boolean b) {
         navigationBox.setDisable(b);
