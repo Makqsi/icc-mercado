@@ -208,6 +208,7 @@ public class Controller implements Initializable {
     public void startTest() {
         effects.fadeTrans(testPanel);
         effects.trans(testPanel);
+        //testPanel.setCenter(test1); //todo: test
     }
 
     protected Node getMainNode() {

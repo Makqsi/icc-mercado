@@ -23,6 +23,16 @@ public class Test9Controller {
     @FXML private ImageView s1, s2, s3, s4, s5;
     private int stars = 0;
 
+    //--Singleton design------------------------------------------------------------------
+
+    private static volatile Test9Controller instance = null;
+    private Test9Controller() { }
+    public synchronized static Test9Controller getInstance() {
+        if (instance == null) {
+            instance = new Test9Controller();
+        }
+        return instance;
+    }
 
     //--Click on links events--------------------------------------------------------------------
 
@@ -72,7 +82,7 @@ public class Test9Controller {
 
     // Turn off all the stars
     // Apaga todas estrelas
-    private void turnOffStars() {
+    public void turnOffStars() {
         s5.setImage(empty);
         s4.setImage(empty);
         s3.setImage(empty);
@@ -125,7 +135,7 @@ public class Test9Controller {
         mouseEnterStar(5);
     }
 
-    private void setStars(int s) {
+    public void setStars(int s) {
         stars = s;
         Problemas.getInstance().setStars(s);
     }

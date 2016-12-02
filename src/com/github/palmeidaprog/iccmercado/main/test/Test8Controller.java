@@ -23,6 +23,16 @@ public class Test8Controller {
     @FXML private ImageView s1, s2, s3, s4, s5;
     private int stars = 0;
 
+    //--Singleton design------------------------------------------------------------------
+
+    private static volatile Test8Controller instance = null;
+    private Test8Controller() { }
+    public synchronized static Test8Controller getInstance() {
+        if (instance == null) {
+            instance = new Test8Controller();
+        }
+        return instance;
+    }
 
     //--Click on links events--------------------------------------------------------------------
 
@@ -72,7 +82,7 @@ public class Test8Controller {
 
     // Turn off all the stars
     // Apaga todas estrelas
-    private void turnOffStars() {
+    public void turnOffStars() {
         s5.setImage(empty);
         s4.setImage(empty);
         s3.setImage(empty);
@@ -125,7 +135,7 @@ public class Test8Controller {
         mouseEnterStar(5);
     }
 
-    private void setStars(int s) {
+    public void setStars(int s) {
         stars = s;
         Logica.getInstance().setStars(s);
     }

@@ -12,19 +12,6 @@
 
 <BorderPane prefHeight="520.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.palmeidaprog.iccmercado.main.test.testPanelController">
    <bottom>
-      <fx:define>
-          <fx:include fx:id="test1" source="1_test.fxml" />
-          <fx:include fx:id="test2" source="2_test.fxml" />
-          <fx:include fx:id="test3" source="3_test.fxml" />
-          <fx:include fx:id="test4" source="4_test.fxml" />
-          <fx:include fx:id="test5" source="5_test.fxml" />
-          <fx:include fx:id="test6" source="6_test.fxml" />
-          <fx:include fx:id="test7" source="7_test.fxml" />
-          <fx:include fx:id="test8" source="8_test.fxml" />
-          <fx:include fx:id="test9" source="9_test.fxml" />
-          <fx:include fx:id="test10" source="10_test.fxml" />
-
-      </fx:define>
       <HBox alignment="CENTER_RIGHT" fillHeight="false" minHeight="50.0" prefHeight="50.0" prefWidth="699.0" spacing="30.0" styleClass="background" BorderPane.alignment="CENTER">
          <stylesheets>
             <URL value="@../css_ui/button.css" />

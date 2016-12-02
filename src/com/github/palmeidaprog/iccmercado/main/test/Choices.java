@@ -130,6 +130,27 @@ public class Choices {
         Logica.getInstance().setStars(0);
         Problemas.getInstance().setStars(0);
         Design.getInstance().setStars(0);
+        Test1Controller.getInstance().setStars(0);
+        Test1Controller.getInstance().turnOffStars();
+        Test2Controller.getInstance().setStars(0);
+        Test2Controller.getInstance().turnOffStars();
+        Test3Controller.getInstance().setStars(0);
+        Test3Controller.getInstance().turnOffStars();
+        Test4Controller.getInstance().setStars(0);
+        Test4Controller.getInstance().turnOffStars();
+        Test5Controller.getInstance().setStars(0);
+        Test5Controller.getInstance().turnOffStars();
+        Test6Controller.getInstance().setStars(0);
+        Test6Controller.getInstance().turnOffStars();
+        Test7Controller.getInstance().setStars(0);
+        Test7Controller.getInstance().turnOffStars();
+        Test8Controller.getInstance().setStars(0);
+        Test8Controller.getInstance().turnOffStars();
+        Test9Controller.getInstance().setStars(0);
+        Test9Controller.getInstance().turnOffStars();
+        Test10Controller.getInstance().setStars(0);
+        Test10Controller.getInstance().turnOffStars();
+
     }
 
     public void calculateProfessions() {

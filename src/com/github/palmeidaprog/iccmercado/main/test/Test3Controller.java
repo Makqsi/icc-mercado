@@ -23,6 +23,17 @@ public class Test3Controller {
     @FXML private ImageView s1, s2, s3, s4, s5;
     private int stars = 0;
 
+    // FXMLoader
+    private static volatile Test3Controller instance = null;
+    private Test3Controller() { }
+    public synchronized static Test3Controller getInstance() {
+        if(instance == null) {
+            instance = new Test3Controller();
+        }
+        return instance;
+    }
+
+
 
     //--Click on links events--------------------------------------------------------------------
 
@@ -72,7 +83,7 @@ public class Test3Controller {
 
     // Turn off all the stars
     // Apaga todas estrelas
-    private void turnOffStars() {
+    public void turnOffStars() {
         s5.setImage(empty);
         s4.setImage(empty);
         s3.setImage(empty);
@@ -125,7 +136,7 @@ public class Test3Controller {
         mouseEnterStar(5);
     }
 
-    private void setStars(int s) {
+    public void setStars(int s) {
         stars = s;
         Criatividade.getInstance().setStars(s);
     }
