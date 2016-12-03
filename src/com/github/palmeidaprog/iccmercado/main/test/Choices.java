@@ -1,8 +1,10 @@
 package com.github.palmeidaprog.iccmercado.main.test;
 
+import com.github.palmeidaprog.iccmercado.main.Controller;
 import com.github.palmeidaprog.iccmercado.main.Interfaces.Professionable;
 import com.github.palmeidaprog.iccmercado.main.test.Professions.AdministradorDeBancoDados;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -150,7 +152,7 @@ public class Choices {
         Test9Controller.getInstance().turnOffStars();
         Test10Controller.getInstance().setStars(0);
         Test10Controller.getInstance().turnOffStars();
-
+        testPanelController.getInstance().resetBox();
     }
 
     public void calculateProfessions() {

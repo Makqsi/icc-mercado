@@ -26,24 +26,29 @@ import java.util.ResourceBundle;
 
 public class testPanelController implements Initializable {
     @FXML private VBox test2, test3, test4, test5, test6, test7,
-            test8, test9, test10, resultTest, atencaoBox;
-    @FXML public VBox test1;
-    @FXML private BorderPane testPanel;
+            test8, test9, test10, resultTest;
+
+    @FXML public VBox test1, atencaoBox;
+    //@FXML private BorderPane testPanel;
     private UIEffects e = UIEffects.getInstance();
     private Controller c = Controller.getInstance();
     private int box = 0;
 
+    //--Singleton design---------------------------------------------------------
 
     private volatile static testPanelController instance = null;
-    public testPanelController() {
-        instance = this;
-    }
-
+    private testPanelController() { }
     public static synchronized testPanelController getInstance() {
+        if(instance == null) {
+            instance = new testPanelController();
+        }
         return instance;
     }
 
+    //--initialize----------------------------------------------------------------
+
     public void initialize(URL u, ResourceBundle rb) {
+
         // test1
         FXMLLoader loader1 = new FXMLLoader(getClass().getResource("1_test.fxml"));
         loader1.setController(Test1Controller.getInstance());
@@ -239,7 +244,7 @@ public class testPanelController implements Initializable {
             case 0:
                 break;
             case 1:
-                retornar(testPanel);
+                retornar(atencaoBox);
                 break;
             case 2:
                 retornar(test1);
@@ -308,5 +313,9 @@ public class testPanelController implements Initializable {
         c.dError.setScene(new Scene(root, 321, 206)); // c is main application controller
         c.disable(true);
         c.dError.showAndWait();
+    }
+
+    public void resetBox() {
+        box = 0;
     }
 }

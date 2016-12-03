@@ -8,28 +8,19 @@ package com.github.palmeidaprog.iccmercado.main;
 
 import com.github.palmeidaprog.iccmercado.main.test.Choices;
 import com.github.palmeidaprog.iccmercado.main.test.TestResultController;
-import javafx.animation.*;
+import com.github.palmeidaprog.iccmercado.main.test.testPanelController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
-import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.Glow;
-import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-
 import java.awt.*;
 import java.io.*;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -75,13 +66,20 @@ public class Controller implements Initializable {
     public void initialize(URL u, ResourceBundle rb) {
         effects = UIEffects.getInstance();
 
-
         // manually load FXML into result to properly use Singleton controller
         // Carregar FXML manualmente para fazer uso de Singleton no Controller.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("test/result_test.fxml"));
         loader.setController(TestResultController.getInstance());
         try {
             resultTest = loader.load();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+
+        FXMLLoader loaderPane = new FXMLLoader(getClass().getResource("test/testPanel.fxml"));
+        loaderPane.setController(testPanelController.getInstance());
+        try {
+            testPanel = loaderPane.load();
         } catch(IOException e) {
             e.printStackTrace();
         }
@@ -119,6 +117,7 @@ public class Controller implements Initializable {
             setEtapa("Inicio (Etapa 1 de 13)");
             mouseExitAction();
             Choices.getInstance().resetTest();
+            //testPanel.setCenter(testPanelController.getInstance().atencaoBox);
             currentMenu = 2;
         }
     }
@@ -208,7 +207,8 @@ public class Controller implements Initializable {
     public void startTest() {
         effects.fadeTrans(testPanel);
         effects.trans(testPanel);
-        //testPanel.setCenter(test1); //todo: test
+        effects.addBlur(false);
+        testPanel.setCenter(testPanelController.getInstance().atencaoBox); //todo: test
     }
 
     protected Node getMainNode() {

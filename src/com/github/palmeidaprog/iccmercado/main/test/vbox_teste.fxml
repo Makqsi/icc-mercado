@@ -13,9 +13,7 @@
       <Insets left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <fx:define>
-         <fx:include fx:id="testPanel" source="testPanel.fxml" />
-      </fx:define>
+
       <HBox>
          <children>
             <Label text="O teste a seguir irá avaliar sua afinidade com as profissões disponíveis no mercado de trabaho na área de TI (Tecnologia da Informação) através de um algoritmo que analisa seu interesse nas habilidades necessárias para exercer respectivas profissões.&#10;&#10;&#10;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">

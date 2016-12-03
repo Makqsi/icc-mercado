@@ -8,12 +8,17 @@ package com.github.palmeidaprog.iccmercado.main.test;
 
 import com.github.palmeidaprog.iccmercado.main.Controller;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 
-public class ControllerTeste {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ControllerTeste implements Initializable {
     @FXML private Button startBtn;
-    @FXML private static BorderPane testPanel;
     private static Controller c = Controller.getInstance();
 
     //--Singleton-Constructor----------------------------------
@@ -32,9 +37,20 @@ public class ControllerTeste {
         return instance;
     }
 
+    //--initialize--------------------------------------------------
+
+    public void initialize(URL u, ResourceBundle rb) {
+/*        FXMLLoader loaderPane = new FXMLLoader(getClass().getResource("test/testPanel.fxml"));
+        loaderPane.setController(testPanelController.getInstance());
+        try {
+            testPanel = loaderPane.load();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }*/
+    }
+
     //--Eventos------------------------------------------------
     public void startBtnClick() {
-        System.out.println(c.toString()); // @debug
         c.startTest();
         c.setEtapa("Aviso (Etapa 2 de 13)");
         //c.fadeTrans(testPanel);
